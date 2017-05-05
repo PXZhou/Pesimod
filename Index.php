@@ -5,11 +5,8 @@
  * Date: 03/05/2017
  * Time: 11:42
  */
-<<<<<<< Updated upstream
+echo "<p><strong>Ceci</strong>est un test </p>";
 echo "coucou tst";
 echo "test2";
-=======
-echo "coucou";
->>>>>>> Stashed changes
 
 ?>
