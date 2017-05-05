@@ -13,7 +13,6 @@
         <?php echo "Haut de Page"; ?>
     </div>
 
-    <hr/>
 
     <div id="corps">
         <div id="menu">
