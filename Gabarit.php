@@ -2,8 +2,8 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet" type="text/css" href="styles/base.css" />
-    <link rel="stylesheet" type="text/css" href="styles/structure.css" />
+    <!--<link rel="stylesheet" type="text/css" href="styles/base.css" />
+    <link rel="stylesheet" type="text/css" href="styles/structure.css" /> -->
     <title>
         <?php echo "MyPage"; ?>
     </title>
@@ -31,9 +31,9 @@
             PesiMod
         </p>
         <p>
-            <a href="_blank">Qu'est ce Pesimod ?</a> <br/>
-            <a href="_blank">Nous rejoindre</a> <br/>
-            <a href="_blank">Mentions légales</a> <br/>
+            <a href="">Qu'est ce Pesimod ?</a> <br/>
+            <a href="">Nous rejoindre</a> <br/>
+            <a href="">Mentions légales</a> <br/>
         </p>
     </div>
 </div>
