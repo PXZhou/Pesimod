@@ -5,7 +5,7 @@
     <link rel="stylesheet" type="text/css" href="styles/base.css" />
     <link rel="stylesheet" type="text/css" href="styles/structure.css" />
     <title>
-        <?php echo "Accueil"; ?>
+        <?php echo "MyPage"; ?>
     </title>
 </head>
 <div id="global">
