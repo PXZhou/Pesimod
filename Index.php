@@ -6,5 +6,6 @@
  * Time: 11:42
  */
 echo "coucou tst";
+echo "test 2";
 
 ?>
