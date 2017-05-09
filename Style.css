@@ -1,8 +1,5 @@
 #logo {
-    /*margin-top:20px;
-    width:255px;
-    height:100%;*/
-   text-align: center;
+    text-align: center;
 }
 
 #menu-deroulant, #menu-deroulant ul {
@@ -59,9 +56,11 @@
     /* On l'encadre */
     border-width:1px;
     border-style:solid;
-    border-color:#00A2E8;
+    border-color:black;
+    /*border-color:#00A2E8;*/
     background: #a4a4a4;
 }
+
 
 #bas-de-page {
     list-style: none;
