@@ -15,11 +15,11 @@
             <li><a href="#"><img src = "https://cdn4.iconfinder.com/data/icons/wirecons-free-vector-icons/32/menu-alt-512.png" width="30" height="30" alt="Menu"/></a>
                 <ul>
                     <li><a href="#">Mon Compte</a></li>
-
+                    <li><hr></li>
                     <li><a href="#">Maison</a></li>
                     <li><a href="#">Calendrier</a></li>
                     <li><a href="#">Edition</a></li>
-
+                    <li><hr></li>
                     <li><a href="#">Paramètres</a></li>
                     <li><a href="#">Deconnexion</a></li>
                 </ul>
