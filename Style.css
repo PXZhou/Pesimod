@@ -4,18 +4,19 @@
     list-style: none;
 }
 #menu-deroulant {
-    /* on centre le menu dans la page */
-    text-align: center;
+    /* Menu a gauche */
+    text-align: left;
 }
 #menu-deroulant li {
-    /* on place les liens du menu horizontalement */
+    /* Ne s'effectue qu'au survole de l'image */
     display: inline-block;
 }
 #menu-deroulant ul li {
-    /* on enlève ce comportement pour les liens du sous menu */
+    /* On met les sousliens a la ligne */
     display: inherit;
 }
 #menu-deroulant a {
+    /* Style d'ectriture */
     text-decoration: none;
     display: block;
     color:#000;
