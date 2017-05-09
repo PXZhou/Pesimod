@@ -2,18 +2,36 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet" type="text/css" href="styles/base.css" />
-    <link rel="stylesheet" type="text/css" href="styles/structure.css" />
+   <link rel="stylesheet" type="text/css" href="Style.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="styles/structure.css" /> -->
     <title>
-        <?php echo "Accueil"; ?>
+        <?php echo "MyPage"; ?>
     </title>
 </head>
 <div id="global">
     <div id="tete">
-        <?php echo "Haut de Page"; ?>
+        <?php echo "haut de page: logo etc..."; ?>
+        <ul id="menu-deroulant">
+            <li><a href="#"><img src = "https://cdn4.iconfinder.com/data/icons/wirecons-free-vector-icons/32/menu-alt-512.png" width="30" height="30" alt="Menu"/></a>
+                <ul>
+                    <li><a href="#">Mon Compte</a></li>
+
+                    <li><a href="#">Maison</a></li>
+                    <li><a href="#">Calendrier</a></li>
+                    <li><a href="#">Edition</a></li>
+
+                    <li><a href="#">Paramètres</a></li>
+                    <li><a href="#">Deconnexion</a></li>
+                </ul>
+            </li>
+        </ul>
     </div>
 
-    <hr/>
+
+
+
+
+
 
     <div id="corps">
         <div id="menu">
@@ -21,6 +39,7 @@
         </div>
         <div id="contenu">
             <?php echo "Contenu"; ?>
+
         </div>
     </div>
 
@@ -31,9 +50,9 @@
             PesiMod
         </p>
         <p>
-            <a href="_blank">Qu'est ce Pesimod ?</a> <br/>
-            <a href="_blank">Nous rejoindre</a> <br/>
-            <a href="_blank">Mentions légales</a> <br/>
+            <a href="">Qu'est ce Pesimod ?</a> <br/>
+            <a href="">Nous rejoindre</a> <br/>
+            <a href="">Mentions légales</a> <br/>
         </p>
     </div>
 </div>
