@@ -3,7 +3,10 @@
     margin: 0;
     list-style: none;
 }
-
+#menu-deroulant {
+    /* on centre le menu dans la page */
+    text-align: center;
+}
 #menu-deroulant li {
     /* on place les liens du menu horizontalement */
     display: inline-block;
@@ -23,4 +26,8 @@
     left: -999em;
     text-align: left;
     z-index: 1000;
+}
+#menu-deroulant li:hover ul {
+    /* Au survol des li du menu on replace les sous menus */
+    left: auto;
 }
