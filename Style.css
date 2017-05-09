@@ -3,10 +3,7 @@
     margin: 0;
     list-style: none;
 }
-#menu-deroulant {
-    /* on centre le menu dans la page */
-    text-align: left;
-}
+
 #menu-deroulant li {
     /* on place les liens du menu horizontalement */
     display: inline-block;
