@@ -1,11 +1,18 @@
+#logo {
+    /*margin-top:20px;
+    width:255px;
+    height:100%;*/
+   text-align: center;
+}
+
 #menu-deroulant, #menu-deroulant ul {
     padding: 0;
-    margin: 0;
     list-style: none;
 }
 #menu-deroulant {
     /* Menu a gauche */
     text-align: left;
+    margin-top: -50px;
 }
 #menu-deroulant li {
     /* Ne s'effectue qu'au survole de l'image */
@@ -32,3 +39,35 @@
     /* Au survol des li du menu on replace les sous menus */
     left: auto;
 }
+
+#corps {
+    /* On met le corps au milieu */
+    padding: 10px; /* Marge autour du corps */
+    position: absolute; /* postulat de départ */
+    left: 15%;
+    /* On l'encadre */
+    border-width:1px;
+    border-style:solid;
+    border-color:black;
+}
+
+
+#pied {
+    position: absolute; /* postulat de départ */
+    padding: 5px; /* Marge autour du pied */
+    top: 50%; left: 70%; /* à 50%/50% du parent référent */
+    /* On l'encadre */
+    border-width:1px;
+    border-style:solid;
+    border-color:#00A2E8;
+    background: #a4a4a4;
+}
+
+#bas-de-page {
+    list-style: none;
+}
+
+#bas-de-page li {
+    list-style: none;
+}
+
