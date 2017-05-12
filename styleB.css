@@ -74,9 +74,8 @@ ul#menu_horizontal a {
     left: auto;
 }
 
-#corps{
-	
-	background-color:yellow;
+section{
+	background-color: white;
 }
 #bas_page{
 	display:block;
