@@ -72,18 +72,27 @@ ul#menu_horizontal a {
     left: auto;
 }
 
+#fixe{
+    position :fixed;
+    top : 0;
+    width : 100%;
+}
+
 section{
 	background-color: white;
     margin-right: 10%;
     margin-left: 10%;
+    width : 80%;
+    height:1000px;
 }
+
 #bas_page{
 	display:block;
-	position:absolute;
 	bottom:0;
     width: 80%;
     margin-left: 10%;
     margin-right: 10%;
+    margin-top: 80%;
     background-color: grey;
 }
 #bas_page ul{

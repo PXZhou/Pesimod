@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="styleB.css"/>
 </head>
 <body>
-<div>
+<div id="fixe">
     <header id="haut_page">
         <a href="#"><img src="http://www.lebreviairedespatriotes.fr/wp-content/uploads/2012/10/banniere-drapeau-francais.jpg" alt="bannière_domisep"/></a>
     </header>
@@ -32,31 +32,31 @@
             <li class="bouton_droite"><a href="#">Se connecter</a></li>
         </ul>
     </div>
-
-    <section>
-        <p>test</p>
-    </section>
-    <footer id="bas_page">
-        <ul>
-            <li><strong>Domisep</strong></li>
-            <li><a href="">Qui sommes nous ?</a></li>
-            <li><a href="">Mentions légales</a></li>
-            <li><a href="">Politique de confidentialité</a></li>
-        </ul>
-        <ul>
-            <li><strong>Service</strong></li>
-            <li><a href="">Documentation</a></li>
-            <li><a href="">Nous rejoindre</a></li>
-        </ul>
-        <ul>
-            <li>Newsletter :</li>
-            <!--icone publié par Freepik sur le site flaticon.com, license : Flaticon Basic License-->
-            <li id="a_cote1"><a href="https://fr-fr.facebook.com/"><img src="001-facebook.png"/></a></li>
-            <li id="a_cote2"><a href="https://twitter.com/"><img src="002-twitter.png"/></a></li>
-            <li id="a_cote3"><a href="https://plus.google.com/?hl=fr"><img src="003-google-plus.png"/></a></li>
-        </ul>
-        <img src="https://scontent-cdg2-1.xx.fbcdn.net/v/t1.0-9/18301761_10209310154091018_2714229423431279309_n.jpg?oh=fdea58c79a83f4c60070654a66443a02&oe=5976BE5A" alt = "logo" id="logo"/>
-    </footer>
 </div>
+
+<section>
+    <p>test</p>
+</section>
+<footer id="bas_page">
+    <ul>
+        <li><strong>Domisep</strong></li>
+        <li><a href="">Qui sommes nous ?</a></li>
+        <li><a href="">Mentions légales</a></li>
+        <li><a href="">Politique de confidentialité</a></li>
+    </ul>
+    <ul>
+        <li><strong>Service</strong></li>
+        <li><a href="">Documentation</a></li>
+        <li><a href="">Nous rejoindre</a></li>
+    </ul>
+    <ul>
+        <li>Newsletter :</li>
+        <!--icone publié par Freepik sur le site flaticon.com, license : Flaticon Basic License-->
+        <li id="a_cote1"><a href="https://fr-fr.facebook.com/"><img src="001-facebook.png"/></a></li>
+        <li id="a_cote2"><a href="https://twitter.com/"><img src="002-twitter.png"/></a></li>
+        <li id="a_cote3"><a href="https://plus.google.com/?hl=fr"><img src="003-google-plus.png"/></a></li>
+    </ul>
+    <img src="https://scontent-cdg2-1.xx.fbcdn.net/v/t1.0-9/18301761_10209310154091018_2714229423431279309_n.jpg?oh=fdea58c79a83f4c60070654a66443a02&oe=5976BE5A" alt = "logo" id="logo"/>
+</footer>
 </body>
 </html>
