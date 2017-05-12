@@ -3,12 +3,10 @@
 	height: 75px;
 	width : 100%;
 }
-
 #haut_page img{
 	height: 75px;
 	width : 100%;
 }
-
 
 ul#menu_horizontal { 
 	width : 100%;
@@ -76,12 +74,16 @@ ul#menu_horizontal a {
 
 section{
 	background-color: white;
+    margin-right: 10%;
+    margin-left: 10%;
 }
 #bas_page{
 	display:block;
 	position:absolute;
 	bottom:0;
-    width: 100%;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
     background-color: grey;
 }
 #bas_page ul{
