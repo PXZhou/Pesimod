@@ -1,0 +1,106 @@
+#haut_page{
+	display:block;
+	height: 75px;
+	width : 100%;
+}
+#haut_page img{
+	height: 75px;
+	width : 100%;
+}
+
+
+ul#menu_horizontal { 
+width : 100%;
+height : 50px;
+margin : 2em 0 0 0;
+padding : 0;
+background-color : grey;
+list-style-type : none; 
+}
+ul#menu_horizontal li {
+padding : 0 0.5em;  
+line-height : 50px;
+}
+ul#menu_horizontal li.bouton_gauche {
+float : left;
+border-right : 1px dashed black; 
+}
+ul#menu_horizontal li.bouton_droite {
+float : right;
+border-left : 1px dashed black;
+}
+ul#menu_horizontal a {
+color : white;
+text-decoration : none;
+padding : 0 0.5em; 
+}
+
+
+#menu-deroulant, #menu-deroulant ul {
+	background-color:grey;
+    padding: 0;
+    list-style: none;
+}
+#menu-deroulant {
+    /* Menu a gauche */
+	width: 50px;
+	height : 30px;
+    float: left;
+}
+#menu-deroulant li {
+    /* Ne s'effectue qu'au survole de l'image */
+    display: inline-block;
+}
+#menu-deroulant ul li {
+    /* On met les sousliens a la ligne */
+    display: inherit;
+}
+#menu-deroulant a {
+    /* Style d'ectriture */
+    text-decoration: none;
+    display: block;
+    color:white;
+}
+#menu-deroulant ul {
+    position: absolute;
+    /* on cache les sous menus complètement sur la gauche */
+    left: -999em;
+    text-align: left;
+    z-index: 1000;
+}
+#menu-deroulant li:hover ul {
+    /* Au survol des li du menu on replace les sous menus */
+    left: auto;
+}
+
+#corps{
+	
+	background-color:yellow;
+}
+#bas_page{
+	display:block;
+	position:absolute;
+	bottom:0;
+    width: 100%;
+    background-color: grey;
+}
+#bas_page ul{
+	list-style: none;
+	color : white;
+	display:inline-block;
+    vertical-align:top;
+}
+#bas_page a{
+	color : white;
+}
+
+#a_coté{
+	display:inline-block;
+}
+
+#logo{
+	float:right;
+	max-width: 10%;
+	height : auto;
+}
+
