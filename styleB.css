@@ -3,6 +3,7 @@
 	height: 75px;
 	width : 100%;
 }
+
 #haut_page img{
 	height: 75px;
 	width : 100%;
@@ -10,29 +11,29 @@
 
 
 ul#menu_horizontal { 
-width : 100%;
-height : 50px;
-margin : 2em 0 0 0;
-padding : 0;
-background-color : grey;
-list-style-type : none; 
+	width : 100%;
+	height : 50px;
+	padding : 0;
+	background-color : grey;
+	list-style-type : none;
+	margin-top: 1px;
 }
 ul#menu_horizontal li {
-padding : 0 0.5em;  
-line-height : 50px;
+	padding : 0 0.5em;
+	line-height : 50px;
 }
 ul#menu_horizontal li.bouton_gauche {
-float : left;
-border-right : 1px dashed black; 
+	float : left;
+	border-right : 1px dashed black;
 }
 ul#menu_horizontal li.bouton_droite {
-float : right;
-border-left : 1px dashed black;
+	float : right;
+	border-left : 1px dashed black;
 }
 ul#menu_horizontal a {
-color : white;
-text-decoration : none;
-padding : 0 0.5em; 
+	color : white;
+	text-decoration : none;
+	padding : 0 0.5em;
 }
 
 
@@ -94,7 +95,13 @@ padding : 0 0.5em;
 	color : white;
 }
 
-#a_coté{
+#a_cote1{
+	display:inline-block;
+}
+#a_cote2{
+	display:inline-block;
+}
+#a_cote3{
 	display:inline-block;
 }
 
