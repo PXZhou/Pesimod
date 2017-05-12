@@ -8,7 +8,7 @@
 <body>
 <div id="fixe">
     <header id="haut_page">
-        <a href="#"><img src="http://www.lebreviairedespatriotes.fr/wp-content/uploads/2012/10/banniere-drapeau-francais.jpg" alt="bannière_domisep"/></a>
+        <a href="#"><img src="Style/banniere.png"/></a>
     </header>
     <div>
         <ul id="menu_horizontal">
