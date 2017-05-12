@@ -1,11 +1,11 @@
 #haut_page{
+
 	display:block;
 	height: 75px;
-	width : 100%;
+	width : 1000px;
 }
 #haut_page img{
 	height: 75px;
-	width : 100%;
 }
 
 ul#menu_horizontal { 
@@ -80,6 +80,7 @@ ul#menu_horizontal a {
 
 section{
 	background-color: white;
+	margin-top:
     margin-right: 10%;
     margin-left: 10%;
     width : 80%;
