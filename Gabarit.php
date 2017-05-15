@@ -2,7 +2,9 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Gabarit Test</title>
+    <title>
+        <?php echo ($titre); ?>
+    </title>
     <link rel="stylesheet" type="text/css" href="styleB.css"/>
 </head>
 <body>
