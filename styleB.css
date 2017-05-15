@@ -22,14 +22,15 @@ ul#menu_horizontal li {
 	padding : 0 0.5em;
 	line-height : 50px;
 }
-ul#menu_horizontal li.bouton_gauche {
+li.bouton_droite li.bouton_gauche {
 	float : left;
-	border-right : 1px dashed black;
 }
-ul#menu_horizontal li.bouton_droite {
+
+li.bouton_droite {
 	float : right;
 	border-left : 1px dashed black;
 }
+
 ul#menu_horizontal a {
 	color : white;
 	text-decoration : none;
@@ -38,6 +39,7 @@ ul#menu_horizontal a {
 
 
 #menu-deroulant, #menu-deroulant ul {
+	margin-top: 2px;
 	background-color:grey;
     padding: 0;
     list-style: none;
