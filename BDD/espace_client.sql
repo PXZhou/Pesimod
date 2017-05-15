@@ -44,7 +44,7 @@ CREATE TABLE `capteur` (
   `Type` varchar(25) NOT NULL,
   `Données` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
+INSERT into Type 
 -- --------------------------------------------------------
 
 --
