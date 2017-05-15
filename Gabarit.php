@@ -56,7 +56,6 @@
         <li id="a_cote2"><a href="https://twitter.com/"><img src="Style/002-twitter.png"/></a></li>
         <li id="a_cote3"><a href="https://plus.google.com/?hl=fr"><img src="Style/003-google-plus.png"/></a></li>
     </ul>
-    <!-- Salut commentaire*/ -->
     <img src="https://scontent-cdg2-1.xx.fbcdn.net/v/t1.0-9/18301761_10209310154091018_2714229423431279309_n.jpg?oh=fdea58c79a83f4c60070654a66443a02&oe=5976BE5A" alt = "logo" id="logo"/>
 </footer>
 </body>
