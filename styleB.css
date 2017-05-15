@@ -1,11 +1,13 @@
 #haut_page{
-
+	background: white;
 	display:block;
 	height: 75px;
-	width : 1000px;
+	width : auto;
 }
 #haut_page img{
+	margin-left: 40%;
 	height: 75px;
+	text-align: center;
 }
 
 ul#menu_horizontal { 
@@ -79,12 +81,11 @@ ul#menu_horizontal a {
 }
 
 section{
-	background-color: white;
-	margin-top:
+	margin-top: 135px;
     margin-right: 10%;
     margin-left: 10%;
-    width : 80%;
-    height:1000px;
+    /*width : 80%;*/
+    height:1500px;
 }
 
 #bas_page{
@@ -93,7 +94,7 @@ section{
     width: 80%;
     margin-left: 10%;
     margin-right: 10%;
-    margin-top: 80%;
+    margin-top: 7px;
     background-color: grey;
 }
 #bas_page ul{
@@ -118,7 +119,7 @@ section{
 
 #logo{
 	float:right;
-	max-width: 10%;
-	height : auto;
+	margin-top: -1px;
+	max-width: 12%;
 }
 
