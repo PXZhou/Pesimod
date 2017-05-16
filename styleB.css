@@ -125,3 +125,24 @@ section{
 	max-width: 12%;
 }
 
+h1 {
+	font-family: Calibri;
+}
+
+ul#listepiece{
+	font : bold 11px Batang, Calibri, serif;
+	list-style-type : none;
+	padding-bottom : 24px;
+	border-bottom : 1px solid #0061a0;
+	margin-left : 0;
+}
+
+#listepiece li
+{
+	float : left;
+	height : 22px; /* à modifier suivant la taille de la police pour centrer le texte dans l'onglet */
+	background-color: #dae6f2;
+	margin : 1px 2px 0 2px;  /* Pour IE  */
+	border : 1px solid #0061a0;
+}
+
