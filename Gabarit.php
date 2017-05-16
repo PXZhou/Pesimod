@@ -18,7 +18,7 @@
                         <ul>
                             <li><a href="">Mon Compte</a></li>
                             <li><hr></li>
-                            <li><a href="">Maison</a></li>
+                            <li><a href="">Maisn</a></li>
                             <li><a href="">Calendrier</a></li>
                             <li><a href="">Edition</a></li>
                             <li><hr></li>
