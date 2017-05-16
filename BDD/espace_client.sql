@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Ven 12 Mai 2017 à 09:46
+-- Généré le :  Mar 16 Mai 2017 à 09:25
 -- Version du serveur :  10.1.21-MariaDB
 -- Version de PHP :  5.6.30
 
@@ -44,7 +44,25 @@ CREATE TABLE `capteur` (
   `Type` varchar(25) NOT NULL,
   `Données` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-INSERT into Type 
+
+--
+-- Contenu de la table `capteur`
+--
+
+INSERT INTO `capteur` (`Référence`, `Type`, `Données`) VALUES
+('DS18B20', 'Temperature', 22),
+('YG - A1', 'Fumee', 30),
+('DHT-11', 'Humidite', 25),
+('Photoresistor Relay Module', 'Luminosite', 80),
+('DS18B20', 'Temperature', 17),
+('DS18B20', 'Temperature', 23),
+('YG - A1', 'Fumee', 40),
+('YG - A1', 'Fumee', 33),
+('DHT-11', 'Humidite', 60),
+('DHT-11', 'Humidite', 90),
+('Photoresistor Relay Module', 'Luminosite', 22),
+('Photoresistor Relay Module', 'Luminosite', 50);
+
 -- --------------------------------------------------------
 
 --
@@ -55,6 +73,15 @@ CREATE TABLE `donnees` (
   `Type` varchar(125) NOT NULL,
   `Historique` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Contenu de la table `donnees`
+--
+
+INSERT INTO `donnees` (`Type`, `Historique`) VALUES
+('Celsius', '2017-05-02'),
+('%', '0000-00-00'),
+('%', '0000-00-00');
 
 -- --------------------------------------------------------
 
