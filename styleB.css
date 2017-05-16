@@ -80,7 +80,7 @@ ul#menu_horizontal a {
 
 section{
 	background-color: white;
-	margin-top: 20%;
+	margin-top:
     margin-right: 10%;
     margin-left: 10%;
     width : 80%;
@@ -120,31 +120,5 @@ section{
 	float:right;
 	max-width: 10%;
 	height : auto;
-}
-
-h2{
-	font-weight : bold;
-	color : black;
-	position: absolute;
-	margin:auto;
-
-}
-#mini_corpsB{
-	width: 40%;
-	height : 70%;
-	background-color: grey;
-	padding-left: 60%;
-	float : left;
-}
-#mini_corps{
-	width: 40%;
-	height : 70%;
-	background-color: whitesmoke;
-	padding-right: 60%;
-	float : right;
-}
-#mini_corps ul{
-	list-style-type : none;
-	word-spacing: 3px;
 }
 
