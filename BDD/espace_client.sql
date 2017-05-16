@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.5.2
--- https://www.phpmyadmin.net/
+-- version 4.5.4.1
+-- http://www.phpmyadmin.net
 --
--- Client :  127.0.0.1
--- Généré le :  Mar 16 Mai 2017 à 09:25
--- Version du serveur :  10.1.21-MariaDB
--- Version de PHP :  5.6.30
+-- Client :  localhost
+-- Généré le :  Mar 16 Mai 2017 à 07:56
+-- Version du serveur :  5.7.11
+-- Version de PHP :  5.6.18
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `espace client`
+-- Base de données :  `pesimod`
 --
 
 -- --------------------------------------------------------
@@ -45,7 +45,6 @@ CREATE TABLE `capteur` (
   `Données` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-<<<<<<< HEAD
 --
 -- Contenu de la table `capteur`
 --
@@ -64,8 +63,6 @@ INSERT INTO `capteur` (`Référence`, `Type`, `Données`) VALUES
 ('Photoresistor Relay Module', 'Luminosite', 22),
 ('Photoresistor Relay Module', 'Luminosite', 50);
 
-=======
->>>>>>> parent of c196819... test html Elisa
 -- --------------------------------------------------------
 
 --
@@ -97,6 +94,24 @@ CREATE TABLE `effecteur` (
   `Type` varchar(25) NOT NULL,
   `Statut` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Contenu de la table `effecteur`
+--
+
+INSERT INTO `effecteur` (`Référence`, `Type`, `Statut`) VALUES
+('DS020', 'Lumiere', 1),
+('DS020', 'Lumiere', 1),
+('DS020', 'Lumiere', 1),
+('DS020', 'Lumiere', 1),
+('DS020', 'Lumiere', 1),
+('DS020', 'Lumiere', 1),
+('DS020', 'Lumiere', 1),
+('DS450', 'Volet', 1),
+('DS450', 'Volet', 1),
+('DS450', 'Volet', 1),
+('DS450', 'Volet', 1),
+('DS450', 'Volet', 1);
 
 -- --------------------------------------------------------
 
