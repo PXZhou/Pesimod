@@ -45,6 +45,7 @@ CREATE TABLE `capteur` (
   `Données` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+<<<<<<< HEAD
 --
 -- Contenu de la table `capteur`
 --
@@ -63,6 +64,8 @@ INSERT INTO `capteur` (`Référence`, `Type`, `Données`) VALUES
 ('Photoresistor Relay Module', 'Luminosite', 22),
 ('Photoresistor Relay Module', 'Luminosite', 50);
 
+=======
+>>>>>>> parent of c196819... test html Elisa
 -- --------------------------------------------------------
 
 --
