@@ -35,7 +35,9 @@
 </div>
 
 <section>
-    <p>test</p>
+    <p>
+        <?php echo($contenu); ?>
+    </p>
 </section>
 <footer id="bas_page">
     <ul>
