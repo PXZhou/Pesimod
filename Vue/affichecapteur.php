@@ -1,5 +1,5 @@
 <?php
-
+    $title = "Affichage";
     $contenu = "<h1> Affichage des capteurs </h1>";
     $contenu .= "<ul id='listepiece' class='maliste'>";
   //  $contenu .= "<u1>";
