@@ -126,6 +126,11 @@ CREATE TABLE `maison` (
   `Etage` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+INSERT INTO `maison` (Numéro, Rue, Ville, Etage) VALUES
+(128, 'Avenue du Maine', 'PARIS-75014', 6),
+(48, 'Rue du Montparnasse', 'PARIS-75014', 1),
+(29, 'Rue Victor Hugo', 'Paris-75015', 3);
+
 -- --------------------------------------------------------
 
 --
@@ -138,6 +143,14 @@ CREATE TABLE `piece` (
   `Type` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+INSERT INTO `piece` (Nom, Taille, Type) VALUES
+('Chambre1', 12, 'Chambre'),
+('Chambre2', 13, 'Chambre'),
+('Chambre3', 15, 'Chambre'),
+('Cuisine', 6, 'Cuisine'),
+('Salle de bain', 7, 'Salle de bain'),
+('Toilette', 15, 'Toilette'),
+('Toilette2', 4, 'Toilette');
 -- --------------------------------------------------------
 
 --
