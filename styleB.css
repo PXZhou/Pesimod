@@ -83,11 +83,12 @@ ul#menu_horizontal a {
 }
 
 section{
-	margin-top: 135px;
+	margin-top: 30px;
     margin-right: 10%;
     margin-left: 10%;
-    /*width : 80%;*/
-    height:1500px;
+	border:2px solid #4A4A58;
+	background-color: #636d76;
+    height:auto;
 }
 
 #bas_page{
@@ -97,7 +98,7 @@ section{
     margin-left: 10%;
     margin-right: 10%;
     margin-top: 7px;
-    background-color: grey;
+    background-color: #808080;
 }
 #bas_page ul{
 	list-style: none;
@@ -126,23 +127,48 @@ section{
 }
 
 h1 {
-	font-family: Calibri;
+	margin-top: 150px;
+	margin-left: 10%;
+	font-family:Arial, sans-serif;
+	font-weight: 600;
+	font-size:25px;
+	letter-spacing:-2px;
 }
 
 ul#listepiece{
-	font : bold 11px Batang, Calibri, serif;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:18px;
+	color:#ffffff;
+	letter-spacing:-1px;
+	margin-bottom: 0;
 	list-style-type : none;
-	padding-bottom : 24px;
-	border-bottom : 1px solid #0061a0;
-	margin-left : 0;
+	padding-bottom : 38px;
+	margin-left : 3px;
 }
 
 #listepiece li
 {
 	float : left;
-	height : 22px; /* à modifier suivant la taille de la police pour centrer le texte dans l'onglet */
-	background-color: #dae6f2;
+	height : 20px; /* centrer le texte */
+	background-color: #636d76;
+	border:1px solid #494e52;
+	padding:8px;
 	margin : 1px 2px 0 2px;  /* Pour IE  */
-	border : 1px solid #0061a0;
 }
+
+#contenu_Chambre{
+	height:1000px;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	border:2px solid #4A4A58;
+	background: url(http://www.c-macredence.com/7074/couleur-degrade-blanc.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+
+
 
