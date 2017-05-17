@@ -1,11 +1,13 @@
 #haut_page{
-
+	background: white;
 	display:block;
 	height: 75px;
-	width : 1000px;
+	width : auto;
 }
 #haut_page img{
+	margin-left: 40%;
 	height: 75px;
+	text-align: center;
 }
 
 ul#menu_horizontal { 
@@ -20,14 +22,15 @@ ul#menu_horizontal li {
 	padding : 0 0.5em;
 	line-height : 50px;
 }
-ul#menu_horizontal li.bouton_gauche {
+li.bouton_droite li.bouton_gauche {
 	float : left;
-	border-right : 1px dashed black;
 }
-ul#menu_horizontal li.bouton_droite {
+
+li.bouton_droite {
 	float : right;
 	border-left : 1px dashed black;
 }
+
 ul#menu_horizontal a {
 	color : white;
 	text-decoration : none;
@@ -36,6 +39,7 @@ ul#menu_horizontal a {
 
 
 #menu-deroulant, #menu-deroulant ul {
+	margin-top: 2px;
 	background-color:grey;
     padding: 0;
     list-style: none;
@@ -79,12 +83,11 @@ ul#menu_horizontal a {
 }
 
 section{
-	background-color: white;
-	margin-top:
+	margin-top: 135px;
     margin-right: 10%;
     margin-left: 10%;
-    width : 80%;
-    height:1000px;
+    /*width : 80%;*/
+    height:1500px;
 }
 
 #bas_page{
@@ -93,7 +96,7 @@ section{
     width: 80%;
     margin-left: 10%;
     margin-right: 10%;
-    margin-top: 80%;
+    margin-top: 7px;
     background-color: grey;
 }
 #bas_page ul{
@@ -118,7 +121,28 @@ section{
 
 #logo{
 	float:right;
-	max-width: 10%;
-	height : auto;
+	margin-top: -1px;
+	max-width: 12%;
+}
+
+h1 {
+	font-family: Calibri;
+}
+
+ul#listepiece{
+	font : bold 11px Batang, Calibri, serif;
+	list-style-type : none;
+	padding-bottom : 24px;
+	border-bottom : 1px solid #0061a0;
+	margin-left : 0;
+}
+
+#listepiece li
+{
+	float : left;
+	height : 22px; /* à modifier suivant la taille de la police pour centrer le texte dans l'onglet */
+	background-color: #dae6f2;
+	margin : 1px 2px 0 2px;  /* Pour IE  */
+	border : 1px solid #0061a0;
 }
 
