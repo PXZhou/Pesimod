@@ -152,6 +152,11 @@ CREATE TABLE `utilisateur` (
   `Admin` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+INSERT INTO `utilisateur` (Email, Mot de passe, Nom, Prenom, Admin) VALUES
+('marie.poppins@gmail.com', 123456789, 'Poppins', 'Marie', 1),
+('Jacque.cartier@gmail.com', 987654321, 'Cartier', 'Jacques', 1),
+('bruce.wayne@gmail.com', 9876543210, 'Wayne', 'Bruce', 1);
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
