@@ -76,12 +76,12 @@ CREATE TABLE `donnees` (
 
 --
 -- Contenu de la table `donnees`
---
-
 INSERT INTO `donnees` (`Type`, `Historique`) VALUES
-('Celsius', '2017-05-02'),
-('%', '0000-00-00'),
-('%', '0000-00-00');
+('Celsius', '2017-05-10'),
+('%', '2017-02-15'),
+('%', '2017-04-25'),
+('Celsius', '2017-03-27');
+
 
 -- --------------------------------------------------------
 
@@ -126,6 +126,11 @@ CREATE TABLE `maison` (
   `Etage` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+INSERT INTO `maison` (Numéro, Rue, Ville, Etage) VALUES
+(128, 'Avenue du Maine', 'PARIS-75014', 6),
+(48, 'Rue du Montparnasse', 'PARIS-75014', 1),
+(29, 'Rue Victor Hugo', 'Paris-75015', 3);
+
 -- --------------------------------------------------------
 
 --
@@ -138,6 +143,14 @@ CREATE TABLE `piece` (
   `Type` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+INSERT INTO `piece` (Nom, Taille, Type) VALUES
+('Chambre1', 12, 'Chambre'),
+('Chambre2', 13, 'Chambre'),
+('Chambre3', 15, 'Chambre'),
+('Cuisine', 6, 'Cuisine'),
+('Salle de bain', 7, 'Salle de bain'),
+('Toilette', 15, 'Toilette'),
+('Toilette2', 4, 'Toilette');
 -- --------------------------------------------------------
 
 --
@@ -151,6 +164,11 @@ CREATE TABLE `utilisateur` (
   `Prenom` varchar(25) NOT NULL,
   `Admin` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `utilisateur` (Email, Mot de passe, Nom, Prenom, Admin) VALUES
+('marie.poppins@gmail.com', 123456789, 'Poppins', 'Marie', 1),
+('Jacque.cartier@gmail.com', 987654321, 'Cartier', 'Jacques', 1),
+('bruce.wayne@gmail.com', 9876543210, 'Wayne', 'Bruce', 1);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
