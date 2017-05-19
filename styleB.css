@@ -176,8 +176,9 @@ h1 {
 }
 
 #contentonglet{
+	clear: both;
 	position: relative;
-	top: -2px;
+	top: -3px;
 	height:1000px;
 	margin-left: 20px;
 	margin-right: 20px;
@@ -185,7 +186,7 @@ h1 {
 	border:2px solid #4A4A58;
 	background: whitesmoke;
 	z-index: 10;
-	/* overflow: hidden; a regarder*/
+	overflow: hidden;
 }
 
 
