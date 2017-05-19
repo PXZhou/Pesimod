@@ -1,8 +1,8 @@
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 <script>
     $(function() {
-        $('#listepiece').css('display', 'block'); //Afficher la barre d'onglet
-        $('#listepiece').click(function(event) { //Evenement clique
+        $('#onglet').css('display', 'block'); //Afficher la barre d'onglet
+        $('#onglet').click(function(event) { //Evenement clique
             var actuel = event.target; // emplacement du clique
             if (!/li/i.test(actuel.nodeName) || actuel.className.indexOf('actif') > -1) {
                 alert(actuel.nodeName)
@@ -13,7 +13,7 @@
         });
         function setDisplay() {
             var modeAffichage;
-            $('#listepiece li').each(function(rang) {
+            $('#onglet li').each(function(rang) {
                 modeAffichage = $(this).hasClass('actif') ? '' : 'none';
                 $('.item').eq(rang).css('display', modeAffichage);
             });
