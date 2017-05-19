@@ -1,7 +1,7 @@
 <?php
     $title = "Accueil";
     $tete = "Accueil";
-    $contenu = "";
+    $contenu = "ceci est l'accueil du site";
 
     $menu_der="";
 
