@@ -1,7 +1,7 @@
 <?php
     $title = "Accueil";
     $tete = "Accueil";
-    $contenu = "ceci est l'accueil du site";
+    $contenu = "Accueuil. Veuillez vous connecter";
 
     $menu_der="";
 

@@ -1,6 +1,6 @@
 <?php
 
-    $contenu = "ceci est l'accueil du site";
+    $contenu = "Accueuil. Veuillez vous connecter";
 
     include 'Gabarit.php';
 ?>
