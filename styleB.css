@@ -141,7 +141,7 @@ h1 {
 	letter-spacing:-2px;
 }
 
-#listepiece{
+#onglet{
 	display: none;
 
 	color:#ffffff;
@@ -152,7 +152,7 @@ h1 {
 	margin-left : 3px;
 }
 
-#listepiece li
+#onglet li
 {
 	overflow: hidden;
 	font-family:Arial, Helvetica, sans-serif;
@@ -167,7 +167,7 @@ h1 {
 	z-index: 1;
 }
 
-#listepiece .actif{
+#onglet .actif{
 	position: relative;
 	border-bottom: none;
 	color: #494e52;
