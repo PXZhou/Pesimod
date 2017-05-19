@@ -26,6 +26,7 @@ function formulaire_co(){
 
 // Genere le formulaire d'inscription
 function formulaire_ins(){
+    ob_start();
     ?>
     <fieldset>
         <form method="POST" action="index.php?cible=verif">
