@@ -171,6 +171,9 @@ CREATE TABLE `utilisateur` (
   `Admin` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Liste des differents utilisateurs
+
 INSERT INTO `utilisateur` (Email, Mdp, Nom, Prenom, Admin) VALUES
 ('marie.poppins@gmail.com', 123456789, 'Poppins', 'Marie', 1),
 ('Jacque.cartier@gmail.com', 987654321, 'Cartier', 'Jacques', 1),
