@@ -1,29 +1,28 @@
 #haut_page{
 	position: relative;
+	z-index: 20;
 	background: white;
 	display:block;
 	height: 75px;
 	width : auto;
-	z-index: 20;
-
 }
 #haut_page img{
+	position: relative;
+	z-index: 20;
 	margin-left: 40%;
 	height: 75px;
 	text-align: center;
-	position: relative;
-	z-index: 20;
 }
 
 ul#menu_horizontal {
 	position: relative;
+	z-index: 20;
 	width : 100%;
 	height : 50px;
 	padding : 0;
 	background-color : grey;
 	list-style-type : none;
 	margin-top: 1px;
-	z-index: 20;
 }
 ul#menu_horizontal li {
 	padding : 0 0.5em;
@@ -144,6 +143,7 @@ h1 {
 
 #listepiece{
 	display: none;
+
 	color:#ffffff;
 	letter-spacing:-1px;
 	margin-bottom: 0;
@@ -157,38 +157,35 @@ h1 {
 	overflow: hidden;
 	font-family:Arial, Helvetica, sans-serif;
 	font-size:18px;
-	position: relative;
 	float : left;
 	height : 20px; /* centrer le texte */
 	background-color: #636d76;
 	border:1px solid #494e52;
 	padding:8px;
-	/* Pour IE  */
-	margin: 1px 2px 0px;
+	margin : 1px 2px 0 2px;  /* Pour IE  */
 	cursor: pointer;
 	z-index: 1;
 }
 
 #listepiece .actif{
+	position: relative;
 	border-bottom: none;
 	color: #494e52;
-	z-index: 10;
+	z-index: 11;
 	background: whitesmoke;
-	margin-bottom: 9px;
 }
 
 #contentonglet{
-	clear: both;
 	position: relative;
+	top: -2px;
 	height:1000px;
-	top: -11px;
 	margin-left: 20px;
 	margin-right: 20px;
 	margin-bottom: 20px;
 	border:2px solid #4A4A58;
-	z-index: 5;
-	overflow: hidden;
 	background: whitesmoke;
+	z-index: 10;
+	/* overflow: hidden; a regarder*/
 }
 
 
