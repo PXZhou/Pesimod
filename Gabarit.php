@@ -30,7 +30,7 @@
                     </li>
                 </ul>
             </li>
-            <li class="bouton_droite"><a href="#">S'inscrire</a></li>
+            <li class="bouton_droite"><a href="index.php?cible=s_inscrire">S'inscrire</a></li>
             <li class="bouton_droite"><a href="index.php?cible=se_connecter">Se connecter</a></li>
         </ul>
     </div>
