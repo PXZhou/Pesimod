@@ -1,9 +1,9 @@
 <?php
-echo "<p> ceci est un test de co bla bla</p>"
-/**
- * Created by PhpStorm.
- * User: Alexandre
- * Date: 05/05/2017
- * Time: 10:18
- */
+
+if(isset($_GET['cible']) && $_GET['cible']=="verif"){
+
+}
+else {
+    include'Vue/non_connecte.php';
+}
 ?>
