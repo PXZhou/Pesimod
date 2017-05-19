@@ -18,8 +18,8 @@
                 <ul id="menu-deroulant">
                     <li><a href="#"><img src = "https://cdn4.iconfinder.com/data/icons/wirecons-free-vector-icons/32/menu-alt-512.png" width="25" height="20" alt="Menu"/></a>
                         <ul>
-                            <li><a href="">Mon Compte</a></li>
-                            <li><hr></li>
+                            <li><a href="">Mon Compte</a>
+                            </li><li><hr></li>
                             <li><a href="">Maison</a></li>
                             <li><a href="">Calendrier</a></li>
                             <li><a href="">Edition</a></li>
@@ -31,7 +31,7 @@
                 </ul>
             </li>
             <li class="bouton_droite"><a href="#">S'inscrire</a></li>
-            <li class="bouton_droite"><a href="#">Se connecter</a></li>
+            <li class="bouton_droite"><a href="index.php?cible=se_connecter">Se connecter</a></li>
         </ul>
     </div>
 </div>
