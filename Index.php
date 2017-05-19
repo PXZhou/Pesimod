@@ -10,7 +10,7 @@
             if ($_GET['cible'] == 'se_connecter') {
                 include("Controler/Connexion.php");
             } else if ($_GET['cible'] == 's_inscrire') {
-                include("Controler/inscritption.php");
+                include("Controler/inscription.php");
             } else {
             }
         }
