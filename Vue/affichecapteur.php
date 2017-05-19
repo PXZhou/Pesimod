@@ -4,7 +4,7 @@
 
 
 
-    $contenu = "<ul id='listepiece'>";
+    $contenu = "<ul id='onglet'>";
     $contenu .= "<li class='actif'>Chambre</li>";
     $contenu .= "<li>Salon</li>";
     $contenu .= "<li>Cuisine</li>";
