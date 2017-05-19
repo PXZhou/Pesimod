@@ -8,6 +8,7 @@
 -- Version de PHP :  5.6.18
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+
 SET time_zone = "+00:00";
 
 
@@ -140,17 +141,22 @@ INSERT INTO `maison` (Numéro, Rue, Ville, Etage) VALUES
 CREATE TABLE `piece` (
   `Nom` varchar(20) NOT NULL,
   `Taille` int(11) NOT NULL,
-  `Type` varchar(25) NOT NULL
+  `Type` varchar(25) NOT NULL,
+  `Nombre_temp` int(11) NOT NULL,
+  `Nombre_ca` int(11) NOT NULL,
+  `Nombre_ch` int(11) NOT NULL,
+  `Nombre_presence` int(11) NOT NULL,
+  `Nombre_fumée` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO `piece` (Nom, Taille, Type) VALUES
-('Chambre1', 12, 'Chambre'),
-('Chambre2', 13, 'Chambre'),
-('Chambre3', 15, 'Chambre'),
-('Cuisine', 6, 'Cuisine'),
-('Salle de bain', 7, 'Salle de bain'),
-('Toilette', 15, 'Toilette'),
-('Toilette2', 4, 'Toilette');
+INSERT INTO `piece` (Nom, Taille, Type, Nombre_temp, Nombre_ca, Nombre_ch, Nombre_presence, Nombre_fumée) VALUES
+('Chambre1', 12, 'Chambre', 1, 1, 0, 1, 1),
+('Chambre2', 13, 'Chambre', 1, 0, 0, 2, 0),
+('Chambre3', 15, 'Chambre', 1, 2, 0, 1, 1),
+('Cuisine', 6, 'Cuisine', 0, 0, 1, 1, 0),
+('Salle de bain', 7, 'Salle de bain', 0, 0, 1, 0, 1),
+('Toilette', 15, 'Toilette', 0, 0, 1, 1, 1),
+('Toilette2', 4, 'Toilette', 0, 0, 1, 0, 0);
 -- --------------------------------------------------------
 
 --
@@ -159,13 +165,16 @@ INSERT INTO `piece` (Nom, Taille, Type) VALUES
 
 CREATE TABLE `utilisateur` (
   `Email` varchar(50) NOT NULL,
-  `Mot de passe` varchar(25) NOT NULL,
+  `Mdp` varchar(25) NOT NULL,
   `Nom` varchar(25) NOT NULL,
   `Prenom` varchar(25) NOT NULL,
   `Admin` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO `utilisateur` (Email, Mot de passe, Nom, Prenom, Admin) VALUES
+--
+-- Liste des differents utilisateurs
+
+INSERT INTO `utilisateur` (Email, Mdp, Nom, Prenom, Admin) VALUES
 ('marie.poppins@gmail.com', 123456789, 'Poppins', 'Marie', 1),
 ('Jacque.cartier@gmail.com', 987654321, 'Cartier', 'Jacques', 1),
 ('bruce.wayne@gmail.com', 9876543210, 'Wayne', 'Bruce', 1);
