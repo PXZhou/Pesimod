@@ -121,16 +121,17 @@ INSERT INTO `effecteur` (`Référence`, `Type`, `Statut`) VALUES
 --
 
 CREATE TABLE `maison` (
+  `Nom` VARCHAR (25) NOT NULL,
   `Numéro` int(11) NOT NULL,
   `Rue` varchar(100) NOT NULL,
   `Ville` varchar(50) NOT NULL,
   `Etage` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO `maison` (Numéro, Rue, Ville, Etage) VALUES
-(128, 'Avenue du Maine', 'PARIS-75014', 6),
-(48, 'Rue du Montparnasse', 'PARIS-75014', 1),
-(29, 'Rue Victor Hugo', 'Paris-75015', 3);
+INSERT INTO `maison` (Nom, Numéro, Rue, Ville, Etage) VALUES
+(Wayne,128, 'Avenue du Maine', 'PARIS-75014', 6),
+(Poppins,48, 'Rue du Montparnasse', 'PARIS-75014', 1),
+(Cartier,29, 'Rue Victor Hugo', 'Paris-75015', 3);
 
 -- --------------------------------------------------------
 
