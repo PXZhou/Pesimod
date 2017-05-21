@@ -7,4 +7,5 @@ $contenu = formulaire_co();
 $tete = "Connexion";
 
     include'Gabarit.php';
+$jvscript = "";
 ?>
