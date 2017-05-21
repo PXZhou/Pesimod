@@ -8,7 +8,8 @@
     /*$_SESSION["userID"] = $ligne['id'];
     include("Vue/accueil_co.php");*/
 
-
+require ("Vue/accueil_co.php");
+session_start();
     if(!isset($_SESSION["userID"])){
         //include ("Vue/accueil_non_co.php");
         include ("Vue/accueil_co.php");
