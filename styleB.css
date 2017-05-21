@@ -168,7 +168,6 @@ h1 {
 	padding:8px;
 	margin : 1px 2px 0 2px;  /* Pour IE  */
 	cursor: pointer;
-	/*z-index: 1*/
 }
 
 #onglet .actif{
@@ -184,7 +183,7 @@ h1 {
 	position: relative;
 	z-index: 2;
 	top: -4px;
-	height:1000px;
+	height:auto;
 	margin-left: 20px;
 	margin-right: 20px;
 	margin-bottom: 20px;
@@ -193,7 +192,39 @@ h1 {
 	overflow: hidden;
 }
 
+typepiece {
+	margin-top:10px;
+	display:block;
+}
+typepiece.inline {
+	display:inline;
+	margin-right:50px;
+}
 
+form {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:90%;
+	margin-top:40px;
+	margin-bottom:40px;
+	text-align: center;
+}
+
+input, textarea, select, option {
+	background-color:whitesmoke;
+}
+input, textarea, select {
+	padding:3px;
+	border:1px solid #636d76;
+	border-radius:5px;
+	width:200px;
+	box-shadow:1px 1px 2px #C0C0C0 inset;
+}
+input[type=submit], input[type=reset] {
+	width:80px;
+	margin-left:5px;
+	box-shadow:1px 1px 1px #4A4A58;
+	cursor:pointer;
+}
 
 
 
