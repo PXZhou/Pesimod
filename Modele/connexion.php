@@ -1,5 +1,5 @@
 <?php
-$dbname = "APP-MVC";
+$dbname = "Pesimod";
 $host='localhost';
 $user='root';
 $pass='';

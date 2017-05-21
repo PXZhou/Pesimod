@@ -18,6 +18,8 @@
     $buttons_droite="<li class=\"bouton_droite\"><a href=\"#\">S'inscrire</a></li>
             <li class=\"bouton_droite\"><a href=\"#\">Se connecter</a></li>";
 
+    $jvscript = "";
+
     include 'gabarit.php';
 ?>
 
