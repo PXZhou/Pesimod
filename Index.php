@@ -23,12 +23,19 @@ session_start();
             } else if ($_GET['cible'] == 'accueil') {
                 include("Vue/accueil.php");
             }
+            if ($_GET['cible']=='hacker') {
+                ob_clean();
+                $_SESSION["userID"] = $ligne['3'];
+                include("Vue/affichecapteur.php");
+            }
+
         }
     }
     else  {
         include ("Vue/accueil_non_co.php");
 
     }
+
 
 
 ?>
