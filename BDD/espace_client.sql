@@ -121,17 +121,18 @@ INSERT INTO `effecteur` (`Référence`, `Type`, `Statut`) VALUES
 --
 
 CREATE TABLE `maison` (
-  `Nom` VARCHAR (25) NOT NULL,
-  `Numéro` int(11) NOT NULL,
-  `Rue` varchar(100) NOT NULL,
-  `Ville` varchar(50) NOT NULL,
-  `Etage` int(11) NOT NULL
+  `id` int(11) NOT NULL,
+  `nom` varchar(100) COLLATE utf8_bin NOT NULL,
+  `adresse` varchar(255) COLLATE utf8_bin NOT NULL,
+  `code_postal` varchar(255) COLLATE utf8_bin NOT NULL,
+  `ville` varchar(255) COLLATE utf8_bin NOT NULL,
+  `id_utilisateur` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO `maison` (Nom, Numéro, Rue, Ville, Etage) VALUES
-('Wayne',128, 'Avenue du Maine', 'PARIS-75014', 6),
-('Poppins',48, 'Rue du Montparnasse', 'PARIS-75014', 1),
-('Cartier',29, 'Rue Victor Hugo', 'Paris-75015', 3);
+INSERT INTO `maison` (id, nom, adresse, code_postal, ville, id_utilisateur) VALUES
+(1,'Wayne','Paris','128 Avenue du Maine ', '75014',''),
+(2,'Poppins','Paris', '48 Rue du Montparnasse', '75014',''),
+(3,'Cartier','Paris', '29 Rue Victor Hugo', '75015','');
 
 -- --------------------------------------------------------
 
@@ -140,24 +141,20 @@ INSERT INTO `maison` (Nom, Numéro, Rue, Ville, Etage) VALUES
 --
 
 CREATE TABLE `piece` (
-  `Nom` varchar(20) NOT NULL,
-  `Nombre_temp` int(11) NOT NULL,
-  `Nombre_ca` int(11) NOT NULL,
-  `Nombre_ch` int(11) NOT NULL,
-  `Nombre_presence` int(11) NOT NULL,
-  `Nombre_fumée` int(11) NOT NULL,
-  `Nombre_lum` int(11) NOT NULL,
-  `Etage` int(11) NOT NULL
+  `id` int(11) NOT NULL,
+  `nom` varchar(255) COLLATE utf8_bin NOT NULL,
+  `type` varchar(255) COLLATE utf8_bin NOT NULL,
+  `id_maison` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO `piece` (Nom, Nombre_temp, Nombre_ca, Nombre_ch, Nombre_presence, Nombre_fumée,Nombre_lum,Etage) VALUES
-('Chambre1', 1, 1, 0, 1, 1,0,0),
-('Chambre2', 1, 0, 0, 2, 0, 1,1),
-('Chambre3', 1, 2, 0, 1, 1,2,2),
-('Cuisine',  0, 0, 1, 1, 0,0,0),
-('Salle de bain', 0, 0, 1, 0, 1,0,0),
-('Toilette', 0, 0, 1, 1, 1,0,1),
-('Toilette2', 0, 0, 1, 0, 0,1,0);
+INSERT INTO `piece` (id, nom, type, id_maison) VALUES
+(1,'Chambre1', 'Chambre',''),
+(2,'Chambre2', 'Chambre',''),
+(3,'Chambre3', 'Chambre',''),
+(4,'Cuisine', 'Cuisine',''),
+(5,'Salle de bain', 'Salle de Bain',''),
+(6,'Toilette', 'Toilette',''),
+(7,'Toilette2', 'Toilette','');
 -- --------------------------------------------------------
 
 --
