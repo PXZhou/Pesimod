@@ -10,8 +10,8 @@
         $capteur = array ('Capteur de température','Capteur de présence','Détecteur de fumée',
             'Nombre de caméra',"Capteur d'humidité",'Capteur de Luminosité');
         ?>
-        <label><?php echo $capteur[$numero]?> </label> <input type="number" name="<?php echo $premons[$numero]?>" min="0" max="100"
-                                                  value="<?php echo get_nombre_capteur($numero,$nom_piece)?>" >
+        <p><?php echo $capteur[$numero]?></p>  <input type="number" name="<?php echo $premons[$numero]?>" min="0" max="100"
+               value="<?php echo get_nombre_capteur($numero,$nom_piece)?>">
     <?php
     }?>
     <?php function Case_Nombre_capteura($numero){
@@ -19,7 +19,7 @@
         $capteur = array ('Capteur de température','Capteur de présence','Détecteur de fumée',
             'Nombre de caméra',"Capteur d'humidité",'Capteur de Luminosité');
         ?>
-        <label><?php echo $capteur[$numero]?></label>  <input type="number" name="<?php echo $premons[$numero]?>" min="0" max="100"
+        <p><?php echo $capteur[$numero]?></p>  <input type="number" name="<?php echo $premons[$numero]?>" min="0" max="100"
                                                       value="0">
         <?php
     }?>
@@ -28,7 +28,7 @@
     function cas($nom_capteur){
         try
         {
-            $bdd = new PDO('mysql:host=localhost;dbname=espace_client;charset=utf8', 'root', '');
+            $bdd = new PDO('mysql:host=localhost;dbname=espace_clientb;charset=utf8', 'root', '');
         }
 
         catch (Exception $e)
@@ -40,9 +40,9 @@
             ?>
         <form action="cible.php" method="post" id="mini_corps">
             <input type="hidden" value="<?php echo $donnees['Nom']?> " name="old_name">
-            <h2> <?php echo $donnees['Nom']?> </h2></br>
+            <h2> <?php echo $donnees['Nom']?> </h2></br></br>
             <p>Voulez vous changer le nom de la pièce ? : </p>
-            <label><input type="text" name="nom_pièce" value= "<?php echo $donnees['Nom']?>"></label>
+            <p><input type="text" name="nom_pièce" value= "<?php echo $donnees['Nom']?>"></p>
             <p>Modifiez le nombre de capteur à l'aide du formulaire suivant :</p>
             <div>
                 <ul>
@@ -55,8 +55,8 @@
 
                 </ul>
             </div>
-            <input type="submit" value="Valider" name="Valider"/>
-            <input type="submit" value="Supprimer" name="Supprimer"/>
+            <p id="droite"><input type="submit" value="Valider" name="Valider"/></p>
+            <p id="gauche"><input type="submit" value="Supprimer"></p>
 
         </form>
         <?php
@@ -87,7 +87,7 @@
     <?php function get_nombre_capteur($numero,$nom_piece)
     {
         try {
-            $bdd = new PDO('mysql:host=localhost;dbname=espace_client;charset=utf8', 'root', '');
+            $bdd = new PDO('mysql:host=localhost;dbname=espace_clientb;charset=utf8', 'root', '');
         } catch (Exception $e) {
             die('Erreur : ' . $e->getMessage());
         }
@@ -101,7 +101,7 @@
     }?>
     <?php function affichage_selon_etage($numero){
         try {
-            $bdd = new PDO('mysql:host=localhost;dbname=espace_client;charset=utf8', 'root', '');
+            $bdd = new PDO('mysql:host=localhost;dbname=espace_clientb;charset=utf8', 'root', '');
         } catch (Exception $e) {
             die('Erreur : ' . $e->getMessage());
         }
@@ -152,7 +152,7 @@
     </form>
     <?php }?>
     <?php affichage_selon_etage(0)?>
-    <?php Modification('Wayne')?>
     <?php Ajouter(0)?>
+
 </body>
 </html>
