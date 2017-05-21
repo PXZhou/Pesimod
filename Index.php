@@ -1,8 +1,7 @@
 <?php
-
-   require("Vue/affichecapteur.php");
+    require ("Vue/affichecapteur.php");
     session_start();
-    require("Vue/Commun.php");
+   require("Vue/Commun.php");
     //require("Modele/connexion.php");
     //require("Vue/affichecapteur.php");
 
