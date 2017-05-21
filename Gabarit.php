@@ -35,7 +35,7 @@
         </ul>
     </div>
 </div>
-<h1><?php echo ($tete); ?></h1>
+<h1><?php echo ($tete= 'la tete'); ?></h1>
 <section>
     <p>
         <?php echo($contenu); ?>
