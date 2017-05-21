@@ -24,6 +24,16 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `administrateur`
+--
+
+CREATE TABLE `administrateur` (
+  `id` int(11) NOT NULL,
+  `nom` varchar(255) COLLATE utf8_bin NOT NULL,
+  `mdp` varchar(255) COLLATE utf8_bin NOT NULL,
+  `mail` varchar(255) COLLATE utf8_bin NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin ROW_FORMAT=COMPACT;
+--
 -- Structure de la table `calendrier`
 --
 
@@ -41,29 +51,39 @@ CREATE TABLE `calendrier` (
 --
 
 CREATE TABLE `capteur` (
-  `Référence` varchar(50) NOT NULL,
-  `Type` varchar(25) NOT NULL,
-  `Données` int(11) NOT NULL
+  `num_serie` varchar(255) COLLATE utf8_bin NOT NULL,
+  `nom` varchar(255) COLLATE utf8_bin NOT NULL,
+  `id_piece` int(11) NOT NULL,
+  `id_categorie` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `capteur`
 --
 
-INSERT INTO `capteur` (`Référence`, `Type`, `Données`) VALUES
-('DS18B20', 'Temperature', 22),
-('YG - A1', 'Fumee', 30),
-('DHT-11', 'Humidite', 25),
-('Photoresistor Relay Module', 'Luminosite', 80),
-('DS18B20', 'Temperature', 17),
-('DS18B20', 'Temperature', 23),
-('YG - A1', 'Fumee', 40),
-('YG - A1', 'Fumee', 33),
-('DHT-11', 'Humidite', 60),
-('DHT-11', 'Humidite', 90),
-('Photoresistor Relay Module', 'Luminosite', 22),
-('Photoresistor Relay Module', 'Luminosite', 50);
+INSERT INTO `capteur` (`num_serie`, `nom`,`id_piece`,`id_categorie`) VALUES
+('DS18B20', 'Temperature','',''),
+('YG - A1', 'Fumee', '',''),
+('DHT-11', 'Humidite', '',''),
+('Photoresistor Relay Module', 'Luminosite', '',''),
+('DS18B20', 'Temperature', '',''),
+('DS18B20', 'Temperature', '',''),
+('YG - A1', 'Fumee', '',''),
+('YG - A1', 'Fumee', '',''),
+('DHT-11', 'Humidite', '',''),
+('DHT-11', 'Humidite', '','',
+('Photoresistor Relay Module', 'Luminosite', '',''),
+('Photoresistor Relay Module', 'Luminosite', '','');
 
+--
+-- Structure de la table `categorie_capteurs`
+--
+
+CREATE TABLE `categorie_capteurs` (
+  `id` int(11) NOT NULL,
+  `nom_categorie` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `unite` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 -- --------------------------------------------------------
 
 --
@@ -121,43 +141,49 @@ INSERT INTO `effecteur` (`Référence`, `Type`, `Statut`) VALUES
 --
 
 CREATE TABLE `maison` (
-  `Nom` VARCHAR (25) NOT NULL,
-  `Numéro` int(11) NOT NULL,
-  `Rue` varchar(100) NOT NULL,
-  `Ville` varchar(50) NOT NULL,
-  `Etage` int(11) NOT NULL
+  `id` int(11) NOT NULL,
+  `nom` varchar(100) COLLATE utf8_bin NOT NULL,
+  `adresse` varchar(255) COLLATE utf8_bin NOT NULL,
+  `code_postal` varchar(255) COLLATE utf8_bin NOT NULL,
+  `ville` varchar(255) COLLATE utf8_bin NOT NULL,
+  `id_utilisateur` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO `maison` (Nom, Numéro, Rue, Ville, Etage) VALUES
-('Wayne',128, 'Avenue du Maine', 'PARIS-75014', 6),
-('Poppins',48, 'Rue du Montparnasse', 'PARIS-75014', 1),
-('Cartier',29, 'Rue Victor Hugo', 'Paris-75015', 3);
+INSERT INTO `maison` (id, nom, adresse, code_postal, ville, id_utilisateur) VALUES
+(1,'Wayne','Paris','128 Avenue du Maine ', '75014',''),
+(2,'Poppins','Paris', '48 Rue du Montparnasse', '75014',''),
+(3,'Cartier','Paris', '29 Rue Victor Hugo', '75015','');
 
--- --------------------------------------------------------
+
+--
+-- création dela connexion entre maison et administrateur
+--
+
+CREATE TABLE `corresp_admin_maison` (
+  `id_maison` int(11) NOT NULL,
+  `id_admin` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin ROW_FORMAT=COMPACT;
+
 
 --
 -- Structure de la table `piece`
 --
 
 CREATE TABLE `piece` (
-  `Nom` varchar(20) NOT NULL,
-  `Nombre_temp` int(11) NOT NULL,
-  `Nombre_ca` int(11) NOT NULL,
-  `Nombre_ch` int(11) NOT NULL,
-  `Nombre_presence` int(11) NOT NULL,
-  `Nombre_fumée` int(11) NOT NULL,
-  `Nombre_lum` int(11) NOT NULL,
-  `Etage` int(11) NOT NULL
+  `id` int(11) NOT NULL,
+  `nom` varchar(255) COLLATE utf8_bin NOT NULL,
+  `type` varchar(255) COLLATE utf8_bin NOT NULL,
+  `id_maison` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO `piece` (Nom, Nombre_temp, Nombre_ca, Nombre_ch, Nombre_presence, Nombre_fumée,Nombre_lum,Etage) VALUES
-('Chambre1', 1, 1, 0, 1, 1,0,0),
-('Chambre2', 1, 0, 0, 2, 0, 1,1),
-('Chambre3', 1, 2, 0, 1, 1,2,2),
-('Cuisine',  0, 0, 1, 1, 0,0,0),
-('Salle de bain', 0, 0, 1, 0, 1,0,0),
-('Toilette', 0, 0, 1, 1, 1,0,1),
-('Toilette2', 0, 0, 1, 0, 0,1,0);
+INSERT INTO `piece` (id, nom, type, id_maison) VALUES
+(1,'Chambre1', 'Chambre',''),
+(2,'Chambre2', 'Chambre',''),
+(3,'Chambre3', 'Chambre',''),
+(4,'Cuisine', 'Cuisine',''),
+(5,'Salle de bain', 'Salle de Bain',''),
+(6,'Toilette', 'Toilette',''),
+(7,'Toilette2', 'Toilette','');
 -- --------------------------------------------------------
 
 --
@@ -165,21 +191,60 @@ INSERT INTO `piece` (Nom, Nombre_temp, Nombre_ca, Nombre_ch, Nombre_presence, No
 --
 
 CREATE TABLE `utilisateur` (
+  `id` int(11) NOT NULL,
   `Email` varchar(50) NOT NULL,
   `Mdp` varchar(25) NOT NULL,
   `Nom` varchar(25) NOT NULL,
   `Prenom` varchar(25) NOT NULL,
-  `Admin` tinyint(1) NOT NULL
+  `id_utilisateur` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Liste des differents utilisateurs
+--
 
-INSERT INTO `utilisateur` (Email, Mdp, Nom, Prenom, Admin) VALUES
-('marie.poppins@gmail.com', 123456789, 'Poppins', 'Marie', 1),
-('Jacque.cartier@gmail.com', 987654321, 'Cartier', 'Jacques', 1),
-('bruce.wayne@gmail.com', 9876543210, 'Wayne', 'Bruce', 1);
+INSERT INTO `utilisateur` (id,Email, Mdp, Nom, Prenom,id_utilisateur) VALUES
+(1,'marie.poppins@gmail.com', 123456789, 'Poppins', 'Marie', ''),
+(2,'Jacque.cartier@gmail.com', 987654321, 'Cartier', 'Jacques', ''),
+(3,'bruce.wayne@gmail.com', 9876543210, 'Wayne', 'Bruce', '');
 
+
+--
+-- Connexion entre les différentes tables
+--
+
+-- Index table admin
+ALTER TABLE `administrateur`
+    ADD PRIMARY KEY (`id`);
+
+-- Index Capteur
+ALTER TABLE `capteur`
+  ADD PRIMARY KEY (`num_serie`),
+  ADD KEY `id_piece` (`id_piece`),
+  ADD KEY `id_catergorie` (`id_categorie`);
+
+-- Index categorie capteur
+ALTER TABLE `categorie_capteurs`
+    ADD PRIMARY KEY (`id`);
+
+-- Index correspondance damin maison
+ALTER TABLE `corresp_admin_maison`
+  ADD KEY `id_maison` (`id_maison`),
+  ADD KEY `id_admin` (`id_admin`);
+
+--Index maison
+ALTER TABLE `maison`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_utilisateur` (`id_utilisateur`);
+
+-- Index pieces
+ALTER TABLE `piece`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_maison` (`id_maison`);
+
+-- Index Utilisateur
+ALTER TABLE `utilisateur`
+  ADD PRIMARY KEY (`id`);
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
