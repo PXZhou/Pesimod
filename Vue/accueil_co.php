@@ -1,6 +1,6 @@
 <?php
 
-    $contenu = "Accueuil. Veuillez vous connecter";
+    $contenu = "Accueil";
     $jvscript = "";
 
     include 'Gabarit.php';
