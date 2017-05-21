@@ -7,4 +7,5 @@ $contenu = formulaire_ins();
 $tete = "Inscription";
 
 include "Gabarit.php";
+$jvscript = "";
 ?>
