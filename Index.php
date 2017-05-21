@@ -14,12 +14,16 @@
         include ("Vue/accueil_co.php");
         if(isset($_GET['cible'])) {
             if ($_GET['cible'] == 'se_connecter') {
+                ob_clean();
                 include("Controler/Connexion.php");
             } else if ($_GET['cible'] == 's_inscrire') {
+                ob_clean();
                 include("Controler/inscription.php");
             } else if ($_GET['cible'] == 'affichecapteur'){
+                ob_clean();
                 include("Vue/affichecapteur.php");
             } else if ($_GET['cible'] == 'accueil') {
+                ob_clean();
                 include("Vue/accueil.php");
             }
         }
