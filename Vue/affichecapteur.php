@@ -9,13 +9,64 @@
     $contenu .= "<li>Cuisine</li>";
     $contenu .= "<li>Salle de bain</li>";
     $contenu .= "<li>+</li>";
+//-------------------------------------------------------------------------------------------------------
     $contenu .= "</ul>";
     $contenu .= "<div id='contentonglet'> ";
-    $contenu .= "<div class='item'> <p>Contenu de la Chambre</p>
+    $contenu .= "<div class='item'> <h6>Capteur température</h6>
+<p><img src='Style/Image/temperature.png' alt='temp' width='40' height='40' ></p>
+<p>Statut</p>
+<h6>Capteur luminosité</h6>
+<p><img src='Style/Image/luminosite.png' alt='temp' width='40' height='40' ></p>
+<p>Statut</p>
+<h6>Capteur humidité</h6>
+<p><img src='Style/Image/fumee.png' alt='temp' width='40' height='40' ></p>
+<p>Statut</p>
+<h6>Capteur fumée</h6>
+<p><img src='Style/Image/fumee.png' alt='temp' width='40' height='40' ></p>
+<p>Statut</p>
     <p><a href='#'><img src='Style/Image/Poubelle.png' alt='Suppression' width='40' height='40' ></a></p></div>";
-    $contenu .= "<div class='item'> Contenu du Salon </div>";
-    $contenu .= "<div class='item'> Contenu de la cuisine </div>";
-    $contenu .= "<div class='item'> Contenu de la salle de bain </div>";
+
+//----------------------------------------------------------------
+    $contenu .= "<div class='item'> <h6>Capteur température</h6>
+<p><img src='Style/Image/temperature.png' alt='temp' width='40' height='40' ></p>
+<p>Statut</p>
+<h6>Capteur luminosité 1</h6>
+<p><img src='Style/Image/luminosite.png' alt='temp' width='40' height='40' ></p>
+<p>Statut</p>
+<h6>Capteur luminosité 2</h6>
+<p><img src='Style/Image/luminosite.png' alt='temp' width='40' height='40' ></p>
+<p>Statut</p>
+<h6>Capteur fumée</h6>
+<p><img src='Style/Image/fumee.png' alt='temp' width='40' height='40' ></p>
+<p>Statut</p>
+    <p><a href='#'><img src='Style/Image/Poubelle.png' alt='Suppression' width='40' height='40' ></a></p></div>";
+
+//----------------------------------------------------------------
+    $contenu .= "<div class='item'> <h6>Capteur température</h6>
+<p><img src='Style/Image/temperature.png' alt='temp' width='40' height='40' ></p>
+<p>Statut</p>
+<h6>Capteur luminosité</h6>
+<p><img src='Style/Image/luminosite.png' alt='temp' width='40' height='40' ></p>
+<p>Statut</p>
+    <p><a href='#'><img src='Style/Image/Poubelle.png' alt='Suppression' width='40' height='40' ></a></p></div>";
+
+//----------------------------------------------------------------
+    $contenu .= "<div class='item'> <h6>Capteur température</h6>
+<p><img src='Style/Image/temperature.png' alt='temp' width='40' height='40' ></p>
+<p>Statut</p>
+<h6>Capteur luminosité 1</h6>
+<p><img src='Style/Image/luminosite.png' alt='temp' width='40' height='40' ></p>
+<p>Statut</p>
+<h6>Capteur luminosité 2</h6>
+<p><img src='Style/Image/luminosite.png' alt='temp' width='40' height='40' ></p>
+<p>Statut</p>
+<h6>Capteur fumée</h6>
+<p><img src='Style/Image/fumee.png' alt='temp' width='40' height='40' ></p>
+<p>Statut</p>
+
+    <p><a href='#'><img src='Style/Image/Poubelle.png' alt='Suppression' width='40' height='40' ></a></p></div>";
+
+//----------------------------------------------------------------
     $contenu .= "<div class='item'>";
     $contenu .= "
 <form method='post' action='list_detail.php'>
