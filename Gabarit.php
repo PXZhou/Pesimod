@@ -10,13 +10,13 @@
 <body>
 <div id="fixe">
     <header id="haut_page">
-        <a href="#"><img src="Style/Image/banniere.png" alt="Banniere"/></a>
+        <a href="index.php?cible=accueil"><img src="Style/Image/banniere.png" alt="Banniere"/></a>
     </header>
     <div>
         <ul id="menu_horizontal">
             <li class="bouton_gauche">
                 <ul id="menu-deroulant">
-                    <li><a href="#"><img src = "https://cdn4.iconfinder.com/data/icons/wirecons-free-vector-icons/32/menu-alt-512.png" width="25" height="20" alt="Menu"/></a>
+                    <li><a href="index.php?cible=accueil"><img src = "https://cdn4.iconfinder.com/data/icons/wirecons-free-vector-icons/32/menu-alt-512.png" width="25" height="20" alt="Menu"/></a>
                         <ul>
                             <li><a href="">Mon Compte</a>
                             </li><li><hr></li>
