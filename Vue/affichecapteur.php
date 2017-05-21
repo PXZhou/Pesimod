@@ -11,7 +11,8 @@
     $contenu .= "<li>+</li>";
     $contenu .= "</ul>";
     $contenu .= "<div id='contentonglet'> ";
-    $contenu .= "<div class='item'> Contenu de la Chambre</div>";
+    $contenu .= "<div class='item'> <p>Contenu de la Chambre</p>
+    <p><a href='#'><img src='Style/Image/Poubelle.png' alt='Suppression' width='40' height='40' ></a></p></div>";
     $contenu .= "<div class='item'> Contenu du Salon </div>";
     $contenu .= "<div class='item'> Contenu de la cuisine </div>";
     $contenu .= "<div class='item'> Contenu de la salle de bain </div>";
