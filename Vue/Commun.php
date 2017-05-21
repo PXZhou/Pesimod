@@ -59,6 +59,8 @@ function formulaire_ins(){
     <?php
     $formulaire_ins = ob_get_clean();
     return $formulaire_ins;
+
+    $jvscript = "";
 }
 
 
