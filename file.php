@@ -1,10 +1,3 @@
-
-/**
- * Created by PhpStorm.
- * User: Psarolf
- * Date: 16/05/2017
- * Time: 09:34
- */
 <!DOCTYPE html>
 <html>
     <head>
