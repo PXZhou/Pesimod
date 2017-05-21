@@ -1,7 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Marine
- * Date: 21/05/2017
- * Time: 19:41
- */
+    ob_start();
+
+    $contenu = formulaire_co();
+
+    $menu = ob_get_clean();
+    $contenu = "<h2>Erreur dans le formulaire de connexion</h2>".$erreur;
+
+    include 'gabarit.php';
+?>

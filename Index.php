@@ -1,12 +1,11 @@
 <?php
 
-    //require("Vue/gestioncapteur.php");
-    //require("Vue/affichecapteur.php");
+
+   //require("Vue/affichecapteur.php");
     session_start();
     require("Vue/Commun.php");
     //require("Modele/connexion.php");
-    /*$_SESSION["userID"] = $ligne['id'];
-    include("Vue/accueil_co.php");*/
+
 
 
     if(!isset($_SESSION["userID"])){ //Utilisateur pas connecté
