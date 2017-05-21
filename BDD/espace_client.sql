@@ -129,9 +129,9 @@ CREATE TABLE `maison` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT INTO `maison` (Nom, Numéro, Rue, Ville, Etage) VALUES
-(Wayne,128, 'Avenue du Maine', 'PARIS-75014', 6),
-(Poppins,48, 'Rue du Montparnasse', 'PARIS-75014', 1),
-(Cartier,29, 'Rue Victor Hugo', 'Paris-75015', 3);
+('Wayne',128, 'Avenue du Maine', 'PARIS-75014', 6),
+('Poppins',48, 'Rue du Montparnasse', 'PARIS-75014', 1),
+('Cartier',29, 'Rue Victor Hugo', 'Paris-75015', 3);
 
 -- --------------------------------------------------------
 
@@ -141,23 +141,23 @@ INSERT INTO `maison` (Nom, Numéro, Rue, Ville, Etage) VALUES
 
 CREATE TABLE `piece` (
   `Nom` varchar(20) NOT NULL,
-  `Taille` int(11) NOT NULL,
-  `Type` varchar(25) NOT NULL,
   `Nombre_temp` int(11) NOT NULL,
   `Nombre_ca` int(11) NOT NULL,
   `Nombre_ch` int(11) NOT NULL,
   `Nombre_presence` int(11) NOT NULL,
-  `Nombre_fumée` int(11) NOT NULL
+  `Nombre_fumée` int(11) NOT NULL,
+  `Nombre_lum` int(11) NOT NULL,
+  `Etage` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO `piece` (Nom, Taille, Type, Nombre_temp, Nombre_ca, Nombre_ch, Nombre_presence, Nombre_fumée) VALUES
-('Chambre1', 12, 'Chambre', 1, 1, 0, 1, 1),
-('Chambre2', 13, 'Chambre', 1, 0, 0, 2, 0),
-('Chambre3', 15, 'Chambre', 1, 2, 0, 1, 1),
-('Cuisine', 6, 'Cuisine', 0, 0, 1, 1, 0),
-('Salle de bain', 7, 'Salle de bain', 0, 0, 1, 0, 1),
-('Toilette', 15, 'Toilette', 0, 0, 1, 1, 1),
-('Toilette2', 4, 'Toilette', 0, 0, 1, 0, 0);
+INSERT INTO `piece` (Nom, Nombre_temp, Nombre_ca, Nombre_ch, Nombre_presence, Nombre_fumée,Nombre_lum,Etage) VALUES
+('Chambre1', 1, 1, 0, 1, 1,0,0),
+('Chambre2', 1, 0, 0, 2, 0, 1,1),
+('Chambre3', 1, 2, 0, 1, 1,2,2),
+('Cuisine',  0, 0, 1, 1, 0,0,0),
+('Salle de bain', 0, 0, 1, 0, 1,0,0),
+('Toilette', 0, 0, 1, 1, 1,0,1),
+('Toilette2', 0, 0, 1, 0, 0,1,0);
 -- --------------------------------------------------------
 
 --
