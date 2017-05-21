@@ -5,14 +5,14 @@ function formulaire_co(){
     ob_start();
     ?>
     <fieldset>
-        <form method="POST" action="index.php?cible=verif">
+        <form method="POST" action="index.php?cible=verif_co">
             Identifiant
             <br/>
-            <input type="text" name="identifiant"/>
+            <input type="text" name="Email"/>
             <br/>
             Mot de passe
             <br/>
-            <input type="text" name="mdp"/>
+            <input type="text" name="Mdp"/>
             <br/>
             <input type='submit'/>
         </form>
@@ -29,7 +29,7 @@ function formulaire_ins(){
     ob_start();
     ?>
     <fieldset>
-        <form method="POST" action="index.php?cible=verif">
+        <form method="POST" action="index.php?cible=verif_ins">
             Nom
             <br/>
             <input type="text" name="nom"/>
