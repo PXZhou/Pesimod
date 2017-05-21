@@ -60,7 +60,6 @@ function formulaire_ins(){
     $formulaire_ins = ob_get_clean();
     return $formulaire_ins;
 
-    $jvscript = "";
 }
 
 
