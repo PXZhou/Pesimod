@@ -17,7 +17,6 @@
     $contenu .= "<div class='item'> Contenu de la salle de bain </div>";
     $contenu .= "<div class='item'>";
     $contenu .= "
-
 <form method='post' action='list_detail.php'>
     <p>Nom de la pièce : <input type='text' name='nom_piece' /></p>
     <p>Type de pièce : 
@@ -28,9 +27,9 @@
         <option name='Chambre'>Chambre</option>
         <option name='Pieceavivre'>Pièce à vivre</option>
         <option name='Cagibi'>Cagibi</option>
-        <input type='submit' name='Valider'/>
-
     </select></p>
+    <p><input type='submit' value='Valider'/>
+    <input type='reset' value='Annuler' /></p>
 
 </form>";
     $contenu .= "</div>";
