@@ -1,8 +1,8 @@
 <?php
     session_start();
-   require("Vue/Commun.php");
+    require("Vue/Commun.php");
     //require("Modele/connexion.php");
-    //require("Vue/affichecapteur.php");
+    require("Vue/affichecapteur.php");
 
     if(!isset($_SESSION["userID"])){
         include ("Vue/accueil_non_co.php");
