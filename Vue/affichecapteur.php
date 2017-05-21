@@ -34,7 +34,7 @@
 
 </form>";
     $contenu .= "</div>";
-
+    ob_clean();
     $jvscrpt = require('Vue/onglets.php');
     include 'Gabarit.php';
 

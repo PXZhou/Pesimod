@@ -209,7 +209,7 @@ CREATE TABLE `utilisateur` (
 
 INSERT INTO `utilisateur` (id,Email, Mdp, Nom, Prenom,id_utilisateur) VALUES
 (1,'marie.poppins@gmail.com', 123456789, 'Poppins', 'Marie', ''),
-(2,'Jacque.cartier@gmail.com', 987654321, 'Cartier', 'Jacques', ''),
+(2,'jacque.cartier@gmail.com', 987654321, 'Cartier', 'Jacques', ''),
 (3,'bruce.wayne@gmail.com', 9876543210, 'Wayne', 'Bruce', '');
 
 
