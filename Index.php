@@ -1,5 +1,7 @@
 <?php
-    session_start();
+
+require("Vue/affichecapteur.php");
+/*session_start();
    require("Vue/Commun.php");
     //require("Modele/connexion.php");
     //require("Vue/affichecapteur.php");
@@ -18,7 +20,7 @@
     else  {
         include ("Vue/accueil_co.php");
 
-    }
+    }*/
 
 
 ?>
