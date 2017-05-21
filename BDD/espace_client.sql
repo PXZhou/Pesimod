@@ -232,7 +232,7 @@ ALTER TABLE `corresp_admin_maison`
   ADD KEY `id_maison` (`id_maison`),
   ADD KEY `id_admin` (`id_admin`);
 
---Index maison
+-- Index maison
 ALTER TABLE `maison`
   ADD PRIMARY KEY (`id`),
   ADD KEY `id_utilisateur` (`id_utilisateur`);
@@ -245,6 +245,43 @@ ALTER TABLE `piece`
 -- Index Utilisateur
 ALTER TABLE `utilisateur`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Auto - incrémentation par l'ordinateur pour choisir des numéros au hasard
+--
+
+-- AUTO_INCREMENT pour categorie
+ALTER TABLE `categorie_capteurs`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+-- AUTO_INCREMENT pour la table `utilisateur`
+ALTER TABLE `utilisateur`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+--
+-- Contraintes pour la table `capteur`
+--
+
+ALTER TABLE `capteur`
+  ADD CONSTRAINT `capteur_1` FOREIGN KEY (`id_piece`) REFERENCES `piece` (`id`),
+  ADD CONSTRAINT `capteur_2` FOREIGN KEY (`id_categorie`) REFERENCES `categorie_capteurs` (`id`);
+
+-- Contraintes pour la table `corresp_admin_maison`
+ALTER TABLE `corresp_admin_maison`
+  ADD CONSTRAINT `corresp_admin_maison_1` FOREIGN KEY (`id_maison`) REFERENCES `maison` (`id`),
+  ADD CONSTRAINT `corresp_admin_maison_2` FOREIGN KEY (`id_admin`) REFERENCES `administrateur` (`id`);
+
+-- Contraintes pour la table `maison`
+ALTER TABLE `maison`
+  ADD CONSTRAINT `maison_1` FOREIGN KEY (`id_utilisateur`) REFERENCES `utilisateur` (`id`);
+
+-- Contraintes pour la table `piece`
+ALTER TABLE `piece`
+  ADD CONSTRAINT `piece_1` FOREIGN KEY (`id_maison`) REFERENCES `maison` (`id`);
+
+
+
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
