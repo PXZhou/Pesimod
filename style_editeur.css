@@ -1,0 +1,43 @@
+#mini_corps{
+    width : 25%;
+    height: auto;
+    float : left;
+    background-color: grey;
+    color : black;
+    border: 2px solid;
+    padding-left: 10px;
+    padding-bottom : 45px;
+
+}
+#mini_corps label{
+     display: inline-block;
+     float: left;
+     clear: left;
+     width: 250px;
+     text-align: left;
+ }
+#mini_corps input [type = number] {
+    display: inline-block;
+    float: left;
+}
+#mini_corps input[type=submit] {
+    display: inline-block;
+    background-color: darkblue;
+    color: white;
+    width : 100px;
+}
+#mini_corps h2{
+    font-weight: bold;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    text-align : center;
+}
+#mini_corps ul{
+    list-style: none;
+}
+#mini_corps droite{
+    float: right;
+}
+#mini_corps gauche{
+    float: left;
+}
