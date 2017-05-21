@@ -225,7 +225,7 @@ ALTER TABLE `administrateur`
 ALTER TABLE `capteur`
   ADD PRIMARY KEY (`num_serie`),
   ADD KEY `id_piece` (`id_piece`),
-  ADD KEY `id_catergorie` (`id_categorie`);
+  ADD KEY `id_categorie` (`id_categorie`);
 
 -- Index categorie capteur
 ALTER TABLE `categorie_capteurs`
