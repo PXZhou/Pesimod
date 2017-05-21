@@ -5,7 +5,7 @@
         $('#onglet').click(function(event) { //Evenement clique
             var actuel = event.target; // emplacement du clique
             if (!/li/i.test(actuel.nodeName) || actuel.className.indexOf('actif') > -1) {
-                alert(actuel.nodeName)
+               /* alert(actuel.nodeName)*/
                 return;
             } //Si pas onglet ou si onglet deja actif, ne rien faire
             $(actuel).addClass('actif').siblings().removeClass('actif');
