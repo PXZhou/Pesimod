@@ -71,7 +71,7 @@ INSERT INTO `capteur` (`num_serie`, `nom`,`id_piece`,`id_categorie`) VALUES
 ('YG - A1', 'Fumee', '',''),
 ('YG - A1', 'Fumee', '',''),
 ('DHT-11', 'Humidite', '',''),
-('DHT-11', 'Humidite', '','',
+('DHT-11', 'Humidite', '',''),
 ('Photoresistor Relay Module', 'Luminosite', '',''),
 ('Photoresistor Relay Module', 'Luminosite', '','');
 
@@ -141,12 +141,16 @@ INSERT INTO `effecteur` (`Référence`, `Type`, `Statut`) VALUES
 --
 
 CREATE TABLE `maison` (
-  `id` int(11) NOT NULL,
-  `nom` varchar(100) COLLATE utf8_bin NOT NULL,
-  `adresse` varchar(255) COLLATE utf8_bin NOT NULL,
-  `code_postal` varchar(255) COLLATE utf8_bin NOT NULL,
-  `ville` varchar(255) COLLATE utf8_bin NOT NULL,
-  `id_utilisateur` int(11) NOT NULL
+  `id`             INT(11)          NOT NULL,
+  `nom`            VARCHAR(100)
+                   COLLATE utf8_bin NOT NULL,
+  `adresse`        VARCHAR(255)
+                   COLLATE utf8_bin NOT NULL,
+  `code_postal`    VARCHAR(255)
+                   COLLATE utf8_bin NOT NULL,
+  `ville`          VARCHAR(255)
+                   COLLATE utf8_bin NOT NULL,
+  `id_utilisateur` INT(11)          NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT INTO `maison` (id, nom, adresse, code_postal, ville, id_utilisateur) VALUES
@@ -258,10 +262,8 @@ ALTER TABLE `categorie_capteurs`
 ALTER TABLE `utilisateur`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
---
--- Contraintes pour la table `capteur`
---
 
+-- Contraintes pour la table `capteur`
 ALTER TABLE `capteur`
   ADD CONSTRAINT `capteur_1` FOREIGN KEY (`id_piece`) REFERENCES `piece` (`id`),
   ADD CONSTRAINT `capteur_2` FOREIGN KEY (`id_categorie`) REFERENCES `categorie_capteurs` (`id`);

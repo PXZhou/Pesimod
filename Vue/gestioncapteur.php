@@ -11,7 +11,7 @@
         for ($Nbre_etage = 0;$Nbre_etage<= get_etage('Wayne');$Nbre_etage++){
             $contenu .= "<li> Etage $Nbre_etage </li>";
         }
-         $contenu .= "<li>Ajouter/Supprimer Etage(s)</li>";
+        $contenu .= "<li>Ajouter/Supprimer Etage(s)</li>";
         $contenu .= "</ul>";
         $contenu .= "<div id='contentonglet'> ";
         $contenu .= "<div class='item'> </div>";
