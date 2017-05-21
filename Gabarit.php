@@ -62,6 +62,6 @@
     </ul>
     <img src="https://scontent-cdg2-1.xx.fbcdn.net/v/t1.0-9/18301761_10209310154091018_2714229423431279309_n.jpg?oh=fdea58c79a83f4c60070654a66443a02&oe=5976BE5A" alt = "logo" id="logo"/>
 </footer>
-    <?php echo ($jvscrpt); ?>
+    <?php echo ($jvscrpt = " "); ?>
 </body>
 </html>
