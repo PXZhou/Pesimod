@@ -3,7 +3,6 @@
     $tete = "Affichage des capteurs";
 
 
-
     $contenu = "<ul id='onglet'>";
     $contenu .= "<li class='actif'>Chambre</li>";
     $contenu .= "<li>Salon</li>";
@@ -18,7 +17,6 @@
     $contenu .= "</div>";
 
     $jvscrpt = require('Vue/onglets.php');
-
 
     include 'Gabarit.php';
 
