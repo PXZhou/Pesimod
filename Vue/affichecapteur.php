@@ -16,7 +16,23 @@
     $contenu .= "<div class='item'> Contenu de la cuisine </div>";
     $contenu .= "<div class='item'> Contenu de la salle de bain </div>";
     $contenu .= "<div class='item'>";
-    $contenu .= require('Vue/ajoutpiece.php');
+    $contenu .= "
+
+<form method='post' action='list_detail.php'>
+    <p>Nom de la pièce : <input type='text' name='nom_piece' /></p>
+    <p>Type de pièce : 
+    <select name='typepiece'>
+        <option name='Cuisine'>Cuisine</option>
+        <option name='SalledeBain'>Salle de Bain</option>
+        <option name='Salon'>Salon</option>
+        <option name='Chambre'>Chambre</option>
+        <option name='Pieceavivre'>Pièce à vivre</option>
+        <option name='Cagibi'>Cagibi</option>
+        <input type='submit' name='Valider'/>
+
+    </select></p>
+
+</form>";
     $contenu .= "</div>";
 
     $jvscrpt = require('Vue/onglets.php');
