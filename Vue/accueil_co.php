@@ -1,6 +1,19 @@
 <?php
+<<<<<<< Updated upstream
 $title = "Espace client - Pesimod";
 $tete = "Espace Personnel";
+=======
+    $tete = "La tête";
+    $contenu = "<p>Accueil</p>
+    <p><a href='accueil_co.php?cible=affichecapteur'>Afficher les capteurs</a></p>";
+    $jvscript = "";
+>>>>>>> Stashed changes
+
+    if(isset($_GET['cible'])) {
+        if ($_GET['cible'] == 'affichecapteur') {
+            include("Vue/affichecapteur.php");
+        }
+    }
 
 
     $jvscript = "";
