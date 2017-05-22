@@ -28,6 +28,10 @@ require("Vue/accueil_non_co.php");
                 ob_clean();
                 include("Vue/accueil.php");
             }
+            else if ($_GET['cible'] == 'gestioncapt') {
+                ob_clean();
+                require ("function.php");
+            }
             if ($_GET['cible']=='hacker') {
                 ob_clean();
                 $_SESSION["userID"] = $ligne['3'];
