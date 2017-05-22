@@ -26,7 +26,8 @@ $contenu .= "<li>Activités recentes</li>";
 $contenu .= "<li>+</li>";
 $contenu .= "</ul>";
 $contenu .= "<div id='contentonglet'> ";
-$contenu .= "<div class='item'> <p><a href='index.php?cible=affichecapteur'>Afficher les capteurs</a></p>";
+$contenu .= "<div class='item'> <p><a href='index.php?cible=affichecapteur'>Afficher les capteurs</a></p>
+<a href='index.php?cible=gestioncapt'>Edition</a>";
 $contenu .= "<div class='item'>ajoutpiece.php</div>";
 $contenu .= "<div class='item'> Calendrier.php</div>";
 $contenu .= "<div class='item'>activitesrecentes.php</div>";
