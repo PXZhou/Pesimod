@@ -18,20 +18,19 @@
                 <ul id="menu-deroulant">
                     <li><a href="index.php?cible=accueil"><img src = "https://cdn4.iconfinder.com/data/icons/wirecons-free-vector-icons/32/menu-alt-512.png" width="25" height="20" alt="Menu"/></a>
                         <ul>
-                            <li><a href="">Mon Compte</a>
+                            <li><a href="index.php?cible=Mon_Compte">Mon Compte</a>
                             </li><li><hr></li>
-                            <li><a href="">Maison</a></li>
-                            <li><a href="">Calendrier</a></li>
-                            <li><a href="">Edition</a></li>
+                            <li><a href="index.php?cible=Maison">Maison</a></li>
+                            <li><a href="index.php?cible=Calendrier">Calendrier</a></li>
+                            <li><a href="index.php?cible=Edition">Edition</a></li>
                             <li><hr></li>
-                            <li><a href="">Paramètres</a></li>
-                            <li><a href="">Deconnexion</a></li>
+                            <li><a href="index.php?cible=Parametres">Paramètres</a></li>
                         </ul>
                     </li>
                 </ul>
             </li>
-            <li class="bouton_droite"><a href="index.php?cible=s_inscrire">S'inscrire</a></li>
-            <li class="bouton_droite"><a href="index.php?cible=se_connecter">Se connecter</a></li>
+            <?php echo ($dbouton1)?>
+            <?php echo ($dbouton2)?>
         </ul>
     </div>
 </div>

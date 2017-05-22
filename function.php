@@ -28,7 +28,7 @@
     function cas($nom_capteur){
         try
         {
-            $bdd = new PDO('mysql:host=localhost;dbname=espace_clientb;charset=utf8', 'root', '');
+            $bdd = new PDO('mysql:host=localhost;dbname=espace_clientb;charset=utf8', 'root', 'root');
         }
 
         catch (Exception $e)
@@ -56,7 +56,7 @@
                 </ul>
             </div>
             <p id="droite"><input type="submit" value="Valider" name="Valider"/></p>
-            <p id="gauche"><input type="submit" value="Supprimer"></p>
+            <p id="gauche"><input type="submit" value="Supprimer" name="Supprimer"></p>
 
         </form>
         <?php
@@ -69,7 +69,7 @@
     <?php function get_etage($Nom){
         try
         {
-            $bdd = new PDO('mysql:host=localhost;dbname=espace_client;charset=utf8', 'root', '');
+            $bdd = new PDO('mysql:host=localhost;dbname=espace_client;charset=utf8', 'root', 'root');
         }
 
         catch (Exception $e)
@@ -87,7 +87,7 @@
     <?php function get_nombre_capteur($numero,$nom_piece)
     {
         try {
-            $bdd = new PDO('mysql:host=localhost;dbname=espace_clientb;charset=utf8', 'root', '');
+            $bdd = new PDO('mysql:host=localhost;dbname=espace_clientb;charset=utf8', 'root', 'root');
         } catch (Exception $e) {
             die('Erreur : ' . $e->getMessage());
         }
@@ -101,7 +101,7 @@
     }?>
     <?php function affichage_selon_etage($numero){
         try {
-            $bdd = new PDO('mysql:host=localhost;dbname=espace_clientb;charset=utf8', 'root', '');
+            $bdd = new PDO('mysql:host=localhost;dbname=espace_clientb;charset=utf8', 'root', 'root');
         } catch (Exception $e) {
             die('Erreur : ' . $e->getMessage());
         }

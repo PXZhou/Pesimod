@@ -1,22 +1,20 @@
 <?php
-
 $title = "Espace client - Pesimod";
 $tete = "Espace Personnel";
+$dbouton1 = dbouton1("");
+$dbouton2 = dbouton2("Se déconnecter");
+
 $contenu = "<p>Accueil</p>
-    <p><a href='index.php?cible=affichecapteur'>Afficher les capteurs</a></p>";
+   <p><a href='index.php?cible=affichecapteur'>Afficher les capteurs</a></p>";
 $jvscript = "";
 
-if(isset($_GET['cible'])) {
-    if ($_GET['cible'] == 'affichecapteur') {
-        include("Vue/affichecapteur.php");
-    }
-}
+
 
 
 $jvscript = "";
 
 "
-    <p><a href='index.php?cible=affichecapteur'><img src='Style/Image/001-facebook.png'></a></p>";
+   <p><a href='index.php?cible=affichecapteur'><img src='Style/Image/001-facebook.png'></a></p>";
 $contenu .= "<p>Espace Personnel</p>";
 $contenu = "<ul id='onglet'>";
 $contenu .= "<li class='actif'>Gestion Capteurs</li>";
