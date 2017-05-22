@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `administrateur` (
-  `id` int(11) NOT NULL,
+  `id_administrateur` int(11) NOT NULL,
   `nom` varchar(255) COLLATE utf8_bin NOT NULL,
   `mdp` varchar(255) COLLATE utf8_bin NOT NULL,
   `mail` varchar(255) COLLATE utf8_bin NOT NULL
@@ -80,7 +80,7 @@ INSERT INTO `capteur` (`num_serie`, `nom`,`id_piece`,`id_categorie`) VALUES
 --
 
 CREATE TABLE `categorie_capteurs` (
-  `id` int(11) NOT NULL,
+  `id_categorie_capteur` int(11) NOT NULL,
   `nom_categorie` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `unite` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -141,7 +141,7 @@ INSERT INTO `effecteur` (`Référence`, `Type`, `Statut`) VALUES
 --
 
 CREATE TABLE `maison` (
-  `id`             INT(11)          NOT NULL,
+  `id_maison`      INT(11) NOT NULL,
   `nom`            VARCHAR(100)
                    COLLATE utf8_bin NOT NULL,
   `adresse`        VARCHAR(255)
@@ -153,7 +153,7 @@ CREATE TABLE `maison` (
   `id_utilisateur` INT(11)          NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO `maison` (id, nom, adresse, code_postal, ville, id_utilisateur) VALUES
+INSERT INTO `maison` (id_maison, nom, adresse, code_postal, ville, id_utilisateur) VALUES
 (1,'Wayne','Paris','128 Avenue du Maine ', '75014',''),
 (2,'Poppins','Paris', '48 Rue du Montparnasse', '75014',''),
 (3,'Cartier','Paris', '29 Rue Victor Hugo', '75015','');
@@ -174,20 +174,21 @@ CREATE TABLE `corresp_admin_maison` (
 --
 
 CREATE TABLE `piece` (
-  `id` int(11) NOT NULL,
+  `id_piece` int(11) NOT NULL,
   `nom` varchar(255) COLLATE utf8_bin NOT NULL,
-  `type` varchar(255) COLLATE utf8_bin NOT NULL,
+  `fonction` varchar(255) COLLATE utf8_bin NOT NULL,
+  `etage` int(5) NOT NULL,
   `id_maison` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO `piece` (id, nom, type, id_maison) VALUES
-(1,'Chambre1', 'Chambre',''),
-(2,'Chambre2', 'Chambre',''),
-(3,'Chambre3', 'Chambre',''),
-(4,'Cuisine', 'Cuisine',''),
-(5,'Salle de bain', 'Salle de Bain',''),
-(6,'Toilette', 'Toilette',''),
-(7,'Toilette2', 'Toilette','');
+INSERT INTO `piece` (id_piece, nom, fonction, etage ,id_maison) VALUES
+(1,'Chambre1', 'Chambre',1,''),
+(2,'Chambre2', 'Chambre',1,''),
+(3,'Chambre3', 'Chambre',1,''),
+(4,'Cuisine', 'Cuisine',0,''),
+(5,'Salle de bain', 'Salle de Bain',2,''),
+(6,'Toilette', 'Toilette',2,''),
+(7,'Toilette2', 'Toilette',1,'');
 -- --------------------------------------------------------
 
 --
@@ -219,17 +220,17 @@ INSERT INTO `utilisateur` (id,Email, Mdp, Nom, Prenom,id_utilisateur) VALUES
 
 -- Index table admin
 ALTER TABLE `administrateur`
-    ADD PRIMARY KEY (`id`);
+    ADD PRIMARY KEY (`id_administrateur`);
 
 -- Index Capteur
 ALTER TABLE `capteur`
   ADD PRIMARY KEY (`num_serie`),
   ADD KEY `id_piece` (`id_piece`),
-  ADD KEY `id_catergorie` (`id_categorie`);
+  ADD KEY `id_categorie` (`id_categorie`);
 
 -- Index categorie capteur
 ALTER TABLE `categorie_capteurs`
-    ADD PRIMARY KEY (`id`);
+    ADD PRIMARY KEY (`id_categorie_capteur`);
 
 -- Index correspondance damin maison
 ALTER TABLE `corresp_admin_maison`
@@ -238,12 +239,12 @@ ALTER TABLE `corresp_admin_maison`
 
 -- Index maison
 ALTER TABLE `maison`
-  ADD PRIMARY KEY (`id`),
+  ADD PRIMARY KEY (`id_maison`),
   ADD KEY `id_utilisateur` (`id_utilisateur`);
 
 -- Index pieces
 ALTER TABLE `piece`
-  ADD PRIMARY KEY (`id`),
+  ADD PRIMARY KEY (`id_piece`),
   ADD KEY `id_maison` (`id_maison`);
 
 -- Index Utilisateur
@@ -256,7 +257,7 @@ ALTER TABLE `utilisateur`
 
 -- AUTO_INCREMENT pour categorie
 ALTER TABLE `categorie_capteurs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_categorie_capteur` int(11) NOT NULL AUTO_INCREMENT;
 
 -- AUTO_INCREMENT pour la table `utilisateur`
 ALTER TABLE `utilisateur`
@@ -265,13 +266,13 @@ ALTER TABLE `utilisateur`
 
 -- Contraintes pour la table `capteur`
 ALTER TABLE `capteur`
-  ADD CONSTRAINT `capteur_1` FOREIGN KEY (`id_piece`) REFERENCES `piece` (`id`),
-  ADD CONSTRAINT `capteur_2` FOREIGN KEY (`id_categorie`) REFERENCES `categorie_capteurs` (`id`);
+  ADD CONSTRAINT `capteur_1` FOREIGN KEY (`id_piece`) REFERENCES `piece` (`id_piece`),
+  ADD CONSTRAINT `capteur_2` FOREIGN KEY (`id_categorie`) REFERENCES `categorie_capteurs` (`id_categorie_capteur`);
 
 -- Contraintes pour la table `corresp_admin_maison`
 ALTER TABLE `corresp_admin_maison`
-  ADD CONSTRAINT `corresp_admin_maison_1` FOREIGN KEY (`id_maison`) REFERENCES `maison` (`id`),
-  ADD CONSTRAINT `corresp_admin_maison_2` FOREIGN KEY (`id_admin`) REFERENCES `administrateur` (`id`);
+  ADD CONSTRAINT `corresp_admin_maison_1` FOREIGN KEY (`id_maison`) REFERENCES `maison` (`id_maison`),
+  ADD CONSTRAINT `corresp_admin_maison_2` FOREIGN KEY (`id_admin`) REFERENCES `administrateur` (`id_maison`);
 
 -- Contraintes pour la table `maison`
 ALTER TABLE `maison`
@@ -279,7 +280,7 @@ ALTER TABLE `maison`
 
 -- Contraintes pour la table `piece`
 ALTER TABLE `piece`
-  ADD CONSTRAINT `piece_1` FOREIGN KEY (`id_maison`) REFERENCES `maison` (`id`);
+  ADD CONSTRAINT `piece_1` FOREIGN KEY (`id_maison`) REFERENCES `maison` (`id_maison`);
 
 
 

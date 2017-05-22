@@ -226,5 +226,11 @@ input[type=submit], input[type=reset] {
 	cursor:pointer;
 }
 
+h6 {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:90%;
+	margin-bottom: -10px;
+}
+
 
 

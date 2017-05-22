@@ -40,9 +40,7 @@ function formulaire_ins(){
             <br/>
             Adresse
             <br/>
-            Numéro <input type="text" name="numero" class=""/> Rue  <input type="text" name="rue"/>
-            <br/>
-            Ville <input type="text" name="ville"/>
+            <input type="text" name="ville"/>
             <br/>
             Email
             <br/>
