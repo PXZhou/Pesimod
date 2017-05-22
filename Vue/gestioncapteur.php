@@ -15,6 +15,7 @@
         $contenu .= "</ul>";
         $contenu .= "<div id='contentonglet'> ";
         $contenu .= "<div class='item'> </div>";
+        $salut = affichage_selon_etage(0);
         /*for ($Nbre_etage = 1;$Nbre_etage<= get_etage('Wayne');$Nbre_etage++){
             $Affiche = affichage_selon_etage($Nbre_etage);
             $Ajout = Ajouter($Nbre_etage);
