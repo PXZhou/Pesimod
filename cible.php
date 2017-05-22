@@ -9,7 +9,7 @@ $nbre_fumée=$_POST['choix2'];
 $nbre_lumière=$_POST['choix5'];
 try
 {
-    $bdd = new PDO('mysql:host=localhost;dbname=espace_clientb;charset=utf8', 'root', '');
+    $bdd = new PDO('mysql:host=localhost;dbname=espace_clientb;charset=utf8', 'root', 'root');
 }
 
 catch (Exception $e)

@@ -12,7 +12,7 @@ function formulaire_co(){
             <br/>
             Mot de passe
             <br/>
-            <input type="text" name="Mdp"/>
+            <input type="password" name="Mdp"/>
             <br/>
             <input type='submit'/>
         </form>
@@ -61,5 +61,21 @@ function formulaire_ins(){
     return $formulaire_ins;
 
 }
+function dbouton1 ($nom){
+ob_start();
+    ?>
+    <li class="bouton_droite"><a href="index.php?cible=bouton1"><?php echo($nom); ?></a></li>
+    <?php
+$dboutton1 = ob_get_clean();
+return $dboutton1;
 
+}
+function dbouton2 ($nom){
+    ob_start();
+    ?>
+    <li class="bouton_droite"><a href="index.php?cible=bouton2"><?php echo($nom); ?></a></li>
+    <?php
+    $dboutton2 = ob_get_clean();
+    return $dboutton2;
 
+}
