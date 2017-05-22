@@ -1,12 +1,12 @@
 <?php
 
-    //require("Vue/gestioncapteur.php");
-    //require("Vue/affichecapteur.php");
+    require("Vue/gestioncapteur.php");
+    require("Vue/affichecapteur.php");
     session_start();
     require("Vue/Commun.php");
-    //require("Modele/connexion.php");
-    /*$_SESSION["userID"] = $ligne['id'];
-    include("Vue/accueil_co.php");*/
+    require("Modele/connexion.php");
+    $_SESSION["userID"] = $ligne['id'];
+    include("Vue/accueil_co.php");
 require("Vue/accueil_non_co.php");
 
 
