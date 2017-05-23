@@ -1,7 +1,6 @@
 <?php
 
 if(isset($_GET['cible']) && $_GET['cible']=="verif_co"){// l'utilisateur a cliqué sur valider
-    echo ("balise 1");
     if(!empty($_POST['Email']) && !empty($_POST['Mdp'])){
         echo ($_POST['Email']);
         include("Modele/PDO.php");
