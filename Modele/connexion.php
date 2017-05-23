@@ -1,8 +1,8 @@
 <?php
-$dbname = "espace_clientb";
+$dbname = "PESIMOD";
 $host='localhost';
 $user='root';
-$pass='root';
+$pass='';
 
 $db = new PDO("mysql:host=$host;dbname=$dbname", "$user", "$pass");
 $db->query("SET NAMES UTF8");
