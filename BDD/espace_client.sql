@@ -24,16 +24,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Structure de la table `administrateur`
---
-
-CREATE TABLE `administrateur` (
-  `id_administrateur` int(11) NOT NULL,
-  `nom` varchar(255) COLLATE utf8_bin NOT NULL,
-  `mdp` varchar(255) COLLATE utf8_bin NOT NULL,
-  `mail` varchar(255) COLLATE utf8_bin NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin ROW_FORMAT=COMPACT;
---
 -- Structure de la table `calendrier`
 --
 
@@ -176,19 +166,18 @@ CREATE TABLE `corresp_admin_maison` (
 CREATE TABLE `piece` (
   `id_piece` int(11) NOT NULL,
   `nom` varchar(255) COLLATE utf8_bin NOT NULL,
-  `fonction` varchar(255) COLLATE utf8_bin NOT NULL,
   `etage` int(5) NOT NULL,
   `id_maison` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO `piece` (id_piece, nom, fonction, etage ,id_maison) VALUES
-(1,'Chambre1', 'Chambre',1,''),
-(2,'Chambre2', 'Chambre',1,''),
-(3,'Chambre3', 'Chambre',1,''),
-(4,'Cuisine', 'Cuisine',0,''),
-(5,'Salle de bain', 'Salle de Bain',2,''),
-(6,'Toilette', 'Toilette',2,''),
-(7,'Toilette2', 'Toilette',1,'');
+INSERT INTO `piece` (id_piece, nom, etage ,id_maison) VALUES
+(1,'Chambre1',1,''),
+(2,'Chambre2',1,''),
+(3,'Chambre3',1,''),
+(4,'Cuisine',0,''),
+(5,'Salle de bain',2,''),
+(6,'Toilette',2,''),
+(7,'Toilette2',1,'');
 -- --------------------------------------------------------
 
 --
@@ -201,26 +190,23 @@ CREATE TABLE `utilisateur` (
   `Mdp` varchar(25) NOT NULL,
   `Nom` varchar(25) NOT NULL,
   `Prenom` varchar(25) NOT NULL,
-  `id_utilisateur` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL
+  `id_utilisateur` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `id_administrateur` TINYINT(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Liste des differents utilisateurs
 --
 
-INSERT INTO `utilisateur` (id,Email, Mdp, Nom, Prenom,id_utilisateur) VALUES
-(1,'marie.poppins@gmail.com', 123456789, 'Poppins', 'Marie', ''),
-(2,'jacque.cartier@gmail.com', 987654321, 'Cartier', 'Jacques', ''),
-(3,'bruce.wayne@gmail.com', 9876543210, 'Wayne', 'Bruce', '');
+INSERT INTO `utilisateur` (id,Email, Mdp, Nom, Prenom,id_utilisateur,id_administrateur) VALUES
+(1,'marie.poppins@gmail.com', 123456789, 'Poppins', 'Marie', '',''),
+(2,'jacque.cartier@gmail.com', 987654321, 'Cartier', 'Jacques', '',''),
+(3,'bruce.wayne@gmail.com', 9876543210, 'Wayne', 'Bruce', '','');
 
 
 --
 -- Connexion entre les différentes tables
 --
-
--- Index table admin
-ALTER TABLE `administrateur`
-    ADD PRIMARY KEY (`id_administrateur`);
 
 -- Index Capteur
 ALTER TABLE `capteur`
