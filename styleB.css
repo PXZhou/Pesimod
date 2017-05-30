@@ -27,6 +27,7 @@ ul#menu_horizontal {
 ul#menu_horizontal li {
 	padding : 0 0.5em;
 	line-height : 50px;
+
 }
 li.bouton_droite li.bouton_gauche {
 	float : left;
@@ -97,7 +98,7 @@ section{
     margin-right: 10%;
     margin-left: 10%;
 	border:2px solid #4A4A58;
-	background-color: #636d76;
+	background-color: "Blue";
     height:auto;
 }
 
