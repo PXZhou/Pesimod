@@ -131,7 +131,7 @@ section{
 }
 
 
-
+*/
 h1 {
 
 }
@@ -241,13 +241,11 @@ h2{
 
 
 form {
-    /*box-shadow: none;
-    border:none;
-    border-color: white;*/
+    box-shadow: none;
     font-family:"Century Gothic", Helvetica, sans-serif;
     /*font-size:90%;*/
-    margin-top:30px;
-    margin-bottom:30px;
+    margin-top:40px;
+    margin-bottom:40px;
     text-align: center;
 
 }
@@ -279,4 +277,3 @@ body{
 	width: 98%;
 	height: 80%;
 }
-
