@@ -1,4 +1,4 @@
-<?php
+<?php /*
 $name = $_POST['old_name'];
 $nvName = $_POST['nom_pièce'];
 $nbre_temp =$_POST['choix0'];
@@ -49,5 +49,5 @@ if (!empty($_POST['Modification'])) {
 
 header('Location: function.php');
 exit();
-
+*/
 ?>

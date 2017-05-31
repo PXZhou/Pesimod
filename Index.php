@@ -1,9 +1,8 @@
 <?php
 
-    //require("Vue/gestioncapteur.php");
-    //require("Vue/affichecapteur.php");
+
     session_start();
-    //require("Modele/connexion.php");
+    require("Modele/connexion.php");
     require("Vue/Commun.php");
 
     if(!isset($_SESSION["userID"])){

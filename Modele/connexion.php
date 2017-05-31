@@ -1,5 +1,5 @@
 <?php
-$dbname = "pesimod";
+$dbname = "espace_clientb";
 $host='localhost';
 $user='root';
 $pass='';

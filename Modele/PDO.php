@@ -11,4 +11,15 @@
         $reponse = $db->query('SELECT nom FROM utilisateur');
         return $reponse;
     }
+// fonction qui va ajouter les utilisateur lors de l'incription
+    function inscription($db){
+        $ajout = $db->prepare('INSERT INTO utlisateur(Nom, Prenom, Email, Mdp) VALUES (:Nom, :Prenom, :Email, :Mdp');
+        $ajout -> execute(array(
+                'Nom' => $Nom,
+                'Prenom' => $Prenom,
+                'Email' => $Email,
+                'Mdp' => $Mdp
+        ));
+    }
 ?>
+"
