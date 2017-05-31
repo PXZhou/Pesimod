@@ -38,10 +38,6 @@ function formulaire_ins(){
             <br/>
             <input type="text" name="prenom"/>
             <br/>
-            Adresse
-            <br/>
-            <input type="text" name="ville"/>
-            <br/>
             Email
             <br/>
             <input type="text" name="Email"/>
