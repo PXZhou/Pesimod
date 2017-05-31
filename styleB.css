@@ -1,88 +1,86 @@
 #haut_page{
 	position: relative;
 	z-index: 30;
+	height:90px;
 	background: white;
 	display:block;
-	height: 75px;
 	width : auto;
-}
-#haut_page img{
-	/*position: relative;
-	z-index: 30;*/
-	margin-left: 40%;
-	height: 75px;
-	text-align: center;
+	text-align:center;
 }
 
-ul#menu_horizontal {
+#banniere{
+	position: absolute;
+	left:49%;
+}
+
+#logo{
+	float:left;
+	margin-left: -15px;
+	margin-top: 10px;
+	height: 120%;
+}
+
+#menu_top {
+	position: absolute;
+	margin-left: 90px;
+}
+
+#menu_horizontal li {
+
+	list-style-type : none;
+}
+
+#menu_horizontal a{
+
+	text-decoration : none;
+	color : black;
+
+}
+#menu_horizontal li a{
 	position: relative;
 	z-index: 30;
-	width : 100%;
-	height : 50px;
-	padding : 0;
-	background-color : grey;
-	list-style-type : none;
-	margin-top: 1px;
-}
-ul#menu_horizontal li {
-	padding : 0 0.5em;
-	line-height : 50px;
-}
-li.bouton_droite li.bouton_gauche {
-	float : left;
+	display:block;
+	float:left;
+	width:80px;
+	margin-left: 40px;
+	top: -75px;
+	left: 7%;
+	text-decoration:none;
+	text-align:center;
+	font-family:"Century Gothic";
+	font-size:27px;
 }
 
-li.bouton_droite {
-	float : right;
-	border-left : 1px dashed black;
+#bandeau {
+
+	position: relative;
+	z-index: 35;
+	top: 70%;
+	left:100px;
+
+	background: #00a2e8;
+	border:5px solid #7f7f7f;
+	border-radius:20px;
+	height: 80px;
+	width: 93%;
+
 }
 
-ul#menu_horizontal a {
-	color : white;
-	text-decoration : none;
-	padding : 0 0.5em;
+#b1{
+	color: white;
+	font-family:"Century Gothic", Helvetica, sans-serif;
+	font-weight: bold;
+	font-size:30px;
+	margin-top: 3px;
+}
+#b2{
+	color: white;
+	font-family:"Century Gothic", Helvetica, sans-serif;
+	font-style: italic;
+	font-size:27px;
+	margin-top: -25px;
 }
 
-
-#menu-deroulant, #menu-deroulant ul {
-	margin-top: 2px;
-	background-color:grey;
-    padding: 0;
-    list-style: none;
-}
-#menu-deroulant {
-    /* Menu a gauche */
-	/*position: absolute;*/
-	top: 7px;
-	width: 50px;
-	height : 30px;
-    float: left;
-}
-#menu-deroulant li {
-    /* Ne s'effectue qu'au survole de l'image */
-    display: inline-block;
-}
-#menu-deroulant ul li {
-    /* On met les sousliens a la ligne */
-    display: inherit;
-}
-#menu-deroulant a {
-    /* Style d'ectriture */
-    text-decoration: none;
-    display: block;
-    color:white;
-}
-#menu-deroulant ul {
-    position: absolute;
-    /* on cache les sous menus complètement sur la gauche */
-    left: -999em;
-    text-align: left;
-    z-index: 1000;
-}
-#menu-deroulant li:hover ul {
-    /* Au survol des li du menu on replace les sous menus */
-    left: auto;
-}
 
 #fixe{
     position :fixed;
@@ -93,31 +91,33 @@ ul#menu_horizontal a {
 section{
 	position: relative;
 	z-index: 0;
-	margin-top: 30px;
+	top: 20px;
+    margin-top:150px;
+	margin-bottom: 40px;
     margin-right: 10%;
     margin-left: 10%;
-	border:2px solid #4A4A58;
-	background-color: #636d76;
-    height:auto;
+
 }
 
 #bas_page{
-	display:block;
-	bottom:0;
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 7px;
-    background-color: #808080;
+	position: relative;
+	z-index: 35;
+	top: 70%;
+	left:20px;
+	margin-right: 30px;
+	background: #00a2e8;
+	border:5px solid #7f7f7f;
+	border-radius:20px;
+
 }
 #bas_page ul{
 	list-style: none;
-	color : white;
+	color : #d8d8d8;
 	display:inline-block;
     vertical-align:top;
 }
 #bas_page a{
-	color : white;
+	color : #d8d8d8;
 }
 
 #a_cote1{
@@ -130,22 +130,13 @@ section{
 	display:inline-block;
 }
 
-#logo{
-	float:right;
-	margin-top: -1px;
-	max-width: 12%;
-}
+
 
 h1 {
-	margin-top: 150px;
-	margin-left: 10%;
-	font-family:Arial, sans-serif;
-	font-weight: 600;
-	font-size:25px;
-	letter-spacing:-2px;
+
 }
 
-#onglet{
+/*#onglet{
 	display: none;
 
 	color:#ffffff;
@@ -154,20 +145,20 @@ h1 {
 	list-style-type : none;
 	padding-bottom : 38px;
 	margin-left : 3px;
-}
+}*/
 
-#onglet li
+/*#onglet li
 {
 	overflow: hidden;
 	font-family:Arial, Helvetica, sans-serif;
 	font-size:18px;
 	float : left;
 	height : 20px; /* centrer le texte */
-	background-color: #636d76;
+	/*background-color: #636d76;
 	border:2px solid #494e52;
 	padding:8px;
 	margin : 1px 2px 0 2px;  /* Pour IE  */
-	cursor: pointer;
+	/*cursor: pointer;
 }
 
 #onglet .actif{
@@ -190,7 +181,7 @@ h1 {
 	border:2px solid #4A4A58;
 	background: whitesmoke;
 	overflow: hidden;
-}
+}*/
 
 typepiece {
 	margin-top:10px;
@@ -201,29 +192,65 @@ typepiece.inline {
 	margin-right:50px;
 }
 
+#connex{
+	width: 300px;
+	/*height: 200px;*/
+	border:4px solid #00a2e8;
+	border-radius:20px;
+	padding: 50px 0px 40px 0px;
+	margin: 1px 1px 1px 1px;
+
+}
+
+#inscrip{
+	width: 300px;
+	/*height: 200px;*/
+	border:4px solid #00a2e8;
+	border-radius:20px;
+	padding: 50px 0px 40px 0px;
+	margin: 1px 1px 1px 1px;
+}
+#conteneur {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+
+h2{
+	position: fixed;
+	font-family:"Century Gothic", Helvetica, sans-serif;
+	color: #00a2e8;
+	font-style: italic;
+	font-weight: 500;
+}
+
+
+
+
+
 form {
-	font-family:Arial, Helvetica, sans-serif;
-	font-size:90%;
+
+	font-family:"Century Gothic", Helvetica, sans-serif;
+	/*font-size:90%;*/
 	margin-top:40px;
 	margin-bottom:40px;
 	text-align: center;
+
 }
 
-input, textarea, select, option {
-	background-color:whitesmoke;
-}
 input, textarea, select {
 	padding:3px;
-	border:1px solid #636d76;
-	border-radius:5px;
+	border:2px solid #bababa;
 	width:200px;
-	box-shadow:1px 1px 2px #C0C0C0 inset;
+
 }
 input[type=submit], input[type=reset] {
-	width:80px;
+	width:100px;
 	margin-left:5px;
-	box-shadow:1px 1px 1px #4A4A58;
+	margin-top: 2px;
 	cursor:pointer;
+	font-family:"Century Gothic", Helvetica, sans-serif;
 }
 
 h6 {

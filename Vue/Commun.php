@@ -1,11 +1,14 @@
 <?php
-
+    $tete = "Connexion";
 // Genere le formulaire de connexion
+
 function formulaire_co(){
     ob_start();
     ?>
     <fieldset>
         <form method="POST" action="index.php?cible=verif_co">
+            <div id="connex">
+            <h2 id="titrcon">Connexion</h2>
             Identifiant
             <br/>
             <input type="text" name="Email"/>
@@ -14,7 +17,8 @@ function formulaire_co(){
             <br/>
             <input type="password" name="Mdp"/>
             <br/>
-            <input type='submit'/>
+            <input type='submit' value="Valider"/>
+            </div>
         </form>
     </fieldset>
     <?php
@@ -30,6 +34,8 @@ function formulaire_ins(){
     ?>
     <fieldset>
         <form method="POST" action="index.php?cible=verif_ins">
+            <div id="inscrip">
+            <h2 id="titrins">Inscription</h2>
             Nom
             <br/>
             <input type="text" name="nom"/>
@@ -51,7 +57,8 @@ function formulaire_ins(){
             <input type="text" name="mdp"/>
             <br/>
 
-            <input type='submit'/>
+            <input type='submit' value="Valider"/>
+            </div>
         </form>
     </fieldset>
     <?php

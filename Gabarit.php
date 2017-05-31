@@ -10,32 +10,28 @@
 <body>
 <div id="fixe">
     <header id="haut_page">
-        <a href="index.php?cible=accueil"><img src="Style/Image/banniere.png" alt="Banniere"/></a>
+        <a href="index.php?cible=accueil"><img src="Style/Image/banniere.png" height=65% alt="Banniere" id="banniere"  /></a>
+        <img src="https://scontent-cdg2-1.xx.fbcdn.net/v/t1.0-9/18301761_10209310154091018_2714229423431279309_n.jpg?oh=fdea58c79a83f4c60070654a66443a02&oe=5976BE5A" alt = "logo" id="logo"/>
+        <div id="bandeau">
+            <p id="b1">Pesimod, les maisons connectées</p>
+            <p id="b2">Un produit Domisep</p>
+            <p></p>
+        </div>
     </header>
-    <div>
+    <div id="menu_top">
+
         <ul id="menu_horizontal">
-            <li class="bouton_gauche">
-                <ul id="menu-deroulant">
-                    <li><a href="index.php?cible=accueil"><img src = "https://cdn4.iconfinder.com/data/icons/wirecons-free-vector-icons/32/menu-alt-512.png" width="25" height="20" alt="Menu"/></a>
-                        <ul>
-                            <li><a href="index.php?cible=Mon_Compte">Mon Compte</a>
-                            </li><li><hr></li>
-                            <li><a href="index.php?cible=Maison">Maison</a></li>
-                            <li><a href="index.php?cible=Calendrier">Calendrier</a></li>
-                            <li><a href="index.php?cible=Edition">Edition</a></li>
-                            <li><hr></li>
-                            <li><a href="index.php?cible=Parametres">Paramètres</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <?php echo ($dbouton1)?>
-            <?php echo ($dbouton2)?>
+            <li><a href="#">Aide</a></li>
+            <li><a href="#">Domisep</a></li>
         </ul>
+
+
     </div>
+
 </div>
-<h1><?php echo ($tete= ''); ?></h1>
+
 <section>
+    <h1><?php echo ($tete= ''); ?></h1>
     <p>
         <?php echo($contenu); ?>
     </p>
@@ -59,7 +55,7 @@
         <li id="a_cote2"><a href="https://twitter.com/"><img src="Style/Image/002-twitter.png"/></a></li>
         <li id="a_cote3"><a href="https://plus.google.com/?hl=fr"><img src="Style/Image/003-google-plus.png"/></a></li>
     </ul>
-    <img src="https://scontent-cdg2-1.xx.fbcdn.net/v/t1.0-9/18301761_10209310154091018_2714229423431279309_n.jpg?oh=fdea58c79a83f4c60070654a66443a02&oe=5976BE5A" alt = "logo" id="logo"/>
+    <!--<img src="https://scontent-cdg2-1.xx.fbcdn.net/v/t1.0-9/18301761_10209310154091018_2714229423431279309_n.jpg?oh=fdea58c79a83f4c60070654a66443a02&oe=5976BE5A" alt = "logo" id="logo"/>-->
 </footer>
     <?php echo ($jvscrpt = " "); ?>
 </body>
