@@ -20,23 +20,42 @@
     height: 120%;
 }
 
+
+
+
+/* Je sélectionne les <li> du menu horizontal */
+ul#menu_horizontal li {
+    display : inline;
+    padding : 0 0.5em; /* Pour espacer les boutons entre eux */
+}
+ul#menu_horizontal {
+    list-style-type : none; /* Car sinon les puces se placent n'importe où */
+}
+
+
+
+
 #menu_top {
     position: absolute;
-    margin-left: 90px;
+    z-index:30;
+    margin-left: 70px;
+    top: 25px;
 }
 
-#menu_horizontal li {
+/*#menu_horizontal li {
 
     list-style-type : none;
-}
+}*/
 
 #menu_horizontal a{
 
     text-decoration : none;
     color : black;
+    font-family:"Century Gothic";
+    font-size:20px;
 
 }
-#menu_horizontal li a{
+/*#menu_horizontal li a{
     position: relative;
     z-index: 30;
     display:block;
@@ -49,7 +68,7 @@
     text-align:center;
     font-family:"Century Gothic";
     font-size:27px;
-}
+}*/
 
 #bandeau {
 
@@ -131,12 +150,12 @@ section{
 }
 
 
-*/
+
 h1 {
 
 }
 
-/*#onglet{
+#onglet{
 	display: none;
 	color:#ffffff;
 	letter-spacing:-1px;
@@ -144,41 +163,44 @@ h1 {
 	list-style-type : none;
 	padding-bottom : 38px;
 	margin-left : 3px;
-}*/
+}
 
-/*#onglet li
+#onglet li
 {
 	overflow: hidden;
 	font-family:Arial, Helvetica, sans-serif;
 	font-size:18px;
 	float : left;
 	height : 20px; /* centrer le texte */
-/*background-color: #636d76;
-border:2px solid #494e52;
-padding:8px;
-margin : 1px 2px 0 2px;  /* Pour IE  */
-/*cursor: pointer;
+    background-color: #00a2e8;
+    border:3px solid #00a2e8;
+    border-radius: 10px;
+    padding:8px;
+    margin : 1px 2px 0 2px;  /* Pour IE  */
+    cursor: pointer;
 }
 #onglet .actif{
-position: relative;
-z-index: 3;
-border-bottom: none;
-color: #494e52;
-background: whitesmoke;
+    position: relative;
+    z-index: 3;
+    border-bottom: none;
+    color: #00a2e8;
+    background: white;
 }
 #contentonglet{
-clear: both;
-position: relative;
-z-index: 2;
-top: -4px;
-height:auto;
-margin-left: 20px;
-margin-right: 20px;
-margin-bottom: 20px;
-border:2px solid #4A4A58;
-background: whitesmoke;
-overflow: hidden;
-}*/
+    clear: both;
+    position: relative;
+    z-index: 2;
+    top: -7px;
+    height:auto;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border:3px solid #00a2e8;
+    border-radius: 10px;
+    background: white;
+
+    overflow: hidden;
+}
 
 typepiece {
     margin-top:10px;
@@ -277,3 +299,160 @@ body{
 	width: 98%;
 	height: 80%;
 }
+
+
+
+/*Style barre echelle*/
+input[type=range] {
+    -webkit-appearance: none;
+    width: 20%;
+    height: 10%;
+    margin: 1.4px 0;
+    border : none;
+}
+input[type=range]:focus {
+    outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+    width: 20%;
+    height: 31.2px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: #abb9d2;
+    border-radius: 14.3px;
+    border: 0px solid #010101;
+}
+input[type=range]::-webkit-slider-thumb {
+    box-shadow: 1.8px 1.8px 5.9px rgba(0, 0, 0, 0.49), 0px 0px 1.8px rgba(13, 13, 13, 0.49);
+    border: 2.9px solid #7f7f7f;
+    height: 37px;
+    width: 34px;
+    border-radius: 28px;
+    background: -webkit-linear-gradient(top, #0061a0, #00a2e8);
+
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -2.9px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #abb9d2;
+}
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 31.2px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: #abb9d2;
+    border-radius: 14.3px;
+    border: 0px solid #010101;
+}
+input[type=range]::-moz-range-thumb {
+    box-shadow: 1.8px 1.8px 5.9px rgba(0, 0, 0, 0.49), 0px 0px 1.8px rgba(13, 13, 13, 0.49);
+    border: 2.9px solid #7f7f7f;
+    height: 37px;
+    width: 34px;
+    border-radius: 28px;
+    background: -webkit-linear-gradient(top, #0061a0, #00a2e8);
+
+    cursor: pointer;
+}
+input[type=range]::-ms-track {
+    width: 100%;
+    height: 31.2px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+    background: #abb9d2;
+    border: 0px solid #010101;
+    border-radius: 28.6px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]::-ms-fill-upper {
+    background: #abb9d2;
+    border: 0px solid #010101;
+    border-radius: 28.6px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]::-ms-thumb {
+    box-shadow: 1.8px 1.8px 5.9px rgba(0, 0, 0, 0.49), 0px 0px 1.8px rgba(13, 13, 13, 0.49);
+    border: 2.9px solid #7f7f7f;
+    width: 34px;
+    border-radius: 28px;
+    background: -webkit-linear-gradient(top, #0061a0, #00a2e8);
+
+    cursor: pointer;
+    height: 35px;
+}
+input[type=range]:focus::-ms-fill-lower {
+    background: #abb9d2;
+}
+input[type=range]:focus::-ms-fill-upper {
+    background: #abb9d2;
+}
+
+
+
+/*Switch on/off */
+.switch{
+    display:none;
+    cursor: pointer;
+}
+.ui-content{
+    cursor: pointer;
+    background: -webkit-linear-gradient(top,#dedede,#fefefe);
+    border-radius: 20px;
+    display: inline-block;
+    text-align: left;
+    height: 26px;
+    overflow: hidden;
+    padding: 5px;
+}
+.ui-switch-range{
+    cursor: pointer;
+    background: #FFF;
+    border: 1px #cfc8bc solid;
+    border-radius: 15px;
+    box-shadow: 0 1px 1px rgba(255, 255, 255, 1), 0 1px 1px rgba(0, 0, 0, .15) inset;
+    display: inline-block;
+    height: 20px;
+    margin-bottom: 15px;
+    padding: 2px;
+    position: relative;
+    width: 70px;
+}
+.switch:checked ~ label .ui-switch-range{
+    cursor: pointer;
+    background: -webkit-linear-gradient(top,#fa9100,#f44800);
+}
+.ui-switch-handle{
+    cursor: pointer;
+    background: -webkit-linear-gradient(top, #00a2e8, #00b4ff);
+    border-radius: 20px;
+    box-shadow: 0 1px 3px 1px rgba(0,0,0,.3), 0 1px 1px rgba(255,255,255,.8) inset;
+    display: inline-block;
+    height: 20px;
+    position: absolute;
+    width: 20px;
+}
+.switch:checked ~ label .ui-switch-handle{
+    cursor: pointer;
+    right: 2px;
+}
+.ui-switch-handle:before{
+    cursor: pointer;
+    margin-left: -30px;
+    line-height: 22px;
+    content: "ON";
+    color: #FFF;
+}
+.ui-switch-handle:after{
+    cursor: pointer;
+    position: relative;
+    right: -35px;
+    content: "OFF";
+}
+
+
