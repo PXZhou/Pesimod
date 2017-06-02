@@ -131,7 +131,7 @@ section{
 }
 
 
-
+*/
 h1 {
 
 }
@@ -238,15 +238,16 @@ h2{
     padding-left: 10px;
 }
 
-fieldset{
-    border: none;
-}
+
 
 form {
     box-shadow: none;
     font-family:"Century Gothic", Helvetica, sans-serif;
     /*font-size:90%;*/
+    margin-top:40px;
+    margin-bottom:40px;
     text-align: center;
+
 }
 
 input, textarea, select {
