@@ -2,9 +2,7 @@
 
 if(isset($_GET['cible']) && $_GET['cible']=="verif_co"){// l'utilisateur a cliqué sur valider
     if(!empty($_POST['Email']) && !empty($_POST['Mdp'])){
-        echo ($_POST['Email']);
         include("Modele/PDO.php");
-
 
         $reponse = mdp($db,$_POST['Email']);
 
@@ -28,6 +26,4 @@ if(isset($_GET['cible']) && $_GET['cible']=="verif_co"){// l'utilisateur a cliqu
         include('Vue/non_connecte.php');
     }
 }
-else{
-    include'Vue/non_connecte.php';
-}
+//else{}

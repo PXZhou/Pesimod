@@ -33,7 +33,7 @@ function formulaire_ins(){
     ob_start();
     ?>
     <fieldset>
-        <form method="POST" action="index.php?cible=verif_ins">
+        <form method="POST" action="index.php?cible=verif">
             <div id="inscrip">
             <h2 id="titrins">Inscription</h2>
             Nom
@@ -52,7 +52,7 @@ function formulaire_ins(){
             <br/>
             <input type="text" name="mdp"/>
             <br/>
-            Confirmation Mot de passe
+            Confirmation "Mot de passe
             <br/>
             <input type="text" name="mdp"/>
 

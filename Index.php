@@ -5,10 +5,17 @@
     require("Modele/connexion.php");
     require("Vue/Commun.php");
 
-    if(!isset($_SESSION["userID"])){
+if(!isset($_SESSION["userID"])){
         $erreur = "";
+        print_r($_GET);
+        if ($_GET['cible'] == 'verif'){
+        include "Controler/inscription.php";
+        }
         include("Controler/Connexion.php");
-    }
+        include("Controler/inscription.php");
+
+
+}
     else{
         if (isset($_GET['cible'])) {
             if ($_GET['cible'] == 'bouton2') {
