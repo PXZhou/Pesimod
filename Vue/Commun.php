@@ -70,8 +70,8 @@ ob_start();
     ?>
     <li class="bouton_droite"><a href="index.php?cible=bouton1"><?php echo($nom); ?></a></li>
     <?php
-$dboutton1 = ob_get_clean();
-return $dboutton1;
+$dbouton1 = ob_get_clean();
+return $dbouton1;
 
 }
 function dbouton2 ($nom){
@@ -79,7 +79,7 @@ function dbouton2 ($nom){
     ?>
     <li class="bouton_droite"><a href="index.php?cible=bouton2"><?php echo($nom); ?></a></li>
     <?php
-    $dboutton2 = ob_get_clean();
-    return $dboutton2;
+    $dbouton2 = ob_get_clean();
+    return $dbouton2;
 
 }
