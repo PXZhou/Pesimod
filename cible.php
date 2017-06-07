@@ -1,4 +1,5 @@
-<?php /*
+<?php
+/*
 $name = $_POST['old_name'];
 $nvName = $_POST['nom_pièce'];
 $nbre_temp =$_POST['choix0'];
@@ -32,7 +33,7 @@ if (!empty($_POST['Valider'])){
 
          )
 
-     );*/}
+     );}*/
 elseif (!empty($_POST['Supprimer'])) {
     $req = $bdd->exec("DELETE FROM piece WHERE Nom='$name'");
 }
@@ -49,5 +50,4 @@ if (!empty($_POST['Modification'])) {
 
 header('Location: function.php');
 exit();
-*/
 ?>
