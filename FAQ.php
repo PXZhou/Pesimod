@@ -1,9 +1,10 @@
+<link rel="stylesheet" type="text/css" href="FAQ.css"/>
 <ul id="Foire à questions">
     <li id="q1"><a href="#a1">Que puis-je contrôler avec Pesimod ?</a></li>
     <li id="q2"><a href="#a2">Je ne peux pas ajouter de nouvelle pièce, pourquoi ?</a></li>
     <li id="q3"><a href="#a3">Je ne peux pas ajouter de nouveau capteur dans une pièce, pourquoi ?</a></li>
     <li id="q4"><a href="#a4">Je ne peux pas ajouter plusieurs maisons, pourquoi ?</a></li>
-    <li id="q5"><a href="#a4">Je n'ai pas trouver la réponse à ma question, comment régler mon problème ?</a></li>
+    <li id="q5"><a href="#a5">Je n'ai pas trouver la réponse à ma question, comment régler mon problème ?</a></li>
 
 </ul>
 <div id="a1">
