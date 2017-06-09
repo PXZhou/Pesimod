@@ -6,13 +6,15 @@
     require("Vue/Commun.php");
 
 if(!isset($_SESSION["userID"])){
+    include "Vue/non_connecte.php";
+    if (isset($_GET['cible'])) {
         $erreur = "";
-        if ($_GET['cible'] == 'verif'){
+        if ($_GET['cible'] == 'verif_ins') {
             include "Controler/inscription.php";
-        }
-        else if ($_GET['cible'] == 'vérif'){
+        } else if ($_GET['cible'] == 'verif_co') {
             include "Controler/Connexion.php";
         }
+    }
 }
     else{
         if (isset($_GET['cible'])) {
