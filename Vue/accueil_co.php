@@ -1,8 +1,7 @@
 <?php
 $title = "Espace client - Pesimod";
 $tete = "Espace Personnel";
-$dbouton1 = dbouton1("");
-$dbouton2 = dbouton2("Se déconnecter");
+
 
 $contenu = "<p>Accueil</p>
    <p><a href='index.php?cible=affichecapteur'>Afficher les capteurs</a></p>";

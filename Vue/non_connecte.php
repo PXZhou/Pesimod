@@ -8,8 +8,7 @@ $contenu .= formulaire_co().$erreur;
 $contenu .= formulaire_ins();
 $contenu .= "</div>";
 $tete = "Connexion";
-$dbouton1 = dbouton1("");
-$dbouton2 = dbouton2("S'inscrire");
+
 
     include'Gabarit.php';
 $jvscript = "";
