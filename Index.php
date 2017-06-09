@@ -16,23 +16,6 @@ if(!isset($_SESSION["userID"])){
 
 
 }
-    else{
-        if (isset($_GET['cible'])) {
-            if ($_GET['cible'] == 'bouton2') {
-                // Détruit toutes les variables de session
-                $_SESSION = array();
-                session_destroy();
-                ob_clean();
-                include("Vue/accueil_non_co.php");
-            }
-            if ($_GET['cible'] == 'Edition') {
-                include("function.php");
-            }
-            if ($_GET['cible'] == 'affichecapteur') {
-                include("Vue/affichecapteur.php");
-            }
-
-        }
         else  {
             include ("Vue/accueil_co.php");
             /*if (isset($_GET['cible'])){
@@ -61,7 +44,7 @@ if(!isset($_SESSION["userID"])){
             }
 
     */
-        }
+
     }
 
 
