@@ -8,7 +8,7 @@
 if(!isset($_SESSION["userID"])){
         $erreur = "";
         print_r($_GET);
-        if ($_GET['cible'] == 'verif'){
+        if ($_GET['cible'] === 'verif'){
         include "Controler/inscription.php";
         }
         include("Controler/Connexion.php");

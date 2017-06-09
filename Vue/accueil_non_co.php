@@ -6,9 +6,6 @@
     $title = "Accueil";
     $tete = "Accueil";
     $contenu = "Accueil. Veuillez vous connecter";
-    $dbouton1 = dbouton1("Se connecter");
-    $dbouton2 = dbouton2("S'inscrire");
-
     $menu_der="";
     $jvscript = "";
 
