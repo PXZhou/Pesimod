@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>Pesimod</title>
+<title>PESIMOD</title>
 <head>
     <link rel="shortcut icon" type="image/x-icon" href="Style/Image/dom.png" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">

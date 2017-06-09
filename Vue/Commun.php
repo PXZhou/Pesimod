@@ -33,7 +33,7 @@ function formulaire_ins(){
     ob_start();
     ?>
     <fieldset>
-        <form method="POST" action="index.php?cible=verif">
+        <form method="POST" action="index.php?cible=verif_ins">
             <div id="inscrip">
             <h2 id="titrins">Inscription</h2>
             Nom
