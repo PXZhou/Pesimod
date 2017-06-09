@@ -8,12 +8,11 @@
 if(!isset($_SESSION["userID"])){
         $erreur = "";
         if ($_GET['cible'] == 'verif'){
-        include "Controler/inscription.php";
+            include "Controler/inscription.php";
         }
-        include("Controler/Connexion.php");
-        include("Controler/inscription.php");
-
-
+        else if ($_GET['cible'] == 'vérif'){
+            include "Controler/Connexion.php";
+        }
 }
     else{
         if (isset($_GET['cible'])) {
