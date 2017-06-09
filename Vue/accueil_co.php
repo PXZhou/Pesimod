@@ -2,7 +2,6 @@
 $title = "Espace client - Pesimod";
 $tete = "Espace Personnel";
 
-
 $contenu = "<p>Accueil</p>
    <p><a href='index.php?cible=affichecapteur'>Afficher les capteurs</a></p>";
 $jvscript = "";
@@ -33,6 +32,7 @@ $contenu .= "
 </form>";
 $contenu .= "</div>";
 ob_clean();
+
 $jvscrpt = require('Vue/onglets.php');
 include 'Gabarit.php';
 ?>

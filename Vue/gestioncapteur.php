@@ -1,6 +1,6 @@
 
 <?php
-        require("function.php");
+        require("Pesimod/Vue/function.php");
         $title = "Editeur";
         $tete = "Editeur";
 

@@ -65,4 +65,3 @@ function formulaire_ins(){
     return $formulaire_ins;
 
 }
-

@@ -25,10 +25,13 @@ if(isset($_GET['cible']) &&  $_GET['cible']=="verif"){
             {
             echo 'Les deux mots de passe que vous avez rentrés ne correspondent pas…';
             include'Vue/ins_non_connecte.php';
+
             }}
     }
 else
     {
         include'Vue/ins_non_connecte.php';
+        include("Vue/accueil_non_co.php");
+
 }
 ?>
