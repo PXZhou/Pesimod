@@ -38,11 +38,11 @@ function formulaire_ins(){
             <h2 id="titrins">Inscription</h2>
             Nom
             <br/>
-            <input type="text" name="nom"/>
+            <input type="text" name="Nom"/>
             <br/>
             Prenom
             <br/>
-            <input type="text" name="prenom"/>
+            <input type="text" name="Prenom"/>
             <br/>
             Email
             <br/>
@@ -50,11 +50,11 @@ function formulaire_ins(){
             <br/>
             Mot de passe
             <br/>
-            <input type="text" name="mdp"/>
+            <input type="text" name="Mdp"/>
             <br/>
             Confirmation "Mot de passe
             <br/>
-            <input type="text" name="mdp"/>
+            <input type="text" name="Mdp2"/>
 
             <input type='submit' value="Valider"/>
             </div>
