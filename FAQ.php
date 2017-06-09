@@ -24,11 +24,10 @@ $title = "FAQ";
     $contenu .= "<h2>Je ne peux pas ajouter plusieurs maisons, pourquoi ?</h2>";
     $contenu .= "<p>L'adresse sélectionnée n'est pas valable, ou bien vous ne vous êtes pas déconnecté du gestionnaire de la première maison.</p>";
 
-    $contenu .= </div>;
-    $contenu .= <div id="a5">;
-    $contenu .=  <h2>"Je ne trouve pas la réponse à ma question, comment régler mon problème ?"</h2>;
-    $contenu .=  <p>"Vous pouvez nous contacter directement au service client par mail : Pesimod@gmail.com ou bien par téléphone : 09 34 23 56 1O (10cts/min"</p>;
-</form>";
+    $contenu .= "</div>";
+    $contenu .= "<div id='a5'>";
+    $contenu .= "<h2>Je ne trouve pas la réponse à ma question, comment régler mon problème ?</h2>";
+    $contenu .= "<p>Vous pouvez nous contacter directement au service client par mail : Pesimod@gmail.com ou bien par téléphone : 09 34 23 56 1O (10cts/min</p>";
 $contenu .= "</div>";
 ob_clean();
     ?>
