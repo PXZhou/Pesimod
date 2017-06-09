@@ -2,8 +2,8 @@
 
 $title = "FAQ";
     $contenu .= "<ul id='Foire à questions'>";
-    $contenu .= "<li id='q1''> "<a href="#a1">Que puis-je contrôler avec Pesimod ?</a></li>";
-    $contenu .= "<li id='q2'>  "<a href="#a2"> Je ne peux pas ajouter de nouvelle pièce, pourquoi ? </a></li>";
+    $contenu .= "<li id='q1'> "<a href='#a1'>Que puis je contrôler avec Pesimod ? </a></li>";
+    $contenu .= "<li id='q2'> "<a href='#a2'>Je ne peux pas ajouter de nouvelle pièce, pourquoi ? </a></li>";
     $contenu .= "<li id='q3'>  "<p><a href='#a3'>Je ne peux pas ajouter de nouveau capteur dans une pièce, pourquoi ?</a></p>";
     $contenu .= "<li id="q4">" "<a href="#a4">"Je ne peux pas ajouter plusieurs maisons, pourquoi ?"/a></li>";
     $contenu .= "<li id="q5">" "<a href="#a5">"Je ne trouve pas trouver la réponse à ma question, comment régler mon problème ?"</a></li>"";
