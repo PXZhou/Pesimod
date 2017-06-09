@@ -15,14 +15,14 @@ $contenu .= "<li>+</li>";
 $contenu .= "</ul>";
 $contenu .= "<div id='contentonglet'> ";
 $contenu .= "<div class='item'>
-    
-        
-            <h6>Capteur température</h6>
-            <p><img src='Style/Image/temperature.png' alt='temp' width='40' height='40' ></p>
+    <div id='contener'>
+        <div class='element'>
+            <p><h6>Capteur température</h6>
+            <img src='Style/Image/thermometer.png' alt='temp' width='50' height='50' ></p>
             <input id='echelle' type='range'>
+        </div>
         
-        
-        
+        <div class='element'>
             <h6>Capteur luminosité</h6>
             <p><img src='Style/Image/luminosite.png' alt='temp' width='40' height='40' ></p>
             <input class='switch' name='premium' id='premium' type='checkbox' checked>
@@ -32,11 +32,11 @@ $contenu .= "<div class='item'>
                  </div>
               </div>
             </label>
-        
+        </div>
 
-        
+        <div class='element'>
             <h6>Capteur humidité</h6>
-            <p><img src='Style/Image/fumee.png' alt='temp' width='40' height='40' ></p>
+            <p><img src='Style/Image/humidite.png' alt='temp' width='40' height='40' ></p>
             <input class='switch' name='premium1' id='premium' type='checkbox' checked>
             <label for='premium1' class='ui-content' >
               <div class='ui-switch-range'>
@@ -44,37 +44,52 @@ $contenu .= "<div class='item'>
                  </div>
               </div>
             </label>
-        
+        </div>
         
     
     
-        
+        <div class='element'>
             <h6>Capteur fumée</h6>
             <p><img src='Style/Image/fumee.png' alt='temp' width='40' height='40' ></p>
-            <input type='checkbox' checked data-toggle='toggle'>
+            <label for='premium1' class='ui-content' >
+              <div class='ui-switch-range'>
+                 <div class='ui-switch-handle'>
+                 </div>
+              </div>
+            </label>
+        </div>
+       </div>
         
-        
-        
-           <p><a href='#'><img src='Style/Image/Poubelle.png' alt='Suppression' width='40' height='40' ></a></p>
+       <p><a href='#'><img src='Style/Image/Poubelle.png' alt='Suppression' width='50' height='50' ></a></p>
      </div>   
     ";
 
 //----------------------------------------------------------------
-$contenu .= "<div class='item'> <h6>Capteur température</h6>
-    <p><img src='Style/Image/temperature.png' alt='temp' width='40' height='40' ></p>
-    <input id='echelle' type='range'>
+$contenu .= "<div class='item'>
+    <bloc id='toto'>
+        <h6>Capteur température</h6>
+        <p><img src='Style/Image/temperature.png' alt='temp' width='40' height='40' ></p>
+        <input id='echelle' type='range'>
+    </bloc>
     
-    <h6>Capteur luminosité 1</h6>
-    <p><img src='Style/Image/luminosite.png' alt='temp' width='40' height='40' ></p>
-    <img src='Style/Image/on.png' alt='switch' width='35' height='35'>
+    <bloc id='toto'>
+        <h6>Capteur luminosité 1</h6>
+        <p><img src='Style/Image/luminosite.png' alt='temp' width='40' height='40' ></p>
+        <img src='Style/Image/on.png' alt='switch' width='35' height='35'>
+    </bloc>
     
-    <h6>Capteur luminosité 2</h6>
-    <p><img src='Style/Image/luminosite.png' alt='temp' width='40' height='40' ></p>
-    <img src='Style/Image/on.png' alt='switch' width='35' height='35'>
+    <bloc id='toto'>
+        <h6>Capteur luminosité 2</h6>
+        <p><img src='Style/Image/luminosite.png' alt='temp' width='40' height='40' ></p>
+        <img src='Style/Image/on.png' alt='switch' width='35' height='35'>
+    </bloc>
     
-    <h6>Capteur fumée</h6>
-    <p><img src='Style/Image/fumee.png' alt='temp' width='40' height='40' ></p>
-    <img src='Style/Image/on.png' alt='switch' width='35' height='35'>
+    <bloc id='toto'>
+        <h6>Capteur fumée</h6>
+        <p><img src='Style/Image/fumee.png' alt='temp' width='40' height='40' ></p>
+        <img src='Style/Image/on.png' alt='switch' width='35' height='35'>
+    </bloc>
+    
     
     <p><a href='#'><img src='Style/Image/Poubelle.png' alt='Suppression' width='40' height='40' ></a></p></div>";
 
