@@ -4,8 +4,8 @@ $contenu = ob_get_clean();
 $tete = ob_get_clean();
 $title = "Connexion" ;
 $contenu = "<div id='conteneur'>";
-$contenu .= formulaire_co();
-$contenu .= formulaire_ins();
+$contenu .= formulaire_co().$erreur;
+$contenu .= formulaire_ins().$erreur;
 $contenu .= "</div>";
 $tete = "Connexion";
 

@@ -1,14 +1,13 @@
 <?php
 
-if(isset($_GET['cible']) &&  $_GET['cible']=="verif"){
-    if(!empty($_POST['Email']) && !empty($_POST['Mdp']) && !empty($_POST['Nom']) && !empty($_POST['Prenom']) && !empty($_POST['Mdp2'])){
+if(isset($_GET['cible']) && $_GET['cible']=="verif_ins"){// l'utilisateur a cliqué sur valider
+    if(!empty($_POST['Nom']) && !empty($_POST['Prenom']) && !empty($_POST['Email']) && !empty($_POST['Mdp']) && !empty($_POST['Mdp2'])) {
         include 'Modele/PDO.php';
 
         $Mdp = (htmlspecialchars($_POST['Mdp']));
         $Mdp2 = (htmlspecialchars($_POST['Mdp2']));
 
-        if($Mdp === $Mdp2)
-            {
+        if ($Mdp === $Mdp2) {
             $Nom = (htmlspecialchars($_POST['Nom']));
             $Prenom = (htmlspecialchars($_POST['Prenom']));
             $Email = (htmlspecialchars($_POST['Email']));
@@ -16,22 +15,23 @@ if(isset($_GET['cible']) &&  $_GET['cible']=="verif"){
             $Mdp = sha1($Mdp);
 
             inscription($db, $Nom, $Prenom, $Email, $Mdp);
+            $erreur = "inscription validée";
+            include "Vue/non_connecte.php";
 
-            echo "inscription terminée";
 
-            }
+        } else {
+            $erreur = "les mots de passes ne correspondent pas";
+            include "Vue/non_connecte.php";
 
-        else
-            {
-            echo 'Les deux mots de passe que vous avez rentrés ne correspondent pas…';
-            include'Vue/ins_non_connecte.php';
-
-            }}
+        }
     }
-else
-    {
-        include'Vue/ins_non_connecte.php';
-        include("Vue/accueil_non_co.php");
+    else {
+        $erreur = "remplissez tous les champs";
+        include "Vue/non_connecte.php";
+    }
 
 }
+
+
+
 ?>

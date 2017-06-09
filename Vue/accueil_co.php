@@ -1,15 +1,15 @@
 <?php
+$title = ob_get_clean();
+$tete = ob_get_clean();
+$contenu = ob_get_clean();
+$jvscrpt = ob_get_clean();
+
 $title = "Espace client - Pesimod";
 $tete = "Espace Personnel";
 
 $contenu = "<p>Accueil</p>
    <p><a href='index.php?cible=affichecapteur'>Afficher les capteurs</a></p>";
-$jvscript = "";
-
-
-
-
-$jvscript = "";
+$jvscrpt = "";
 
 "
    <p><a href='index.php?cible=affichecapteur'><img src='Style/Image/001-facebook.png'></a></p>";
@@ -31,7 +31,7 @@ $contenu .= "<div class='item'>";
 $contenu .= "
 </form>";
 $contenu .= "</div>";
-ob_clean();
+
 
 $jvscrpt = require('Vue/onglets.php');
 include 'Gabarit.php';

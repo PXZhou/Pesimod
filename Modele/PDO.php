@@ -6,6 +6,7 @@
         return $reponse;
     }
 
+
 // fonction qui va ajouter les utilisateur lors de l'incription
     function inscription($db, $Nom, $Prenom, $Email, $Mdp){
         $ajout = $db->prepare('INSERT INTO utlisateur(Nom, Prenom, Email, Mdp) VALUES (:Nom, :Prenom, :Email, :Mdp)');
