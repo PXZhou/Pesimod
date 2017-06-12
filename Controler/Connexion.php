@@ -26,4 +26,4 @@ if(isset($_GET['cible']) && $_GET['cible']=="verif_co"){// l'utilisateur a cliqu
         include('Vue/non_connecte.php');
     }
 }
-//else{}
+

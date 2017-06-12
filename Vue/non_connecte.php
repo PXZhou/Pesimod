@@ -5,12 +5,12 @@ $tete = ob_get_clean();
 $title = "Connexion" ;
 $contenu = "<div id='conteneur'>";
 $contenu .= formulaire_co().$erreur;
-$contenu .= formulaire_ins();
+$contenu .= formulaire_ins().$info_ins;
 $contenu .= "</div>";
 $tete = "Connexion";
-$dbouton1 = dbouton1("");
-$dbouton2 = dbouton2("S'inscrire");
 
-    include'Gabarit.php';
+
+
+include'Gabarit.php';
 $jvscript = "";
 ?>
