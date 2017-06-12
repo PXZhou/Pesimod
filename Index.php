@@ -6,6 +6,7 @@
     require("Vue/Commun.php");
 
 if(!isset($_SESSION["userID"])){
+    $info_ins = "";
     $erreur = "";
     if (isset($_GET['cible'])) {
         if ($_GET['cible'] == 'verif_ins') {

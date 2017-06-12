@@ -12,15 +12,26 @@ if(isset($_GET['cible']) && $_GET['cible']=="verif_ins"){// l'utilisateur a cliq
             $Prenom = (htmlspecialchars($_POST['Prenom']));
             $Email = (htmlspecialchars($_POST['Email']));
 
-            $Mdp = sha1($Mdp);
+            $verif = $db->query('SELECT Email FROM utilisateur WHERE Email="'.$Email.'"');
 
-            inscription($db, $Nom, $Prenom, $Email, $Mdp);
-            $erreur = "inscription validée";
-            include "Vue/non_connecte.php";
+            if ($verif->rowcount()==0){
+                $Mdp = sha1($Mdp);
+
+                inscription($db, $Nom, $Prenom, $Email, $Mdp);
+                $info_ins = "inscription validée";
+                include "Vue/non_connecte.php";
+            }
+
+            else {
+                $info_ins = "cet email est déjà utilisé.";
+                include "Vue/non_connecte.php";
+            }
+
+
 
 
         } else {
-            $erreur = "les mots de passes ne correspondent pas";
+            $info_ins = "les mots de passes ne correspondent pas";
             include "Vue/non_connecte.php";
 
         }
