@@ -21,6 +21,9 @@
     height: 120%;
 }
 
+fieldset{
+    border: none;
+}
 
 
 
@@ -217,7 +220,9 @@ section{
     border-radius:20px;
     padding: 30px 0px 40px 0px;
     margin: 1px 1px 1px 1px;
+
 }
+
 #conteneur {
     display: flex;
     flex-direction: row;
@@ -226,27 +231,28 @@ section{
 }
 
 h2{
-    position: relative;
+    position: absolute;
+    display: inline;
     font-family:"Century Gothic", Helvetica, sans-serif;
     color: #00a2e8;
+    background-color: white;
     font-style: italic;
     font-weight: 500;
 }
 
 #titrcon{
-    margin-top: -68px;
-    margin-left: 20px;
-    background-color: white;
-    padding-right: 10px;
-    padding-left: 10px;
+    margin-top: -65px;
+    margin-left: -90px;
+    padding-left: 7px;
+    padding-right: 7px;
+
 }
 
 #titrins{
     margin-top: -50px;
-    margin-left: 20px;
-    background-color: white;
-    padding-right: 10px;
-    padding-left: 10px;
+    margin-left: -110px;
+    padding-left: 7px;
+    padding-right: 7px;
 }
 
 
