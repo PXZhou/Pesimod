@@ -22,7 +22,7 @@ if(isset($_GET['cible']) && $_GET['cible']=="verif_co"){// l'utilisateur a cliqu
         }
     }
     else {
-        $erreur = "veuillez remplir tous les champs";
+        $erreur = "Veuillez remplir tous les champs.";
         include('Vue/non_connecte.php');
     }
 }

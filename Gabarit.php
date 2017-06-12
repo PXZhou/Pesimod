@@ -5,7 +5,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="Style/Image/dom.png" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title><?php echo ($title) ?></title>
-    <link rel="stylesheet" type="text/css" href="styleB.css"/>
+    <link rel="stylesheet" type="text/css" href="Style/styleB.css"/>
 
 </head>
 <body>
@@ -22,8 +22,8 @@
     <div id="menu_top">
 
         <ul id="menu_horizontal">
-            <li><a href="#">Aide</a></li>
-            <li><a href="#">Domisep</a></li>
+            <li><a href="FAQ.php">Aide</a></li>
+            <li><a href="Gabarit.php">Domisep</a></li>
         </ul>
 
 
@@ -32,7 +32,7 @@
 </div>
 
 <section>
-    <h1><?php echo ($tete= ''); ?></h1>
+    <h1> <?php echo ($tete= 'Accueil'); ?> </h1>
     <p>
         <?php echo($contenu); ?>
     </p>
@@ -43,11 +43,6 @@
         <li><a href="">Qui sommes nous ?</a></li>
         <li><a href="">Mentions légales</a></li>
         <li><a href="">Politique de confidentialité</a></li>
-    </ul>
-    <ul>
-        <li><strong>Service</strong></li>
-        <li><a href="">Documentation</a></li>
-        <li><a href="">Nous rejoindre</a></li>
     </ul>
     <ul>
         <li>Newsletter :</li>

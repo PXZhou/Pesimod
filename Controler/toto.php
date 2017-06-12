@@ -18,6 +18,6 @@
     }
 
     /*function titi($id_utilisateur, $id_maison, $bdd){
-        $arr = array();
+        $tab2 = array();
         $req = $bdd ->query("SELECT nom");
     }*/

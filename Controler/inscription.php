@@ -18,12 +18,12 @@ if(isset($_GET['cible']) && $_GET['cible']=="verif_ins"){// l'utilisateur a cliq
                 $Mdp = sha1($Mdp);
 
                 inscription($db, $Nom, $Prenom, $Email, $Mdp);
-                $info_ins = "inscription validée";
+                $info_ins = "Inscription Validée.";
                 include "Vue/non_connecte.php";
             }
 
             else {
-                $info_ins = "cet email est déjà utilisé.";
+                $info_ins = "Cet email existe déjà.";
                 include "Vue/non_connecte.php";
             }
 
@@ -31,13 +31,13 @@ if(isset($_GET['cible']) && $_GET['cible']=="verif_ins"){// l'utilisateur a cliq
 
 
         } else {
-            $info_ins = "les mots de passes ne correspondent pas";
+            $info_ins = "Veuillez recommencer. Les mots de passes ne correspondent pas.";
             include "Vue/non_connecte.php";
 
         }
     }
     else {
-        $erreur = "remplissez tous les champs";
+        $erreur = "Veuillez remplir tous les champs.";
         include "Vue/non_connecte.php";
     }
 

@@ -1,4 +1,4 @@
-#a1{
+/* #a1{
     position: relative;
     z-index: 30;
     height:90px;
@@ -6,20 +6,20 @@
     display:block;
     width : auto;
     text-align:center;
-}
+}*/
 
 #q1{
-        color : #0061a0;
-        position: relative;
-        z-index: 30;
-        height:90px;
-        background: white;
-        display:block;
-        width : auto;
+    color : #0061a0;
+    position: absolute;
+    z-index: 0;
+    height:90px;
+    background: white;
+    display:block;
+    width : auto;
 
 
 }
-
+/*
 #a2{
     position: relative;
     z-index: 30;
@@ -59,4 +59,4 @@
     text-align:center;
 }
 
-
+*/
