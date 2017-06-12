@@ -10,9 +10,9 @@
 
 #q1{
     color : #0061a0;
-    position: absolute;
-    z-index: 0;
-    height:90px;
+    position: relative;
+    z-index: 10;
+    height:75px;
     background: white;
     display:block;
     width : auto;

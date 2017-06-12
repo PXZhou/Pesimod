@@ -23,7 +23,7 @@
 
         <ul id="menu_horizontal">
             <li><a href="FAQ.php">Aide</a></li>
-            <li><a href="Gabarit.php">Domisep</a></li>
+            <li><a href="Index.php">Domisep</a></li>
         </ul>
 
 

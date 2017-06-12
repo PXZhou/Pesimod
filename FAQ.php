@@ -24,7 +24,7 @@
 
         <ul id="menu_horizontal">
             <li><a href="FAQ.php">Aide</a></li>
-            <li><a href="Gabarit.php">Domisep</a></li>
+            <li><a href="Index.php">Domisep</a></li>
         </ul>
 
 
@@ -35,22 +35,22 @@
 <section>
     <h1>F.A.Q</h1>
     <p>
-    <ul id='Foire à questions'>
+    <ul id='Foire au questions'>
 
         <li id='q1'> <strong> Que puis je contrôler avec Pesimod ? </strong>
-    </br> Vous pouvez contrôler les différents capteurs de votre maison, via votre interface de Pesimod.</li>
+        </br> Vous pouvez contrôler les différents capteurs de votre maison, via votre interface de Pesimod.</li>
 
         <li id='q1'> <strong>Je ne peux pas ajouter de nouvelle pièce, pourquoi ? </strong>
-    </br>Il faut cliquer sur le gestionnaire de pièces avant de pouvoir acceder à la fonctionnalité ajout de pièces. </li>
+        </br>Il faut cliquer sur le gestionnaire de pièces avant de pouvoir acceder à la fonctionnalité ajout de pièces. </li>
 
         <li id='q1'> <strong>Je ne peux pas ajouter de nouveau capteur dans une pièce, pourquoi ? </strong>
-    </br>Vous n'avez pas le type d'abonnement qui vous permet d'ajouter plus de capteurs, il faut souscrire à l'offre Premium.</li>
+        </br>Vous n'avez pas le type d'abonnement qui vous permet d'ajouter plus de capteurs, il faut souscrire à l'offre Premium.</li>
 
         <li id='q1'> <strong>Je ne peux pas ajouter plusieurs maisons, pourquoi ? </strong>
-    </br>L'adresse sélectionnée n'est pas valable, ou bien vous ne vous êtes pas déconnecté du gestionnaire de la première maison.</li>
+        </br>L'adresse sélectionnée n'est pas valable, ou bien vous ne vous êtes pas déconnecté du gestionnaire de la première maison.</li>
 
         <li id='q1'> <strong>Je ne trouve pas trouver la réponse à ma question, comment régler mon problème ? </strong>
-    </br>Vous pouvez nous contacter directement au service client par mail : Pesimod@gmail.com ou bien par téléphone : 09 34 23 56 1O (10cts/min) </li>
+        </br>Vous pouvez nous contacter directement au service client par mail : Pesimod@gmail.com ou bien par téléphone : 09 34 23 56 1O (10cts/min) </li>
 
     </p>
 </section>
