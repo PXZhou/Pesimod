@@ -32,7 +32,7 @@
 </div>
 
 <section>
-    <h1> <?php echo ($tete= 'Accueil'); ?> </h1>
+    <h1> <?php echo ($tete= ''); ?> </h1>
     <p>
         <?php echo($contenu); ?>
     </p>
