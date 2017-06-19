@@ -57,7 +57,7 @@ function formulaire_ins(){
             <input type="text" name="Mdp2"/>
 
             <br/>
-            <p><a href="CGU">Conditions générales d'utilisation </a><input type="checkbox" name="macase" value="Conditions generales d'utilisation"></p>
+            <p><a href="CGU.php">Conditions générales d'utilisation </a><input type="checkbox" name="macase" value="Conditions generales d'utilisation"></p>
 
             <input type='submit' value="Valider"/>
             </div>
