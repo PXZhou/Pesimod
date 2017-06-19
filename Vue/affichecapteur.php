@@ -101,7 +101,7 @@ $contenu .= "<div class='item'>
 
 $contenu .= "<div class='item'>
     <bloc id='toto'>
-        <h6>Capteur température</h6>
+        <h6>Régulateur température</h6>
         <p><img src='Style/Image/temperature.png' alt='temp' width='40' height='40' ></p>
         <input id='echelle' type='range'>
     </bloc>

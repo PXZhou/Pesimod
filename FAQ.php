@@ -37,7 +37,7 @@
     <p>
     <ul id='Foire au questions'>
 
-        <li id='q1'> <strong> Que puis je contrôler avec Pesimod ? </strong>
+        <li id='q1'> <strong> Que puis-je contrôler avec Pesimod ? </strong>
         </br> Vous pouvez contrôler les différents capteurs de votre maison, via votre interface de Pesimod.</li>
 
         <li id='q1'> <strong>Je ne peux pas ajouter de nouvelle pièce, pourquoi ? </strong>
