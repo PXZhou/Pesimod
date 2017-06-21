@@ -33,6 +33,6 @@ $contenu .= "
 $contenu .= "</div>";
 
 
-$jvscrpt = require('Vue/onglets.php');
+$jvscrpt = require('');
 include 'Gabarit.php';
 ?>
