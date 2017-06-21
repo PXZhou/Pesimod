@@ -52,7 +52,7 @@ function formulaire_ins(){
             <br/>
             <input type="text" name="Mdp"/>
             <br/>
-            Confirmation "Mot de passe
+            Confirmation Mot de passe
             <br/>
             <input type="text" name="Mdp2"/>
 
