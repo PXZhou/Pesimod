@@ -50,11 +50,11 @@ function formulaire_ins(){
             <br/>
             Mot de passe
             <br/>
-            <input type="text" name="Mdp"/>
+            <input type="password" name="Mdp"/>
             <br/>
             Confirmation "Mot de passe
             <br/>
-            <input type="text" name="Mdp2"/>
+            <input type="password" name="Mdp2"/>
 
             <input type='submit' value="Valider"/>
             </div>

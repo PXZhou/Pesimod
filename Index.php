@@ -20,8 +20,11 @@ if(!isset($_SESSION["userID"])){
     }
 
 }
+
+
+
 else  {
-    include ("Vue/accueil_co.php");
+    include ("Vue/affichecapteur.php");
     /*if (isset($_GET['cible'])){
         if ($_GET['cible'] == 'bouton2'){
             // Détruit toutes les variables de session
