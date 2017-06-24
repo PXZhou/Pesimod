@@ -165,6 +165,7 @@ ALTER TABLE maison
 ALTER TABLE effecteur
   MODIFY id int(11) NOT NULL AUTO_INCREMENT;
 
+
 ALTER TABLE categorie_capteurs
   MODIFY id int(11) NOT NULL AUTO_INCREMENT;
 
