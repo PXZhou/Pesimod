@@ -2,13 +2,6 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
-CREATE TABLE administrateur(
-  id INTEGER PRIMARY KEY,
-  Nom varchar(15) NOT NULL,
-  id_utilisateur TINYINT(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-
 CREATE TABLE utilisateur (
   id INTEGER PRIMARY KEY,
   Email varchar(50) NOT NULL,
@@ -49,7 +42,7 @@ CREATE TABLE corresp_admin_maison (
 
 
 CREATE TABLE piece (
-  id  int(11) NOT NULL,
+  id INTEGER PRIMARY KEY,
   nom varchar(255) COLLATE utf8_bin NOT NULL,
   etage int(5) NOT NULL,
   id_maison int(11) NOT NULL,
@@ -81,6 +74,7 @@ CREATE TABLE calendrier (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE capteur (
+  id INTEGER PRIMARY KEY,
   num_serie varchar(255) COLLATE utf8_bin NOT NULL,
   nom varchar(255) COLLATE utf8_bin NOT NULL,
   id_piece int(11) NOT NULL,
@@ -88,19 +82,19 @@ CREATE TABLE capteur (
   id_utilisateur int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO capteur (num_serie, nom,id_piece,id_categorie,id_utilisateur) VALUES
-  ('DS18B20', 'Temperature',1,'',1),
-  ('YG - A1', 'Fumee', 1,'',1),
-  ('DHT-11', 'Humidite', 2,'',1),
-  ('Photoresistor Relay Module', 'Luminosite', 2,'',1),
-  ('DS18B20', 'Temperature', 2,'',2),
-  ('DS18B20', 'Temperature', 3,'',3),
-  ('YG - A1', 'Fumee', 3,'',2),
-  ('YG - A1', 'Fumee', 2,'',3),
-  ('DHT-11', 'Humidite', 1,'',2),
-  ('DHT-11', 'Humidite', 1,'',3),
-  ('Photoresistor Relay Module', 'Luminosite', 2,'',2),
-  ('Photoresistor Relay Module', 'Luminosite', 3,'',3);
+INSERT INTO capteur (id,num_serie, nom,id_piece,id_categorie,id_utilisateur) VALUES
+  (1,'DS18B20', 'Temperature',1,'',1),
+  (2,'YG - A1', 'Fumee', 1,'',1),
+  (3,'DHT-11', 'Humidite', 2,'',1),
+  (4,'Photoresistor Relay Module', 'Luminosite', 2,'',1),
+  (5,'DS18B20', 'Temperature', 2,'',2),
+  (6,'DS18B20', 'Temperature', 3,'',3),
+  (7,'YG - A1', 'Fumee', 3,'',2),
+  (8,'YG - A1', 'Fumee', 2,'',3),
+  (9,'DHT-11', 'Humidite', 1,'',2),
+  (10,'DHT-11', 'Humidite', 1,'',3),
+  (11,'Photoresistor Relay Module', 'Luminosite', 2,'',2),
+  (12,'Photoresistor Relay Module', 'Luminosite', 3,'',3);
 
 
 CREATE TABLE categorie_capteurs (
@@ -118,38 +112,42 @@ INSERT INTO `categorie_capteurs`(`id`,`nom_categorie`,`unite`) VALUES
   (6,'Presence','absent');
 
 CREATE TABLE donnees (
-  Type varchar(125) NOT NULL,
-  Historique date NOT NULL
+  Unité varchar(125) NOT NULL,
+  Historique date NOT NULL,
+  valeur VARCHAR(125) NOT NULL,
+  id_capteur INT(11) NOT NULL,
+  id_user INT(11) Not NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO donnees (Type, Historique) VALUES
-  ('Celsius', '2017-05-10'),
-  ('%', '2017-02-15'),
-  ('%', '2017-04-25'),
-  ('Celsius', '2017-03-27');
+INSERT INTO donnees (Unité, Historique,valeur,id_capteur,id_user) VALUES
+  ('Celsius', '2017-05-10',25,1,1),
+  ('%', '2017-02-15',45,3,1),
+  ('%', '2017-04-25',45,7,2),
+  ('Celsius', '2017-03-27',15,6,3);
 
 
 CREATE TABLE effecteur (
+  id INTEGER PRIMARY KEY,
   Référence varchar(100) NOT NULL,
-  Type varchar(25) NOT NULL,
+  fooction varchar(25) NOT NULL,
   Statut tinyint(1) NOT NULL,
   id_piece INT(11) NOT NULL,
   id_utilisateur INT(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO effecteur (Référence, Type, Statut,id_piece, id_utilisateur) VALUES
-  ('DS020', 'Lumiere', 1,'',1),
-  ('DS020', 'Lumiere', 1,'',2),
-  ('DS020', 'Lumiere', 1,'',3),
-  ('DS020', 'Lumiere', 1,'',1),
-  ('DS020', 'Lumiere', 1,'',2),
-  ('DS020', 'Lumiere', 1,'',3),
-  ('DS020', 'Lumiere', 1,'',2),
-  ('DS450', 'Volet', 1,'',3),
-  ('DS450', 'Volet', 1,'',1),
-  ('DS450', 'Volet', 1,'',1),
-  ('DS450', 'Volet', 1,'',2),
-  ('DS450', 'Volet', 1,'',3);
+INSERT INTO effecteur (id,Référence, fonction, Statut,id_piece, id_utilisateur) VALUES
+  (1,'DS020', 'Lumiere', 1,'',1),
+  (2,'DS020', 'Lumiere', 1,'',2),
+  (3,'DS020', 'Lumiere', 1,'',3),
+  (4,'DS020', 'Lumiere', 1,'',1),
+  (5,'DS020', 'Lumiere', 1,'',2),
+  (6,'DS020', 'Lumiere', 1,'',3),
+  (7,'DS020', 'Lumiere', 1,'',2),
+  (8,'DS450', 'Volet', 1,'',3),
+  (9,'DS450', 'Volet', 1,'',1),
+  (10,'DS450', 'Volet', 1,'',1),
+  (11,'DS450', 'Volet', 1,'',2),
+  (12,'DS450', 'Volet', 1,'',3);
 
 
 ALTER TABLE categorie_capteurs
@@ -157,6 +155,18 @@ ALTER TABLE categorie_capteurs
 
 ALTER TABLE utilisateur
   MODIFY id int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+ALTER TABLE piece
+  MODIFY id int(11) NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE maison
+  MODIFY id int(11) NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE effecteur
+  MODIFY id int(11) NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE categorie_capteurs
+  MODIFY id int(11) NOT NULL AUTO_INCREMENT;
 
 
 
