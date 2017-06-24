@@ -21,15 +21,12 @@
     VALUES ('','$nom',".$id_piece.",".$ajout.")");
         }
     }
-    else if (!empty($_POST['Ajouter'])){
+    if (!empty($_POST['Ajouter'])){
         $id = $_POST['id_maison'];
         $etage = $_POST['etage'];
         $nom = $_POST['nom'];
-        $nvid = $bdd->exec("Select max(id_piece)");
-        $nvid = $nvid+1;
-        echo $nvid;
         $req = $bdd->exec("INSERT INTO piece(id_piece,nom,etage,id_maison)
-    VALUES ('$nvid',".$nom.",'$etage','$id')");
+    VALUES ('.$nvid.','$nom','.$etage.','.$id.')");
 
     }
     else if (!empty($_POST['Ajouter_maison'])){
