@@ -29,19 +29,22 @@
     VALUES ('.$nvid.','$nom','.$etage.','.$id.')");
 
     }
-    else if (!empty($_POST['Ajouter_maison'])){
+    if (!empty($_POST['ajout'])){
         $adress = $_POST['adress'];
-        $city  = $_POST['nom_city'];
+        $city  = $_POST['name_city'];
         $poste = $_POST['code_postal'];
         $id = $_POST['id_user'];
-        $nom = $bdd->exec("SELECT Nom from utilisateur where id ='.$id.'");
-        $nvid = ($bdd->exec("SELECT MAX(id) form maison")) + 1;
-        $req =$bdd->exec("INSERT INTO maison(id,nom,adresse,code_postal,ville,id_utilisateur) values ('$nvid','.$nom.','.$adress.',
-'.$poste.','.$city.','.$id.')" );
+        echo $id;
+        $req = $bdd->query("SELECT Nom from utilisateur where id = '.$id.'");
+        while ($donnees = $req->fetchAll()){
+            $lastname = $donnees['Nom'];
+            echo $lastname;
+        }
+        $req =$bdd->exec("INSERT INTO maison(nom,adresse,code_postal,ville,id_utilisateur) values ('$lastname','$adress',
+'$poste','$city','$id')" );
     }
 
     /** SELECT concert.date,Ville.nom as Ville, Salle.nom as salle From Groupe Join concert on Groupe.id = Concert groupe_id
      Join salle on concert.salle= Salle.id Join ville on salle.ville = ville.id where groupe.nom ='PNL' order by concert.date asc**/
-header('Location: test divers.php');
-exit();
+
 
