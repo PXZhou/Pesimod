@@ -24,6 +24,8 @@
         <ul id="menu_horizontal">
             <li><a href="FAQ.php">Aide</a></li>
             <li><a href="Index.php">Domisep</a></li>
+            <li><input type="button" value="Déconnexion" /></li>
+            <!--<li><a href="Vue/affichecapteur.php">Deconnexion</a></li>-->
         </ul>
 
 

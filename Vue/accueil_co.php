@@ -33,6 +33,6 @@ $contenu .= "
 $contenu .= "</div>";
 
 
-$jvscrpt = require('');
+//$jvscrpt = require('');
 include 'Gabarit.php';
 ?>

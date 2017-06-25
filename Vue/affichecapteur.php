@@ -1,4 +1,3 @@
-
 <?php
 include "Controler/toto.php";
 try{
@@ -7,46 +6,27 @@ try{
 catch(Exception $e){
     die('Erreur : ' . $e->getMessage());
 }
-
-
 $title = "Affichage";
 $tete = "Affichage des capteurs";
-
-
 $contenu = "<ul id='onglet'>";
 $ongle = tata(1,1,$bdd);
-
 $contenu .= "<li class='actif'> $ongle[0] </li>";
-
 $long = count($ongle);
 for ($i=1; $i < $long; $i++){
     $contenu .= "<li> $ongle[$i] </li>";
 }
-
-
-
-
-
-
 $contenu .= "<li>+</li>";
 $contenu .= "</ul>";
-
 //-------------------------------------------------------------------------------------------------------
-
-
 /*
  commencer par div class='item'
 autant de ça que de piece
-
 dans chaque onglet (item):
 commencer par (<div id='centener'>)et le fermer A LA FIN DE LONGLET
-
 while chaque capteur qui correspond à la pièce:
 les afficher entre des balises <div class='element'></div>
 t'auras qu'à juste afficher le nom de la reference
  */
-
-
 
 
 $contenu .= "<div id='contentonglet'> ";
@@ -68,7 +48,6 @@ $contenu .= "<div class='item'>
               </div>
             </label>
         </div>
-
         <div class='element'>
             <p><img src='Style/Image/humidite.png' alt='temp' width='230' ></p>
             <input class='switch' name='premium1' id='premium' type='checkbox' checked>
@@ -91,14 +70,21 @@ $contenu .= "<div class='item'>
               </div>
             </label>
         </div>
-       </div>
+       </div>";
+       $ongle2 = titi(1,1,$bdd);
+echo ("<p>");
+
+for ($i=0; $i < $long2 ; $i++) {
+
+    echo('num série : '.$ongle2[$i]['num_serie'] . "<br>");
+    echo('nom capteur : '.$ongle2[$i]['nom_capteur'] . "<br><br>");
+
+}
+echo ("</p>");
         
-       <p><a href='#'><img src='Style/Image/Poubelle.png' alt='Suppression' width='50' height='50' ></a></p>
-     </div>   
-    ";
-
+$contenu.="<p><a href='#'><img src='Style/Image/Poubelle.png' alt='Suppression' width='50' height='50' ></a></p>
+</div>";
 //----------------------------------------------------------------
-
 $contenu .= "<div class='item'>
     <bloc id='toto'>
         <h6>Régulateur température</h6>
@@ -126,9 +112,7 @@ $contenu .= "<div class='item'>
     
     
     <p><a href='#'><img src='Style/Image/Poubelle.png' alt='Suppression' width='40' height='40' ></a></p></div>";
-
 //----------------------------------------------------------------
-
 $contenu .= "<div class='item'> <h6>Capteur température</h6>
 <p><img src='Style/Image/temperature.png' alt='temp' width='40' height='40' ></p>
 <input id='echelle' type='range'>
@@ -136,7 +120,6 @@ $contenu .= "<div class='item'> <h6>Capteur température</h6>
 <p><img src='Style/Image/luminosite.png' alt='temp' width='40' height='40' ></p>
 <img src='Style/Image/on.png' alt='switch' width='35' height='35'>
    <p><a href='#'><img src='Style/Image/Poubelle.png' alt='Suppression' width='40' height='40' ></a></p></div>";
-
 //----------------------------------------------------------------
 $contenu .= "<div class='item'> <h6>Capteur température</h6>
 <p><img src='Style/Image/temperature.png' alt='temp' width='40' height='40' ></p>
@@ -150,8 +133,37 @@ $contenu .= "<div class='item'> <h6>Capteur température</h6>
 <h6>Capteur fumée</h6>
 <p><img src='Style/Image/fumee.png' alt='temp' width='40' height='40' ></p>
 <img src='Style/Image/on.png' alt='switch' width='35' height='35'>
-
    <p><a href='#'><img src='Style/Image/Poubelle.png' alt='Suppression' width='40' height='40' ></a></p></div>";
+
+//----------------------------------------------------------------
+
+$contenu .= "<div class='item'>";
+$ongle2 = titi(1,1,$bdd);
+$long2=count($ongle2);
+//echo($long2);
+
+echo ("<p>");
+
+for ($i=0; $i < $long2 ; $i++) {
+
+    echo('num série : '.$ongle2[$i]['num_serie'] . "<br>");
+    echo('nom capteur : '.$ongle2[$i]['nom_capteur'] . "<br><br>");
+
+}
+echo ("</p>");
+
+       /*$ongle2 = titi(1,1,$bdd);
+       $long2=count($ongle2);
+echo ("<p>");
+
+for ($i=0; $i < $long2 ; $i++) {
+
+    echo('num série : '.$ongle2[$i]['num_serie'] . "<br>");
+    echo('nom capteur : '.$ongle2[$i]['nom_capteur'] . "<br><br>");
+
+}
+echo ("</p>");*/
+$contenu .= "</div>";
 
 //----------------------------------------------------------------
 $contenu .= "<div class='item'>";
@@ -160,12 +172,9 @@ $contenu .= "
    <p>Nom de la pièce : <input type='text' name='nom_piece' /></p>
    <p><input type='submit' value='Valider'/>
    <input type='reset' value='Annuler' /></p>
-
 </form>";
 $contenu .= "</div>";
 ob_clean();
 $jvscrpt = require('Vue/onglets.php');
-
 include 'Gabarit.php';
-
 ?>
