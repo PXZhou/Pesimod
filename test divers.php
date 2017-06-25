@@ -45,7 +45,7 @@
     <?php function Ajout_maison($id_user)
     {?>
         <form action="cible2.php" method="post">
-            <input type="hidden" name="id_user" values="<?php echo $id_user?>">
+            <input type="hidden"  values="<?php echo $id_user?>" name="id_user">
             <h2>Ajout d'un nouveau bien</h2>
             <p>Quelle est l'adresse du bien ?</p>
             <input type="text" name="adress">
@@ -53,7 +53,7 @@
             <input type="text" name="code_postal">
             <p>Quelle est le nom de la ville ?</p>
             <input type="text" name="name_city">
-            <input type="submit" value="Ajouter" name="Ajouter_maison"?>
+            <input type="submit" value="Ajout" name="ajout"?>
         </form>
     <?php }?>
 
@@ -65,8 +65,8 @@
         </form>
     <?php }?>
 
-    <?php function get_etage($id_utilisateur,$bdd){
-        $reponse = $bdd->exec("SELECT etage FROM maison WHERE utilisateur.id = '$id_utilisateur'");
+    <?php function get_etage($nom,$bdd){
+        $reponse = $bdd->exec("SELECT etage FROM maison WHERE utilisateur.nom = '$nom'");
         return $reponse;
     }?>
 
@@ -91,6 +91,6 @@
     }?>
 <html>
 <body>
-    <?php echo ajout_piece(0,1)?>
+    <?php echo Ajout_maison(2)?>
 </body>
 </html>
