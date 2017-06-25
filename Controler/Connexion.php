@@ -12,18 +12,18 @@ if(isset($_GET['cible']) && $_GET['cible']=="verif_co"){// l'utilisateur a cliqu
 
         } else { // utilisateur trouvé dans la base de données
             $ligne = $reponse->fetch();
-            if($_POST['Mdp']!=$ligne['Mdp']){ // Le mot de passe entré ne correspond pas à celui stocké dans la base de données
+            if(sha1($_POST['Mdp'])!=$ligne['Mdp']){ // Le mot de passe entré ne correspond pas à celui stocké dans la base de données
                 $erreur = "Mot de passe incorrect";
                 include("Vue/non_connecte.php");
             } else { // mot de passe correct, on affiche la page d'accueil
                 $_SESSION["userID"] = $ligne['id'];
-                include("Vue/accueil_co.php");
+                include("Vue/affichecapteur.php");
             }
         }
     }
     else {
-        $erreur = "veuillez remplir tous les champs";
+        $erreur = "Veuillez remplir tous les champs.";
         include('Vue/non_connecte.php');
     }
 }
-//else{}
+

@@ -33,16 +33,16 @@ function formulaire_ins(){
     ob_start();
     ?>
     <fieldset>
-        <form method="POST" action="index.php?cible=verif">
+        <form method="POST" action="index.php?cible=verif_ins">
             <div id="inscrip">
             <h2 id="titrins">Inscription</h2>
             Nom
             <br/>
-            <input type="text" name="nom"/>
+            <input type="text" name="Nom"/>
             <br/>
             Prenom
             <br/>
-            <input type="text" name="prenom"/>
+            <input type="text" name="Prenom"/>
             <br/>
             Email
             <br/>
@@ -50,11 +50,11 @@ function formulaire_ins(){
             <br/>
             Mot de passe
             <br/>
-            <input type="text" name="mdp"/>
+            <input type="password" name="Mdp"/>
             <br/>
             Confirmation "Mot de passe
             <br/>
-            <input type="text" name="mdp"/>
+            <input type="password" name="Mdp2"/>
 
             <input type='submit' value="Valider"/>
             </div>
@@ -63,23 +63,5 @@ function formulaire_ins(){
     <?php
     $formulaire_ins = ob_get_clean();
     return $formulaire_ins;
-
-}
-function dbouton1 ($nom){
-ob_start();
-    ?>
-    <li class="bouton_droite"><a href="index.php?cible=bouton1"><?php echo($nom); ?></a></li>
-    <?php
-$dboutton1 = ob_get_clean();
-return $dboutton1;
-
-}
-function dbouton2 ($nom){
-    ob_start();
-    ?>
-    <li class="bouton_droite"><a href="index.php?cible=bouton2"><?php echo($nom); ?></a></li>
-    <?php
-    $dboutton2 = ob_get_clean();
-    return $dboutton2;
 
 }

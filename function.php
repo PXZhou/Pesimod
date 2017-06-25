@@ -1,7 +1,7 @@
 
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="style_editeur.css"/>
+    <link rel="stylesheet" type="text/css" href="Style/style_editeur.css"/>
 </head>
 <body>
 

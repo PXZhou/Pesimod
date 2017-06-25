@@ -1,0 +1,1 @@
+<p><a href="CGU">Conditions generales d'utilisation </a><input type="checkbox" name="macase" value="Conditions generales d'utilisation">;</p>

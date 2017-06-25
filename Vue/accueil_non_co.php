@@ -1,14 +1,11 @@
 <?php
-    $jvscript = ob_clean();
+    //$jvscript = ob_clean();
     $title = ob_get_clean();
     $tete = ob_get_clean();
     $contenu = ob_get_clean();
     $title = "Accueil";
     $tete = "Accueil";
     $contenu = "Accueil. Veuillez vous connecter";
-    $dbouton1 = dbouton1("Se connecter");
-    $dbouton2 = dbouton2("S'inscrire");
-
     $menu_der="";
     $jvscript = "";
 
