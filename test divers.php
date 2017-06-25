@@ -1,10 +1,11 @@
-    <?php function editeur($id_piece){
-        try
-        {
-            $bdd = new PDO('mysql:host=localhost;dbname=beta_client;charset=utf8', 'root', '');
-        } catch (Exception $e) {
-            die('Erreur : ' . $e->getMessage());
-        }
+    <?php
+    try
+    {
+        $bdd = new PDO('mysql:host=localhost;dbname=beta_client;charset=utf8', 'root', '');
+    } catch (Exception $e) {
+        die('Erreur : ' . $e->getMessage());
+    }
+    function editeur($id_piece,$bdd){
         $reponse = $bdd->query("SELECT nom_categorie FROM categorie_capteurs ");
         while ($donnees = $reponse->fetch()) {
             $categorie[] = $donnees['nom_categorie'];
@@ -58,13 +59,38 @@
 
     <?php function supprimer_capteur($id_piece,$id_maison){?>
         <form action="cible2.php" method="post">
-            <input type ="hidden" name=""
-            <input type="b"  >
+            <input type ="hidden" name="id_piece" value="<?php echo $id_piece?>">
+            <input type ="hidden" name="id_maison" value="<?php echo $id_maison?>">
+            <input type="submit" value="Supprimer">
         </form>
     <?php }?>
 
+    <?php function get_etage($id_utilisateur,$bdd){
+        $reponse = $bdd->exec("SELECT etage FROM maison WHERE utilisateur.id = '$id_utilisateur'");
+        return $reponse;
+    }?>
+
+    <?php function get_id($email,$bdd){
+        $reponse = $bdd->exec("SELECT id FROM utilisateur WHERE utilisateur.Email = '$email'");
+        return $reponse;
+    }?>
+
+    <?php function editeur_effecteur($id_maison,$id_piece,$bdd){
+        ?>
+        <form>
+            <input type="hidden" value="<?php echo $id_piece?>" name="id_piece">
+            <input type="hidden" value="<?php echo $id_maison?>" name="id_maison">
+            <p>Entrez le numéro de série de effecteur :</p>
+            <input type="text" name="serie_effecteur" values="absent"/>
+            <p>Entrez le type de l'effecteur</p>
+            <input type="text" name="type_effecteur" values="absent"/></br>
+            <p>Est-il allumé ou éteint</p>
+            
+        </form>
+    <?php
+    }?>
 <html>
 <body>
-    <?php echo editeur(1)?>
+    <?php echo ajout_piece(0,1)?>
 </body>
 </html>

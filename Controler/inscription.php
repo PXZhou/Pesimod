@@ -17,9 +17,10 @@ if(isset($_GET['cible']) && $_GET['cible']=="verif_ins"){// l'utilisateur a cliq
             if ($verif->rowcount()==0){
                 $Mdp = sha1($Mdp);
 
-                inscription($db, $Nom, $Prenom, $Email, $Mdp);
+                $err = inscription($db, $Nom, $Prenom, $Email, $Mdp);
                 $info_ins = "Inscription Validée.";
                 include "Vue/non_connecte.php";
+                print_r($err->errorInfo());
             }
 
             else {

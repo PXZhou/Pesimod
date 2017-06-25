@@ -15,7 +15,10 @@
             'Nom' => $Nom,
             'Prenom' => $Prenom,
             'Email' => $Email,
-            'Mdp' => $Mdp,));
+            'Mdp' => $Mdp,)
+        );
+
+        return $ajout;
 
     }
 
