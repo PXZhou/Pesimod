@@ -1,32 +1,38 @@
 
 <?php
-        require("test divers.php");
+        include "Editeur.php";
         $title = "Editeur";
         $tete = "Editeur";
-
-
-
-        $contenu = "<ul id='onglet'>";
-        $contenu .= "<li class='actif'>RDC</li>";
-        for ($Nbre_etage = 0;$Nbre_etage<= get_etage(get);$Nbre_etage++){
-            $contenu .= "<li> Etage $Nbre_etage </li>";
+        try
+        {
+            $bdd = new PDO('mysql:host=localhost;dbname=pesimod;charset=utf8', 'root', '');
+        } catch (Exception $e) {
+            die('Erreur : ' . $e->getMessage());
         }
-        $contenu .= "<li>Ajouter/Supprimer Etage(s)</li>";
+
+
+
+        $email = "marie.poppins@gmail.com";
+        $email1 = "jacque.cartier@gmail.com";
+        $contenu = "<ul id='onglet'>";
+        $contenu .= "<li class='actif'>Ajout de maison</li>";
+        $contenu .= "<li >Ajout de piece</li>";
+        $contenu .= "<li>Ajout de Capteur</li>";
         $contenu .= "</ul>";
         $contenu .= "<div id='contentonglet'> ";
-        affichage_selon_etage(0);
-        Ajouter(0);
-        $contenu .= "<div class='item'>  </div>";
-        /*for ($Nbre_etage = 1;$Nbre_etage<= get_etage('Wayne');$Nbre_etage++){
-            $Affiche = affichage_selon_etage($Nbre_etage);
-            $Ajout = Ajouter($Nbre_etage);
-            $contenu .= "<div class='item'> </div>";
-        }*/
-
-        $contenu .=  "<div class='item'>  </div>";
+        $contenu .= "<div class='item'> ";
+        $contenu .= Ajout_maison(get_id_user($emial1,$bdd));
         $contenu .= "</div>";
 
-        $jvscrpt = require('Vue/onglets.php');
+        $contenu .=  "<div class='item'>";
+        $contenu .= ajout_piece(get_id_maison($email1,$bdd),$bdd,get_id_user($emial1,$bdd));
+        $contenu .= "</div>";
+
+        $contenu .=  "<div class='item'>";
+        $contenu .=  editeur($bdd,$email1);
+        $contenu .= "</div>";
+
+        $jvscrpt = require('onglets.php');
 
 
         include 'Gabarit.php';
