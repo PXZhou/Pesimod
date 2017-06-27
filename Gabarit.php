@@ -4,7 +4,7 @@
 <head>
     <link rel="shortcut icon" type="image/x-icon" href="Style/Image/dom.png" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title><?php echo ($title) ?></title>
+    <title><?php echo é ?></title>
     <link rel="stylesheet" type="text/css" href="Style/styleB.css"/>
 
 </head>
@@ -24,7 +24,7 @@
         <ul id="menu_horizontal">
             <li><a href="FAQ.php">Aide</a></li>
             <li><a href="Index.php">Domisep</a></li>
-            <li><input type="button" value="Déconnexion" /></li>
+            <li><a href="Index.php">Déconnexion</a></li>
             <!--<li><a href="Vue/affichecapteur.php">Deconnexion</a></li>-->
         </ul>
 

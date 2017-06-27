@@ -452,9 +452,10 @@ input[type=range]:focus::-ms-fill-upper {
 }
 .ui-switch-handle:before{
     cursor: pointer;
-    margin-left: -30px;
+    font-size: 12px;
+    margin-left: -48px;
     line-height: 22px;
-    content: "ON";
+    content: "OUVERT";
     color: #FFF;
 }
 .ui-switch-handle:after{
@@ -462,7 +463,16 @@ input[type=range]:focus::-ms-fill-upper {
     position: relative;
     right: -27px;
     top: -20px;
-    content: "OFF";
+    content: "FERME";
 }
 
+
+
+#donnee{
+    font-family:"Century Gothic", Helvetica, sans-serif;
+    font-size:100%;
+    font-weight: 500;
+    margin-top:-5px;
+    color: black;
+}
 
