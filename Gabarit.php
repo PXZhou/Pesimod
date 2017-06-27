@@ -22,7 +22,7 @@
     <div id="menu_top">
 
         <ul id="menu_horizontal">
-            <li><a href="FAQ.php">Aide</a></li>
+            <li><a href="Vue/gestioncapteur.php">Aide</a></li>
             <li><a href="Index.php">Domisep</a></li>
             <li><a href="index.php?cible=deco"><?php echo($deconnection);?></a></li>
 
