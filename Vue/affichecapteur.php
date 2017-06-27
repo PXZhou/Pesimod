@@ -9,7 +9,7 @@ catch(Exception $e){
 $title = "Affichage";
 $tete = "Affichage des capteurs";
 $contenu = "<ul id='onglet'>";
-$ongle = tata($_SESSION["userID"],1,$bdd);
+$ongle = tata($_SESSION["userID"],$_SESSION["userID"],$bdd);
 $contenu .= "<li class='actif'> $ongle[0] </li>";
 $long = count($ongle);
 for ($i=1; $i < $long; $i++){
@@ -72,6 +72,8 @@ $contenu .= "<div class='item'>
         </div>
         
        </div>";
+
+
        $ongle2 = titi(1,1,$bdd);
 echo ("<p>");
 
