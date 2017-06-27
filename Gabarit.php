@@ -24,6 +24,7 @@
         <ul id="menu_horizontal">
             <li><a href="FAQ.php">Aide</a></li>
             <li><a href="Index.php">Domisep</a></li>
+            <li><a href="index.php?cible=editeur"> <?php echo($editeur) ?></a></li>
             <li><a href="index.php?cible=deco"><?php echo($deconnection);?></a></li>
 
         </ul>
