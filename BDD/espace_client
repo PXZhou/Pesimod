@@ -12,11 +12,11 @@ CREATE TABLE utilisateur (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT INTO utilisateur (id, Email, Mdp, Nom, Prenom, Accré)
-VALUES(1,'marie.poppins@gmail.com', 123456789, 'Poppins', 'Marie', FALSE );
-INSERT INTO utilisateur (id, Email, Mdp, Nom, Prenom)
-VALUES(2,'jacque.cartier@gmail.com', 987654321, 'Cartier', 'Jacques', FALSE );
-INSERT INTO utilisateur (id, Email, Mdp, Nom, Prenom)
-VALUES(3,'bruce.wayne@gmail.com', 9876543210, 'Wayne', 'Bruce', TRUE);
+VALUES(1,'marie.poppins@gmail.com', 'f7c3bc1d808e04732adf679965ccc34ca7ae3441', 'Poppins', 'Marie', FALSE );
+INSERT INTO utilisateur (id, Email, Mdp, Nom, Prenom,Accré)
+VALUES(2,'jacque.cartier@gmail.com', 'bfe54caa6d483cc3887dce9d1b8eb91408f1ea7a', 'Cartier', 'Jacques', FALSE );
+INSERT INTO utilisateur (id, Email, Mdp, Nom, Prenom,Accré)
+VALUES(3,'bruce.wayne@gmail.com', '9cd656169600157ec17231dcf0613c94932efcdc', 'Wayne', 'Bruce', TRUE);
 
 
 CREATE TABLE maison (
@@ -129,7 +129,7 @@ INSERT INTO donnees (Unité, Historique,valeur,id_capteur,id_user) VALUES
 CREATE TABLE effecteur (
   id INTEGER PRIMARY KEY,
   Référence varchar(100) NOT NULL,
-  fooction varchar(25) NOT NULL,
+  fonction varchar(25) NOT NULL,
   Statut tinyint(1) NOT NULL,
   id_piece INT(11) NOT NULL,
   id_utilisateur INT(11) NOT NULL

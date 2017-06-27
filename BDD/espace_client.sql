@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost
--- Généré le :  Dim 25 Juin 2017 à 13:00
+-- Généré le :  Dim 25 Juin 2017 à 12:08
 -- Version du serveur :  5.7.11
 -- Version de PHP :  5.6.18
 
@@ -230,7 +230,7 @@ CREATE TABLE `utilisateur` (
   `Mdp` varchar(255) NOT NULL,
   `Nom` varchar(25) NOT NULL,
   `Prenom` varchar(25) NOT NULL,
-  `Accré` tinyint(1) NOT NULL DEFAULT '0'
+  `Accré` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -282,35 +282,6 @@ ALTER TABLE `piece`
 ALTER TABLE `utilisateur`
   ADD PRIMARY KEY (`id`);
 
---
--- AUTO_INCREMENT pour les tables exportées
---
-
---
--- AUTO_INCREMENT pour la table `capteur`
---
-ALTER TABLE `capteur`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
---
--- AUTO_INCREMENT pour la table `categorie_capteurs`
---
-ALTER TABLE `categorie_capteurs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
---
--- AUTO_INCREMENT pour la table `effecteur`
---
-ALTER TABLE `effecteur`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
---
--- AUTO_INCREMENT pour la table `piece`
---
-ALTER TABLE `piece`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
---
--- AUTO_INCREMENT pour la table `utilisateur`
---
-ALTER TABLE `utilisateur`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
