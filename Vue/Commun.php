@@ -52,9 +52,12 @@ function formulaire_ins(){
             <br/>
             <input type="password" name="Mdp"/>
             <br/>
-            Confirmation "Mot de passe
+            Confirmation "Mot de passe"
             <br/>
             <input type="password" name="Mdp2"/>
+
+            <br/>
+            <p><a href="CGU.php">Conditions générales d'utilisation </a><input type="checkbox" name="macase" value="Conditions generales d'utilisation"></p>
 
             <input type='submit' value="Valider"/>
             </div>

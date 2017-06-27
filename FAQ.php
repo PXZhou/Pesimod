@@ -57,7 +57,7 @@
 <footer id="bas_page">
     <ul>
         <li><strong>Domisep</strong></li>
-        <li><a href="" target="_blank">Qui sommes nous ?</a></li>
+        <li><a href="">Qui sommes nous ?</a></li>
         <li><a href="">Mentions légales</a></li>
         <li><a href="">Politique de confidentialité</a></li>
     </ul>
