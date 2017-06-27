@@ -8,7 +8,7 @@ catch(Exception $e){
     die('Erreur : ' . $e->getMessage());
 }
 
-
+$deconnection = 'Déconnection';
 $title = "Affichage";
 $tete = "Affichage des capteurs";
 
