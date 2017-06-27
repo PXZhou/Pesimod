@@ -24,10 +24,8 @@
         <ul id="menu_horizontal">
             <li><a href="FAQ.php">Aide</a></li>
             <li><a href="Index.php">Domisep</a></li>
-            <?php if(isset($_SESSION)){
-                echo ('<li><a href="Deconnexion.php" >Deconnexion</a></li>');
-            }
-            ?>
+            <li><a href="index.php?cible=deco"><?php echo($deconnection);?></a></li>
+
         </ul>
 
 
