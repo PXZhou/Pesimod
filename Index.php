@@ -5,6 +5,7 @@
     require("Modele/connexion.php");
     require("Vue/Commun.php");
     $deconnection = '';
+    $editeur = "";
     $info_ins = "";
     $erreur = "";
 
@@ -34,6 +35,9 @@ else  {
             }
             session_destroy();
             include("Vue/non_connecte.php");
+        }
+        else if ($_GET['cible'] == 'editeur'){
+            include ("Vue/gestioncapteur.php");
         }
     }
     else{
